@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  background-image: url("../img/headerBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.navBar {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.navBar-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.navBar-link {
+  display: flex;
+  flex-direction: row;
+}
+.navBar-link_li {
+  list-style-type: none;
+}
+.navBar-link_a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
