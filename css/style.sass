@@ -1,0 +1,32 @@
+@import "color"
+*
+  margin: 0
+  padding: 0
+body
+  height: 100%
+  width: 100%
+
+.header
+  background-image: url("../img/headerBG.png")
+  background-size: cover
+  background-repeat: no-repeat
+  height: 100vh
+
+.navBar
+  max-width: 1440px
+  margin: 0 auto
+  height: auto
+  display: flex
+  justify-content: space-between
+  &-container
+    display: flex
+    flex-direction: row
+    height: 100%
+  &-link
+    display: flex
+    flex-direction: row
+    &_li
+      list-style-type: none
+    &_a
+      color: $white
+      text-decoration: none
