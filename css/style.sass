@@ -2,6 +2,7 @@
 *
   margin: 0
   padding: 0
+
 body
   height: 100%
   width: 100%
@@ -12,21 +13,46 @@ body
   background-repeat: no-repeat
   height: 100vh
 
+  &-main
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &_text
+      margin-top: 300px
+      color: $white
+      font-size: 183px
+      line-height: 242px
+
+  &-dropDown
+    margin-top: 301px
+    display: flex
+    align-items: center
+    justify-content: center
+
 .navBar
   max-width: 1440px
   margin: 0 auto
+  padding-top: 40px
   height: auto
   display: flex
+  align-items: center
   justify-content: space-between
-  &-container
-    display: flex
-    flex-direction: row
-    height: 100%
+
   &-link
     display: flex
+    min-width: 512px
     flex-direction: row
+    justify-content: space-between
+
     &_li
       list-style-type: none
+
     &_a
       color: $white
       text-decoration: none
+
+  &-right
+    display: flex
+    justify-content: space-between
+    height: 100%
