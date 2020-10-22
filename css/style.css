@@ -200,5 +200,11 @@ body {
   background-color: #FFFFFF;
   border-radius: 5px;
 }
+.cell-BigBlockTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 90px;
+}
 
 /*# sourceMappingURL=style.css.map */
