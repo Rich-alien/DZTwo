@@ -5,6 +5,7 @@
   outline: none
   border: none
   overflow:  hidden
+  box-sizing: border-box
 
 body
   height: 100%
@@ -36,19 +37,22 @@ body
 
 .navBar
   max-width: 1440px
-  margin: 0 auto
-  padding-top: 40px
-  height: auto
+  margin: 40px auto 0
+  height: 38px
   display: flex
   align-items: center
   justify-content: space-between
-
+  &-left
+    display: flex
+    align-items: center
   &-link
     display: flex
     min-width: 512px
+    margin-left: 105px
     flex-direction: row
     justify-content: space-between
-
+    align-items: center
+    height: 100%
     &_li
       list-style-type: none
 
@@ -56,16 +60,45 @@ body
       color: $white
       text-decoration: none
       font-family: 'Sora', sans-serif
+      line-height: 30px
+    &_a:hover
+      color: $red
+    &_label
+      display: flex
+      align-items: center
+      position: relative
+    &_search
+      background-color: transparent
+      width: 224px
+      border: 2px solid #FFFFFF
+      border-radius: 25px
+      height: 38px
+      color: $white
+
+    &_searchH
+      position: absolute
+      top: 4px
+      left: 18px
+      height: 24px
+      bottom: 11px
+      color: $white
+      font-size: 24px
+      line-height: 30px
+    &_searchSVG
+      position: absolute
+      right: 10px
 
   &-right
     display: flex
     justify-content: space-between
+    align-items: center
     height: 100%
     &_button
       color: $white
       font-size: 18px
       line-height: 23px
       margin-left: 40px
+      height: 38px
       text-transform: uppercase
       font-family: 'Sora', sans-serif
       border-radius: 38px
