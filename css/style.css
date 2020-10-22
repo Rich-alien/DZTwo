@@ -35,6 +35,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: 1s ease infinite pulse;
+}
+@keyframes pulse {
+  0% {
+    transform: translateY(1px);
+  }
+  10% {
+    transform: translateY(2px);
+  }
+  20% {
+    transform: translateY(4px);
+  }
+  30% {
+    transform: translateY(8px);
+  }
+  40% {
+    transform: translateY(12px);
+  }
+  50% {
+    transform: translateY(14px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .navBar {
@@ -114,6 +138,9 @@ body {
   border-radius: 38px;
   width: 135px;
   background-color: #FF0000;
+}
+.navBar-right_button:hover {
+  color: rgba(0, 0, 0, 0.94);
 }
 
 /*# sourceMappingURL=style.css.map */
