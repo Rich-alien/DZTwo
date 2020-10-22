@@ -2,6 +2,9 @@
 *
   margin: 0
   padding: 0
+  outline: none
+  border: none
+  overflow:  hidden
 
 body
   height: 100%
@@ -19,6 +22,7 @@ body
     justify-content: center
 
     &_text
+      font-family: 'Shojumaru', cursive
       margin-top: 300px
       color: $white
       font-size: 183px
@@ -51,8 +55,19 @@ body
     &_a
       color: $white
       text-decoration: none
+      font-family: 'Sora', sans-serif
 
   &-right
     display: flex
     justify-content: space-between
     height: 100%
+    &_button
+      color: $white
+      font-size: 18px
+      line-height: 23px
+      margin-left: 40px
+      text-transform: uppercase
+      font-family: 'Sora', sans-serif
+      border-radius: 38px
+      width: 135px
+      background-color: $red

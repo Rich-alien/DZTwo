@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  outline: none;
+  border: none;
+  overflow: hidden;
 }
 
 body {
@@ -20,6 +23,7 @@ body {
   justify-content: center;
 }
 .header-main_text {
+  font-family: "Shojumaru", cursive;
   margin-top: 300px;
   color: #FFFFFF;
   font-size: 183px;
@@ -53,11 +57,23 @@ body {
 .navBar-link_a {
   color: #FFFFFF;
   text-decoration: none;
+  font-family: "Sora", sans-serif;
 }
 .navBar-right {
   display: flex;
   justify-content: space-between;
   height: 100%;
+}
+.navBar-right_button {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 23px;
+  margin-left: 40px;
+  text-transform: uppercase;
+  font-family: "Sora", sans-serif;
+  border-radius: 38px;
+  width: 135px;
+  background-color: #FF0000;
 }
 
 /*# sourceMappingURL=style.css.map */
