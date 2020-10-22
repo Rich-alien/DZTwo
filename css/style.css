@@ -156,8 +156,49 @@ body {
 
 .main {
   display: flex;
+  flex-direction: column;
   background-color: rgba(0, 0, 0, 0.94);
   height: 980px;
+}
+
+.cell {
+  display: flex;
+  max-width: 1440px;
+  margin: 80px auto 0;
+}
+.cell-product {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  width: 237px;
+  height: 187px;
+  margin-left: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.cell-product_name {
+  display: flex;
+  margin-top: 42px;
+  margin-left: 8px;
+  text-align: left;
+  font-family: "Sora", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+.cell-product_img {
+  margin: 48px auto 0;
+}
+.cell-littleBlock {
+  width: 492px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cell-BigBlock {
+  width: 710px;
+  height: 380px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
