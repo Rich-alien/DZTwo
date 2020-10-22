@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdc34c85-29e7-413b-a79f-daf70cb4e6da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/color.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/DownBtn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/product1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/color.sass" beforeDir="false" afterPath="$PROJECT_DIR$/css/color.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -60,6 +59,7 @@
       <recent name="C:\Users\richa\WebstormProjects\DZTwo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\Fonts" />
       <recent name="C:\Users\richa\WebstormProjects\DZTwo\css" />
       <recent name="C:\Users\richa\WebstormProjects\DZTwo\img" />
     </key>
@@ -74,7 +74,7 @@
       <updated>1603283862235</updated>
       <workItem from="1603283863294" duration="309000" />
       <workItem from="1603312937677" duration="1220000" />
-      <workItem from="1603314584419" duration="4269000" />
+      <workItem from="1603314584419" duration="15678000" />
     </task>
     <task id="LOCAL-00001" summary="svg for navBar">
       <created>1603316763239</created>
@@ -118,7 +118,133 @@
       <option name="project" value="LOCAL" />
       <updated>1603316880126</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add text Japan and drop down button with minal style">
+      <created>1603319187126</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603319187126</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add text Japan and drop down button with minal style">
+      <created>1603319202182</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603319202182</updated>
+    </task>
+    <task id="LOCAL-00009" summary="btn for header">
+      <created>1603319218386</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1603319218386</updated>
+    </task>
+    <task id="LOCAL-00010" summary="style for main where text japan and add drop down style">
+      <created>1603319262237</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603319262237</updated>
+    </task>
+    <task id="LOCAL-00011" summary="style for main where text japan and add drop down style">
+      <created>1603319266978</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1603319266978</updated>
+    </task>
+    <task id="LOCAL-00012" summary="i dont know what is that">
+      <created>1603319339981</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1603319339981</updated>
+    </task>
+    <task id="LOCAL-00013" summary="i dont know what is that">
+      <created>1603319345842</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1603319345842</updated>
+    </task>
+    <task id="LOCAL-00014" summary="следит за sass и адаптирует под css">
+      <created>1603319368926</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1603319368926</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add fonts and style for button">
+      <created>1603361469857</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1603361469857</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add svg for search">
+      <created>1603361483189</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1603361483189</updated>
+    </task>
+    <task id="LOCAL-00017" summary=" svg for search">
+      <created>1603361489288</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1603361489288</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add style for navbar and global style border-box">
+      <created>1603364963071</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1603364963071</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add style for navbar and global style border-box">
+      <created>1603364966911</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1603364966911</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactoring">
+      <created>1603365004010</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1603365004010</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add animation for drop down svg">
+      <created>1603365929272</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1603365929272</updated>
+    </task>
+    <task id="LOCAL-00022" summary="new color &#10;BLACK">
+      <created>1603365942164</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1603365942164</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add container main and footer">
+      <created>1603374559325</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1603374559325</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix style">
+      <created>1603374575121</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1603374575121</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +270,21 @@
     <MESSAGE value="style for navbar" />
     <MESSAGE value="style" />
     <MESSAGE value="bgc for header" />
-    <option name="LAST_COMMIT_MESSAGE" value="bgc for header" />
+    <MESSAGE value="add text Japan and drop down button with minal style" />
+    <MESSAGE value="btn for header" />
+    <MESSAGE value="style for main where text japan and add drop down style" />
+    <MESSAGE value="i dont know what is that" />
+    <MESSAGE value="следит за sass и адаптирует под css" />
+    <MESSAGE value="add fonts and style for button" />
+    <MESSAGE value="add svg for search" />
+    <MESSAGE value=" svg for search" />
+    <MESSAGE value="add style for navbar and global style border-box" />
+    <MESSAGE value="refactoring" />
+    <MESSAGE value="add animation for drop down svg" />
+    <MESSAGE value="new color &#10;BLACK" />
+    <MESSAGE value="add container main and footer" />
+    <MESSAGE value="fix style" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix style" />
   </component>
   <component name="WindowStateProjectService">
     <state x="629" y="318" key="EditFileWatcherDialog" timestamp="1603314661400">
@@ -155,9 +295,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="285" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603284173778" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603316885534">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603374594954">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603316885534" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603374594954" />
   </component>
 </project>
