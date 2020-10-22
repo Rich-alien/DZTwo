@@ -4,6 +4,7 @@
   outline: none;
   border: none;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 body {
@@ -38,18 +39,24 @@ body {
 
 .navBar {
   max-width: 1440px;
-  margin: 0 auto;
-  padding-top: 40px;
-  height: auto;
+  margin: 40px auto 0;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.navBar-left {
+  display: flex;
+  align-items: center;
+}
 .navBar-link {
   display: flex;
   min-width: 512px;
+  margin-left: 105px;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 .navBar-link_li {
   list-style-type: none;
@@ -58,10 +65,42 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   font-family: "Sora", sans-serif;
+  line-height: 30px;
+}
+.navBar-link_a:hover {
+  color: #FF0000;
+}
+.navBar-link_label {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.navBar-link_search {
+  background-color: transparent;
+  width: 224px;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  height: 38px;
+  color: #FFFFFF;
+}
+.navBar-link_searchH {
+  position: absolute;
+  top: 4px;
+  left: 18px;
+  height: 24px;
+  bottom: 11px;
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 30px;
+}
+.navBar-link_searchSVG {
+  position: absolute;
+  right: 10px;
 }
 .navBar-right {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 100%;
 }
 .navBar-right_button {
@@ -69,6 +108,7 @@ body {
   font-size: 18px;
   line-height: 23px;
   margin-left: 40px;
+  height: 38px;
   text-transform: uppercase;
   font-family: "Sora", sans-serif;
   border-radius: 38px;
