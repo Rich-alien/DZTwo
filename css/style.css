@@ -13,11 +13,11 @@ body {
 
 .header {
   background-image: url("../img/headerBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   flex-direction: column;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 1024px;
 }
 .header-main {
@@ -251,6 +251,23 @@ body {
   border-left: 3px solid #FFFFFF;
   border-right: 3px solid #FFFFFF;
   border-top: none;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.94);
+  display: flex;
+  flex-direction: column;
+  height: 980px;
+}
+.footer_top {
+  display: flex;
+}
+.footer_top-img {
+  width: 100%;
+}
+.footer_bottom {
+  background-color: black;
+  height: 488px;
 }
 
 /*# sourceMappingURL=style.css.map */
