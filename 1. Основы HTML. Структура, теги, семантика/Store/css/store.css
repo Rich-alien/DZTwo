@@ -104,10 +104,23 @@ body {
   min-width: 1196px;
   margin: 63px auto 0;
 }
+.catalog_choice {
+  margin-top: 14px;
+}
+.catalog_choice-leftUL {
+  display: flex;
+}
+.catalog_choice-leftLI {
+  list-style-type: none;
+  margin-right: 40px;
+}
 .catalog_choice-leftP {
   color: #FFFFFF;
   text-decoration: none;
   font-family: "Sora", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
 }
 
 /*# sourceMappingURL=store.css.map */
