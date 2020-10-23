@@ -467,47 +467,29 @@ let employee = {
     position: 'engineer',
     department: 'UX'
 }
-
+// 1 задание
 let result;
-let engineerSort = () => {
-    // result = employees.filter(item => item.position === 'engineer');
-    result = employees.map(item => {
-
-    })
-    // result = employee.sort()
+let filterEngineer = () => {
+    result = employees.filter(item => item.position === 'engineer')
 }
-engineerSort();
-console.log(result);
-
-// function yourFunction(employees) {
-//     const result = [];
-//     /* Write your code here */
-//     return result;
-// }
-//
-// // should show the result
-// console.log(yourFunction(employees));
-
-
-/**
- * Example function
- * Finds employees who has max salaries
- */
-// function exampleFunction(employees) {
-//     let maxSalary = 10000;
-//     for (let i = 0; i < employees.length; i++) {
-//         if (employees[i].salary > maxSalary) {
-//             maxSalary = employees[i].salary;
-//         }
-//     }
-//     const result = [];
-//     for (let i = 0; i < employees.length; i++) {
-//         if (employees[i].salary === maxSalary) {
-//             result.push(employees[i]);
-//         }
-//     }
-//     return result;
-// }
-
-
-// console.log(exampleFunction(employees));
+let sortSalary = () => {
+    result.sort((prev, next) => prev.salary - next.salary);
+}
+let deleteExcess = () => {
+    for (let i = 0; i < result.length; i++) {
+        result[i] = {
+            surname: result[i].surname,
+            name: result[i].name,
+            salary: result[i].salary,
+            hireDate: result[i].hireDate
+        }
+    }
+}
+function main() {
+    filterEngineer();
+    sortSalary();
+    deleteExcess();
+    console.log(result);
+}
+main();
+// 2 задание
