@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdc34c85-29e7-413b-a79f-daf70cb4e6da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Store/css/store.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Store/store.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Store/css/colorS.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/css/store.css" beforeDir="false" afterPath="$PROJECT_DIR$/Store/css/store.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/css/store.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Store/css/store.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/css/store.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Store/css/store.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/store.html" beforeDir="false" afterPath="$PROJECT_DIR$/Store/store.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/color.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/color.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,13 +50,14 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Store/css" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\Store\css" />
       <recent name="C:\Users\richa\WebstormProjects\DZTwo\img" />
       <recent name="C:\Users\richa\WebstormProjects\DZTwo" />
     </key>
@@ -77,7 +78,7 @@
       <updated>1603283862235</updated>
       <workItem from="1603283863294" duration="309000" />
       <workItem from="1603312937677" duration="1220000" />
-      <workItem from="1603314584419" duration="23171000" />
+      <workItem from="1603314584419" duration="24617000" />
     </task>
     <task id="LOCAL-00001" summary="svg for navBar">
       <created>1603316763239</created>
@@ -331,7 +332,56 @@
       <option name="project" value="LOCAL" />
       <updated>1603410961328</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="png for footer">
+      <created>1603444724527</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1603444724527</updated>
+    </task>
+    <task id="LOCAL-00038" summary="footer 1/2 add img footer">
+      <created>1603444755546</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1603444755546</updated>
+    </task>
+    <task id="LOCAL-00039" summary="new html page for store standart html">
+      <created>1603444786096</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1603444786096</updated>
+    </task>
+    <task id="LOCAL-00040" summary="zero css for  new page store">
+      <created>1603444811296</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1603444811296</updated>
+    </task>
+    <task id="LOCAL-00041" summary="footer style">
+      <created>1603444846160</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1603444846160</updated>
+    </task>
+    <task id="LOCAL-00042" summary="сообщения для гита!">
+      <created>1603444861531</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1603444861531</updated>
+    </task>
+    <task id="LOCAL-00043" summary="css and css map for store">
+      <created>1603444882574</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1603444882574</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,13 +401,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add text Japan and drop down button with minal style" />
-    <MESSAGE value="btn for header" />
-    <MESSAGE value="style for main where text japan and add drop down style" />
-    <MESSAGE value="i dont know what is that" />
-    <MESSAGE value="следит за sass и адаптирует под css" />
-    <MESSAGE value="add fonts and style for button" />
-    <MESSAGE value="add svg for search" />
     <MESSAGE value=" svg for search" />
     <MESSAGE value="add style for navbar and global style border-box" />
     <MESSAGE value="refactoring" />
@@ -376,9 +419,20 @@
     <MESSAGE value="svg for notification about choice year" />
     <MESSAGE value="block choice year" />
     <MESSAGE value="style for block choice year" />
-    <option name="LAST_COMMIT_MESSAGE" value="style for block choice year" />
+    <MESSAGE value="png for footer" />
+    <MESSAGE value="footer 1/2 add img footer" />
+    <MESSAGE value="new html page for store standart html" />
+    <MESSAGE value="zero css for  new page store" />
+    <MESSAGE value="footer style" />
+    <MESSAGE value="сообщения для гита!" />
+    <MESSAGE value="css and css map for store" />
+    <option name="LAST_COMMIT_MESSAGE" value="css and css map for store" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2696" y="379" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603459784300">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2696" y="379" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603459784300" />
     <state x="629" y="318" key="EditFileWatcherDialog" timestamp="1603314661400">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -387,9 +441,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="285" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603284173778" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603410968589">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603444890196">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603410968589" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603444890196" />
   </component>
 </project>
