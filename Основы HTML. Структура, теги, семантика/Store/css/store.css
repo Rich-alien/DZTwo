@@ -10,6 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.94);
@@ -96,6 +97,17 @@ body {
 }
 .navBar-right_button:hover {
   color: rgba(0, 0, 0, 0.94);
+}
+
+.catalog {
+  border-top: 5px solid #FFFFFF;
+  min-width: 1196px;
+  margin: 63px auto 0;
+}
+.catalog_choice-leftP {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
 }
 
 /*# sourceMappingURL=store.css.map */

@@ -1,4 +1,4 @@
-@import "colorS.sass"
+@import "colorS"
 *
   margin: 0
   padding: 0
@@ -11,6 +11,7 @@ body
   display: flex
   align-items: center
   justify-content: center
+  flex-direction: column
   height: 100%
   width: 100%
   background-color: $blackS
@@ -96,3 +97,17 @@ body
 
     &_button:hover
       color: $blackS
+
+.catalog
+  &_line
+  border-top: 5px solid $whiteS
+  min-width: 1196px
+  margin: 63px auto 0
+  &_choice
+    &-left
+    &-leftLI
+
+    &-leftP
+      color: $whiteS
+      text-decoration: none
+      font-family: 'Sora', sans-serif

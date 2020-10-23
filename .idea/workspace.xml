@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdc34c85-29e7-413b-a79f-daf70cb4e6da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Store/css/colorS.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/css/store.css" beforeDir="false" afterPath="$PROJECT_DIR$/Store/css/store.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/css/store.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Store/css/store.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/css/store.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Store/css/store.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/store.html" beforeDir="false" afterPath="$PROJECT_DIR$/Store/store.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/color.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/color.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,21 +75,7 @@
       <updated>1603283862235</updated>
       <workItem from="1603283863294" duration="309000" />
       <workItem from="1603312937677" duration="1220000" />
-      <workItem from="1603314584419" duration="24617000" />
-    </task>
-    <task id="LOCAL-00001" summary="svg for navBar">
-      <created>1603316763239</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1603316763239</updated>
-    </task>
-    <task id="LOCAL-00002" summary="sass for color">
-      <created>1603316782664</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1603316782664</updated>
+      <workItem from="1603314584419" duration="26165000" />
     </task>
     <task id="LOCAL-00003" summary="starting html grid">
       <created>1603316825965</created>
@@ -381,7 +364,63 @@
       <option name="project" value="LOCAL" />
       <updated>1603444882574</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="fix bug">
+      <created>1603460079548</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1603460079548</updated>
+    </task>
+    <task id="LOCAL-00045" summary="refactoring name">
+      <created>1603460097186</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1603460097186</updated>
+    </task>
+    <task id="LOCAL-00046" summary="add href in store">
+      <created>1603460120463</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1603460120463</updated>
+    </task>
+    <task id="LOCAL-00047" summary="style:&#10;black bgc and add style for navbar">
+      <created>1603460154391</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1603460154391</updated>
+    </task>
+    <task id="LOCAL-00048" summary=" add  navbar">
+      <created>1603460165222</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1603460165222</updated>
+    </task>
+    <task id="LOCAL-00049" summary="css colorStore">
+      <created>1603460182099</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1603460182099</updated>
+    </task>
+    <task id="LOCAL-00050" summary="git comment">
+      <created>1603460192324</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1603460192324</updated>
+    </task>
+    <task id="LOCAL-00051" summary="add href in navbar">
+      <created>1603460489576</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1603460489577</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,14 +440,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value=" svg for search" />
-    <MESSAGE value="add style for navbar and global style border-box" />
-    <MESSAGE value="refactoring" />
-    <MESSAGE value="add animation for drop down svg" />
-    <MESSAGE value="new color &#10;BLACK" />
-    <MESSAGE value="add container main and footer" />
-    <MESSAGE value="fix style" />
-    <MESSAGE value="add cell" />
     <MESSAGE value="img for cell" />
     <MESSAGE value="style for cell" />
     <MESSAGE value="git" />
@@ -426,7 +457,15 @@
     <MESSAGE value="footer style" />
     <MESSAGE value="сообщения для гита!" />
     <MESSAGE value="css and css map for store" />
-    <option name="LAST_COMMIT_MESSAGE" value="css and css map for store" />
+    <MESSAGE value="fix bug" />
+    <MESSAGE value="refactoring name" />
+    <MESSAGE value="add href in store" />
+    <MESSAGE value="style:&#10;black bgc and add style for navbar" />
+    <MESSAGE value=" add  navbar" />
+    <MESSAGE value="css colorStore" />
+    <MESSAGE value="git comment" />
+    <MESSAGE value="add href in navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="add href in navbar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2696" y="379" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603459784300">
@@ -441,9 +480,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="285" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603284173778" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603444890196">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1603460494415">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603444890196" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603460494415" />
   </component>
 </project>
