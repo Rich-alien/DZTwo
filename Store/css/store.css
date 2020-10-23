@@ -1,3 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.94);
+}
 
-/*# sourceMappingURL=Store.css.map */
+.navBar {
+  min-width: 1196px;
+  margin: 40px auto 0;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navBar-left {
+  display: flex;
+  align-items: center;
+}
+.navBar-link {
+  display: flex;
+  min-width: 512px;
+  margin-left: 105px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.navBar-link_li {
+  list-style-type: none;
+}
+.navBar-link_a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
+  line-height: 30px;
+}
+.navBar-link_a:hover {
+  color: #FF0000;
+}
+.navBar-link_label {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.navBar-link_search {
+  background-color: transparent;
+  width: 224px;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  height: 38px;
+  color: #FFFFFF;
+}
+.navBar-link_searchH {
+  position: absolute;
+  top: 4px;
+  left: 18px;
+  height: 24px;
+  bottom: 11px;
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 30px;
+}
+.navBar-link_searchSVG {
+  position: absolute;
+  right: 10px;
+}
+.navBar-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.navBar-right_button {
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 23px;
+  margin-left: 40px;
+  height: 38px;
+  text-transform: uppercase;
+  font-family: "Sora", sans-serif;
+  border-radius: 38px;
+  width: 135px;
+  background-color: #FF0000;
+}
+.navBar-right_button:hover {
+  color: rgba(0, 0, 0, 0.94);
+}
+
+/*# sourceMappingURL=store.css.map */
