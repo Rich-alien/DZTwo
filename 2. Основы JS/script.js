@@ -485,11 +485,46 @@ let deleteExcess = () => {
         }
     }
 }
+
 function main() {
     filterEngineer();
     sortSalary();
     deleteExcess();
     console.log(result);
 }
+
 main();
-// 2 задание
+// 2 задание\
+let allPositions,
+    positions,
+    countPositions = [];
+let filterPosition = () => {
+    return allPositions = employees.map(item => item.position);
+}
+let newPositions = (positions) => {
+    countPositions = positions.map((item) => {
+        return {
+            'position': item,
+            'count': 0,
+        }
+    })
+}
+let endResult = (allPositions, positions) => {
+    for (let i = 0; i < positions.length; i++) {
+        for (let j = 0; j < allPositions.length; j++) {
+            if (positions[i].position === allPositions[j]) {
+                positions[i].count++;
+            }
+        }
+    }
+}
+
+function mainTwo() {
+    filterPosition();
+    positions = allPositions.filter((item, index) => allPositions.indexOf(item) === index);
+    newPositions(positions);
+    endResult(allPositions, countPositions);
+    console.log(countPositions)
+}
+
+mainTwo();
