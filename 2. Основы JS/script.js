@@ -484,25 +484,25 @@ let filterPosition = (positions) => {
     let uniqueSet = new Set(positions.map(
         item => item.position
     ));
-    return count([...uniqueSet]);
+    return [...uniqueSet];
 
 }
-let count = (positions) => {
-    return  positions.map((item) => {
-        return {
-            'position': item,
-            'count': 0
-        }
-    })
-}
-let endResult = (allPositions, positions) => {
-    for (let i = 0; i < positions.length; i++) {
-        for (let j = 0; j < allPositions.length; j++) {
-            if (positions[i].position === allPositions[j]) {
-                positions[i].count++;
-            }
+let count = (positions) => positions.map((item) => {
+    return {
+        'position': item,
+        'count': getCount(employees, item),
+    }
+})
+
+
+let getCount = (employees, position) => {
+    let count = 0
+    for (let j = 0; j < employees.length; j++) {
+        if (position === employees[j].position) {
+            count++;
         }
     }
+    return count;
 }
+console.log(count(filterPosition(employees)));
 
-console.log(filterPosition(employees));
