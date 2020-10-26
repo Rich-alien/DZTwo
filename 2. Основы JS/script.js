@@ -480,20 +480,18 @@ function main() {
 
 main();
 // 2 задание\
-
-
 let filterPosition = (positions) => {
-  let uniqueSet = new Set(positions.map(
+    let uniqueSet = new Set(positions.map(
         item => item.position
     ));
-    return [...uniqueSet];
+    return count([...uniqueSet]);
 
 }
-let newPositions = (positions) => {
-    const countPositions = positions.map((item) => {
+let count = (positions) => {
+    return  positions.map((item) => {
         return {
             'position': item,
-            'count': 0,
+            'count': 0
         }
     })
 }
