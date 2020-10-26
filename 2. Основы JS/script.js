@@ -1,3 +1,5 @@
+// import {employees} from './data';
+// не работает даже после обновы node.js
 let employees = [{
     "name": "Alex",
     "surname": "Yavkin",
@@ -450,23 +452,6 @@ let employees = [{
     "salary": 17600
 }];
 
-
-/**
- * Employee example object
- * hireDate - from 01/01/2011 to 01/01/2019
- * birthday - from 01/01/1981 to 01/01/1993
- * salary - from 10000 to 35000
- */
-let employee = {
-    name: '',
-    surname: '',
-    hireDate: '2/14/2013',
-    salary: 20000,
-    gender: 'male',
-    birthday: '01/12/1990',
-    position: 'engineer',
-    department: 'UX'
-}
 // 1 задание
 let result;
 let filterEngineer = () => {
@@ -490,19 +475,22 @@ function main() {
     filterEngineer();
     sortSalary();
     deleteExcess();
-    console.log(result);
+    // console.log(result);
 }
 
 main();
 // 2 задание\
-let allPositions,
-    positions,
-    countPositions = [];
-let filterPosition = () => {
-    return allPositions = employees.map(item => item.position);
+
+
+let filterPosition = (positions) => {
+  let uniqueSet = new Set(positions.map(
+        item => item.position
+    ));
+    return [...uniqueSet];
+
 }
 let newPositions = (positions) => {
-    countPositions = positions.map((item) => {
+    const countPositions = positions.map((item) => {
         return {
             'position': item,
             'count': 0,
@@ -519,12 +507,4 @@ let endResult = (allPositions, positions) => {
     }
 }
 
-function mainTwo() {
-    filterPosition();
-    positions = allPositions.filter((item, index) => allPositions.indexOf(item) === index);
-    newPositions(positions);
-    endResult(allPositions, countPositions);
-    console.log(countPositions)
-}
-
-mainTwo();
+console.log(filterPosition(employees));
