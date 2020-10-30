@@ -20,40 +20,39 @@ body
   flex-direction: column
   height: 1024px
 
-  &-main
+.banner
+  display: flex
+  align-items: center
+  justify-content: center
+  &__text
+    font-family: 'Shojumaru', cursive
+    margin-top: 300px
+    color: $white
+    font-size: 183px
+    line-height: 242px
+
+  &__drop
+    margin-bottom: 66px
+    margin-top: 301px
     display: flex
     align-items: center
     justify-content: center
-
-    &__text
-      font-family: 'Shojumaru', cursive
-      margin-top: 300px
-      color: $white
-      font-size: 183px
-      line-height: 242px
-
-    &__drop
-      margin-bottom: 66px
-      margin-top: 301px
-      display: flex
-      align-items: center
-      justify-content: center
-      animation: 1s ease infinite pulse
-      @keyframes pulse
-        0%
-          transform: translateY(1px)
-        10%
-          transform: translateY(2px)
-        20%
-          transform: translateY(4px)
-        30%
-          transform: translateY(8px)
-        40%
-          transform: translateY(12px)
-        50%
-          transform: translateY(14px)
-        100%
-          transform: translateY(0px)
+    animation: 1s ease infinite pulse
+    @keyframes pulse
+      0%
+        transform: translateY(1px)
+      10%
+        transform: translateY(2px)
+      20%
+        transform: translateY(4px)
+      30%
+        transform: translateY(8px)
+      40%
+        transform: translateY(12px)
+      50%
+        transform: translateY(14px)
+      100%
+        transform: translateY(0px)
 
 .header
   min-width: 1196px

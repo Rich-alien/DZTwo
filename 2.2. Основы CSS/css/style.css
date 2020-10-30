@@ -21,19 +21,20 @@ body {
   flex-direction: column;
   height: 1024px;
 }
-.container-main {
+
+.banner {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.container-main__text {
+.banner__text {
   font-family: "Shojumaru", cursive;
   margin-top: 300px;
   color: #FFFFFF;
   font-size: 183px;
   line-height: 242px;
 }
-.container-main__drop {
+.banner__drop {
   margin-bottom: 66px;
   margin-top: 301px;
   display: flex;
