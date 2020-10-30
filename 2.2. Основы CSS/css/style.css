@@ -26,14 +26,14 @@ body {
   align-items: center;
   justify-content: center;
 }
-.header-main_text {
+.header-main__text {
   font-family: "Shojumaru", cursive;
   margin-top: 300px;
   color: #FFFFFF;
   font-size: 183px;
   line-height: 242px;
 }
-.header-dropDown {
+.header-drop {
   margin-bottom: 66px;
   margin-top: 301px;
   display: flex;
@@ -132,9 +132,9 @@ body {
   align-items: center;
   height: 100%;
 }
-.navBar-right_button {
-  cursor: pointer;
+.navBar-button {
   color: #FFFFFF;
+  cursor: pointer;
   font-size: 18px;
   line-height: 23px;
   margin-left: 40px;
@@ -145,11 +145,11 @@ body {
   width: 135px;
   background-color: #FF0000;
 }
-.navBar-right_button:hover {
+.navBar-button:hover {
   color: rgba(0, 0, 0, 0.94);
 }
 
-.transitionBlock {
+.transition-block {
   position: absolute;
   bottom: 0;
   width: 100%;
