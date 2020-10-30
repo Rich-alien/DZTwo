@@ -65,7 +65,7 @@ body {
   }
 }
 
-.navBar {
+.nav {
   min-width: 1196px;
   margin: 40px auto 0;
   height: 38px;
@@ -73,11 +73,11 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.navBar-left {
+.nav-left {
   display: flex;
   align-items: center;
 }
-.navBar-left__link {
+.nav-left__link {
   display: flex;
   min-width: 512px;
   margin-left: 105px;
@@ -86,24 +86,24 @@ body {
   align-items: center;
   height: 100%;
 }
-.navBar-left__li {
+.nav-left__li {
   list-style-type: none;
 }
-.navBar-left__href {
+.nav-left__href {
   color: #FFFFFF;
   text-decoration: none;
   font-family: "Sora", sans-serif;
   line-height: 30px;
 }
-.navBar-left__href:hover {
+.nav-left__href:hover {
   color: #FF0000;
 }
-.navBar-left__label {
+.nav-left__label {
   display: flex;
   align-items: center;
   position: relative;
 }
-.navBar-left__search {
+.nav-left__search {
   background-color: transparent;
   padding-left: 10px;
   width: 224px;
@@ -112,7 +112,7 @@ body {
   height: 38px;
   color: #FFFFFF;
 }
-.navBar-left__text {
+.nav-left__text {
   position: absolute;
   top: 4px;
   left: 18px;
@@ -122,17 +122,17 @@ body {
   font-size: 24px;
   line-height: 30px;
 }
-.navBar-left__svg {
+.nav-left__svg {
   position: absolute;
   right: 10px;
 }
-.navBar-right {
+.nav-right {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-.navBar-button {
+.nav-button {
   color: #FFFFFF;
   cursor: pointer;
   font-size: 18px;
@@ -145,7 +145,7 @@ body {
   width: 135px;
   background-color: #FF0000;
 }
-.navBar-button:hover {
+.nav-button:hover {
   color: rgba(0, 0, 0, 0.94);
 }
 
