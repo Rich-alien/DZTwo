@@ -77,7 +77,7 @@ body {
   display: flex;
   align-items: center;
 }
-.navBar-link {
+.navBar-left__link {
   display: flex;
   min-width: 512px;
   margin-left: 105px;
@@ -86,32 +86,33 @@ body {
   align-items: center;
   height: 100%;
 }
-.navBar-link_li {
+.navBar-left__li {
   list-style-type: none;
 }
-.navBar-link_a {
+.navBar-left__href {
   color: #FFFFFF;
   text-decoration: none;
   font-family: "Sora", sans-serif;
   line-height: 30px;
 }
-.navBar-link_a:hover {
+.navBar-left__href:hover {
   color: #FF0000;
 }
-.navBar-link_label {
+.navBar-left__label {
   display: flex;
   align-items: center;
   position: relative;
 }
-.navBar-link_search {
+.navBar-left__search {
   background-color: transparent;
+  padding-left: 10px;
   width: 224px;
   border: 2px solid #FFFFFF;
   border-radius: 25px;
   height: 38px;
   color: #FFFFFF;
 }
-.navBar-link_searchH {
+.navBar-left__text {
   position: absolute;
   top: 4px;
   left: 18px;
@@ -121,7 +122,7 @@ body {
   font-size: 24px;
   line-height: 30px;
 }
-.navBar-link_searchSVG {
+.navBar-left__svg {
   position: absolute;
   right: 10px;
 }

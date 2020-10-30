@@ -67,41 +67,42 @@ body
     display: flex
     align-items: center
 
-  &-link
-    display: flex
-    min-width: 512px
-    margin-left: 105px
-    flex-direction: row
-    justify-content: space-between
-    align-items: center
-    height: 100%
+    &__link
+      display: flex
+      min-width: 512px
+      margin-left: 105px
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      height: 100%
 
-    &_li
+    &__li
       list-style-type: none
 
-    &_a
+    &__href
       color: $white
       text-decoration: none
       font-family: 'Sora', sans-serif
       line-height: 30px
 
-    &_a:hover
+    &__href:hover
       color: $red
 
-    &_label
+    &__label
       display: flex
       align-items: center
       position: relative
 
-    &_search
+    &__search
       background-color: transparent
+      padding-left: 10px
       width: 224px
       border: 2px solid #FFFFFF
       border-radius: 25px
       height: 38px
       color: $white
 
-    &_searchH
+    &__text
       position: absolute
       top: 4px
       left: 18px
@@ -111,7 +112,7 @@ body
       font-size: 24px
       line-height: 30px
 
-    &_searchSVG
+    &__svg
       position: absolute
       right: 10px
 
