@@ -31,28 +31,28 @@ body
     font-size: 183px
     line-height: 242px
 
-  &__drop
-    margin-bottom: 66px
-    margin-top: 301px
-    display: flex
-    align-items: center
-    justify-content: center
-    animation: 1s ease infinite pulse
-    @keyframes pulse
-      0%
-        transform: translateY(1px)
-      10%
-        transform: translateY(2px)
-      20%
-        transform: translateY(4px)
-      30%
-        transform: translateY(8px)
-      40%
-        transform: translateY(12px)
-      50%
-        transform: translateY(14px)
-      100%
-        transform: translateY(0px)
+drop
+  margin-bottom: 66px
+  margin-top: 301px
+  display: flex
+  align-items: center
+  justify-content: center
+  animation: 1s ease infinite pulse
+  @keyframes pulse
+    0%
+      transform: translateY(1px)
+    10%
+      transform: translateY(2px)
+    20%
+      transform: translateY(4px)
+    30%
+      transform: translateY(8px)
+    40%
+      transform: translateY(12px)
+    50%
+      transform: translateY(14px)
+    100%
+      transform: translateY(0px)
 
 .header
   min-width: 1196px
@@ -165,40 +165,40 @@ body
     &_img
       margin: 48px auto 0
 
-  &-littleBlock
+  &-mini
     width: 492px
     display: flex
     flex-wrap: wrap
 
-  &-BigBlock
+  &-big
     width: 710px
     height: 380px
     background-color: $white
     border-radius: 5px
 
-  &-BigBlockTop
-    display: flex
-    justify-content: space-between
-    align-items: center
-    margin-top: 90px
+    &__top
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-top: 90px
 
-    &_svg
-      cursor: pointer
+      &-svg
+        cursor: pointer
 //понять как лучше задать!
 //&_svg:hover
 //  fill: $red
-.headerCategory
+.select
   display: flex
   flex-direction: column
   min-width: 1196px
   margin: 154px auto 0
   justify-content: flex-start
 
-  &_notification
+  &-notification
     display: flex
     align-items: center
 
-    &-text
+    &__text
       font-size: 24px
       line-height: 30px
       letter-spacing: 0.06em
@@ -206,12 +206,12 @@ body
       font-family: 'Sora', sans-serif
       margin-left: 7px
 
-  &_year
+  &-year
     display: flex
     margin-top: 17px
     justify-content: space-between
 
-    &-a
+    &__href
       color: $white
       text-decoration: none
       font-family: 'Sora', sans-serif
@@ -223,7 +223,7 @@ body
       border-top: 3px solid $white
       width: 100%
 
-    &-a:hover
+    &__href:hover
       //transition-duration: 0.5s
       border-left: 3px solid $white
       border-right: 3px solid $white

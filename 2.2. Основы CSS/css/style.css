@@ -34,7 +34,8 @@ body {
   font-size: 183px;
   line-height: 242px;
 }
-.banner__drop {
+
+drop {
   margin-bottom: 66px;
   margin-top: 301px;
   display: flex;
@@ -180,39 +181,39 @@ body {
 .cell-product_img {
   margin: 48px auto 0;
 }
-.cell-littleBlock {
+.cell-mini {
   width: 492px;
   display: flex;
   flex-wrap: wrap;
 }
-.cell-BigBlock {
+.cell-big {
   width: 710px;
   height: 380px;
   background-color: #FFFFFF;
   border-radius: 5px;
 }
-.cell-BigBlockTop {
+.cell-big__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 90px;
 }
-.cell-BigBlockTop_svg {
+.cell-big__top-svg {
   cursor: pointer;
 }
 
-.headerCategory {
+.select {
   display: flex;
   flex-direction: column;
   min-width: 1196px;
   margin: 154px auto 0;
   justify-content: flex-start;
 }
-.headerCategory_notification {
+.select-notification {
   display: flex;
   align-items: center;
 }
-.headerCategory_notification-text {
+.select-notification__text {
   font-size: 24px;
   line-height: 30px;
   letter-spacing: 0.06em;
@@ -220,12 +221,12 @@ body {
   font-family: "Sora", sans-serif;
   margin-left: 7px;
 }
-.headerCategory_year {
+.select-year {
   display: flex;
   margin-top: 17px;
   justify-content: space-between;
 }
-.headerCategory_year-a {
+.select-year__href {
   color: #FFFFFF;
   text-decoration: none;
   font-family: "Sora", sans-serif;
@@ -237,7 +238,7 @@ body {
   border-top: 3px solid #FFFFFF;
   width: 100%;
 }
-.headerCategory_year-a:hover {
+.select-year__href:hover {
   border-left: 3px solid #FFFFFF;
   border-right: 3px solid #FFFFFF;
   border-top: none;
