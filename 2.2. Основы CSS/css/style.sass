@@ -137,11 +137,14 @@ drop
   background-color: $black
   height: 980px
 
-.cell
+.main-container
   display: flex
   max-width: 1440px
   margin: 80px auto 0
-
+.cell
+  width: 492px
+  display: flex
+  flex-wrap: wrap
   &-product
     background-color: $white
     border-radius: 5px
@@ -152,8 +155,7 @@ drop
     display: flex
     justify-content: center
     flex-direction: column
-
-    &_name
+    &__name
       display: flex
       margin-top: 42px
       margin-left: 8px
@@ -161,29 +163,22 @@ drop
       font-family: 'Sora', sans-serif
       font-weight: normal
       font-size: 14px
-
-    &_img
+    &__img
       margin: 48px auto 0
 
-  &-mini
-    width: 492px
+
+.slider
+  width: 710px
+  height: 380px
+  background-color: $white
+  border-radius: 5px
+  &-top
     display: flex
-    flex-wrap: wrap
-
-  &-big
-    width: 710px
-    height: 380px
-    background-color: $white
-    border-radius: 5px
-
-    &__top
-      display: flex
-      justify-content: space-between
-      align-items: center
-      margin-top: 90px
-
-      &-svg
-        cursor: pointer
+    justify-content: space-between
+    align-items: center
+    margin-top: 90px
+    &__svg
+      cursor: pointer
 //понять как лучше задать!
 //&_svg:hover
 //  fill: $red
