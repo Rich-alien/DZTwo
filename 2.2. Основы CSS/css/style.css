@@ -33,7 +33,7 @@ body {
   font-size: 183px;
   line-height: 242px;
 }
-.container-drop {
+.container-main__drop {
   margin-bottom: 66px;
   margin-top: 301px;
   display: flex;
