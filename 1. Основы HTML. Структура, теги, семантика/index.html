@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header">
-    <nav class="nav">
-        <div class="nav-left">
-            <div class="nav-left__logo">
+<div class="container">
+    <header class="header">
+        <div class="header-left">
+            <div class="header-logo">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="18.0001" cy="18" r="18" fill="white"/>
                     <line x1="4.14548" y1="6.36201" x2="17.9544" y2="15.3492" stroke="#FF0000" stroke-width="2"/>
@@ -26,26 +26,24 @@
                     <line x1="16.6" y1="36.0001" x2="16.6" y2="9.15527e-05" stroke="#FF0000" stroke-width="4"/>
                 </svg>
             </div>
-            <ul class="nav-left__link">
-                <li class="nav-left__li"><a class="nav-left__href" href="index.html">Home</a></li>
-                <li class="nav-left__li"><a class="nav-left__href" href="Storetore.html">Store</a></li>
-                <li class="nav-left__li"><a class="nav-left__href" href="#">News</a></li>
-                <li class="nav-left__li">    <label class="nav-left__label">
-                    <input class="nav-left__search"  placeholder="Search..." type="search">
-<!--                    через js задать ограничитель по кол-во символов-->
-<!--                    <h3 class="navBar-left__text">Search...</h3>-->
-                    <svg class="nav-left__svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            <nav class="header-nav">
+                <a class="header-nav__href" href="index.html">Home</a>
+                <a class="header-nav__href" href="Storetore.html">Store</a>
+                <a class="header-nav__href" href="#">News</a>
+                <label class="header-search">
+                    <input class="header-search__input" placeholder="Search..." type="search">
+                    <!--                    через js задать ограничитель по кол-во символов-->
+                    <!--                    <h3 class="navBar-left__text">Search...</h3>-->
+                    <svg class="header-search__svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.5764 18.9986L12.8089 14.2326C10.6525 15.655 7.76938 15.215 6.13553 13.2141C4.50168 11.2133 4.64715 8.30073 6.47224 6.4726C8.30023 4.64699 11.2134 4.50091 13.2149 6.13449C15.2164 7.76806 15.6567 10.6512 14.234 12.8076L18.9995 17.5756L17.5764 18.9986ZM10.0326 7.01259C8.5917 7.01168 7.35081 8.02862 7.06879 9.4415C6.78676 10.8544 7.54216 12.2697 8.87301 12.822C10.2039 13.3742 11.7395 12.9095 12.5408 11.7121C13.3422 10.5147 13.186 8.91806 12.1678 7.8986C11.603 7.32994 10.8341 7.0109 10.0326 7.01259Z"
                               fill="white"/>
                     </svg>
                 </label>
-                </li>
-            </ul>
+            </nav>
         </div>
-        <!--        !navBar-left        -->
-        <div class="nav-right">
-            <div class="nav-cart">
+        <div class="header-right">
+            <div class="header-cart">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
                         <path d="M10.4826 19.6694C9.27027 19.6694 8.28394 20.6557 8.28394 21.8681C8.28394 23.0804 9.27027 24.0667 10.4826 24.0667C11.695 24.0667 12.6813 23.0804 12.6813 21.8681C12.6813 20.6557 11.6949 19.6694 10.4826 19.6694ZM10.4826 22.839C9.94717 22.839 9.51157 22.4034 9.51157 21.868C9.51157 21.3325 9.94722 20.8969 10.4826 20.8969C11.018 20.8969 11.4537 21.3326 11.4537 21.868C11.4537 22.4035 11.018 22.839 10.4826 22.839Z"
@@ -64,24 +62,25 @@
                     </defs>
                 </svg>
             </div>
-            <button class="nav-button">
+            <button class="header-button">
                 sign in
             </button>
         </div>
-        <!--        !navBar-right        -->
-    </nav>
-    <div class="header-main">
-        <h1 class="header-main__text">Japan</h1>
-    </div>
-    <div class="header-drop">
-        <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 1.14343L10 8L20 1.14343L18.3335 0L10 5.71475L1.66647 0L0 1.14343Z" fill="white"/>
-            <path d="M0 20.0005L10 26L20 20.0005L18.3335 19L10 24.0004L1.66647 19L0 20.0005Z" fill="white"/>
-            <path d="M0 11.0005L10 17L20 11.0005L18.3335 10L10 15.0004L1.66647 10L0 11.0005Z" fill="white"/>
-        </svg>
-    </div>
-    <div class="transition-block"></div>
-</header>
+    </header>
+    <!--        !header       -->
+    <!--    <div class="header-main">-->
+    <!--        <h1 class="header-main__text">Japan</h1>-->
+    <!--    </div>-->
+    <!--    <div class="header-drop">-->
+    <!--        <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+    <!--            <path d="M0 1.14343L10 8L20 1.14343L18.3335 0L10 5.71475L1.66647 0L0 1.14343Z" fill="white"/>-->
+    <!--            <path d="M0 20.0005L10 26L20 20.0005L18.3335 19L10 24.0004L1.66647 19L0 20.0005Z" fill="white"/>-->
+    <!--            <path d="M0 11.0005L10 17L20 11.0005L18.3335 10L10 15.0004L1.66647 10L0 11.0005Z" fill="white"/>-->
+    <!--        </svg>-->
+    <!--    </div>-->
+    <!--    <div class="transition-block"></div>-->
+    <!--</div>-->
+</div>
 <main class="main">
     <nav class="nav">
         <div class="nav-left">
@@ -101,8 +100,8 @@
                 <li class="nav-left__li"><a class="nav-left__href" href="index.html">Home</a></li>
                 <li class="nav-left__li"><a class="nav-left__href" href="Storetore.html">Store</a></li>
                 <li class="nav-left__li"><a class="nav-left__href" href="#">News</a></li>
-                <li class="nav-left__li">    <label class="nav-left__label">
-                    <input class="nav-left__search"  placeholder="Search..." type="search">
+                <li class="nav-left__li"><label class="nav-left__label">
+                    <input class="nav-left__search" placeholder="Search..." type="search">
                     <!--                    через js задать ограничитель по кол-во символов-->
                     <!--                    <h3 class="navBar-left__text">Search...</h3>-->
                     <svg class="nav-left__svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -142,7 +141,7 @@
         <!--        !navBar-right        -->
     </nav>
     <div class="cell">
-        <div class="cell-littleBlock">
+        <div class="cell-mini">
             <div class="cell-product">
                 <img src="imgroduct1.png" alt="картинка товара" class="cell-product_img">
                 <p class="cell-product_name">Top100</p>
@@ -160,7 +159,7 @@
                 <p class="cell-product_name">Hot</p>
             </div>
         </div>
-        <div class="cell-BigBlock">
+        <div class="cell-big">
             <div class="cell-BigBlockTop">
                 <svg class="cell-BigBlockTop_svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
                      xmlns="http://www.w3.org/2000/svg">

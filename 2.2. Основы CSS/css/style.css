@@ -12,7 +12,7 @@ body {
   width: 100%;
 }
 
-.header {
+.container {
   background-image: url("../../1. Основы HTML. Структура, теги, семантика/img/headerBG.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,19 +21,19 @@ body {
   flex-direction: column;
   height: 1024px;
 }
-.header-main {
+.container-main {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.header-main__text {
+.container-main__text {
   font-family: "Shojumaru", cursive;
   margin-top: 300px;
   color: #FFFFFF;
   font-size: 183px;
   line-height: 242px;
 }
-.header-drop {
+.container-drop {
   margin-bottom: 66px;
   margin-top: 301px;
   display: flex;
@@ -65,7 +65,7 @@ body {
   }
 }
 
-.nav {
+.header {
   min-width: 1196px;
   margin: 40px auto 0;
   height: 38px;
@@ -73,11 +73,11 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.nav-left {
+.header-left {
   display: flex;
   align-items: center;
 }
-.nav-left__link {
+.header-nav {
   display: flex;
   min-width: 512px;
   margin-left: 105px;
@@ -86,24 +86,21 @@ body {
   align-items: center;
   height: 100%;
 }
-.nav-left__li {
-  list-style-type: none;
-}
-.nav-left__href {
+.header-nav__href {
   color: #FFFFFF;
   text-decoration: none;
   font-family: "Sora", sans-serif;
   line-height: 30px;
 }
-.nav-left__href:hover {
+.header-nav__href:hover {
   color: #FF0000;
 }
-.nav-left__label {
+.header-search {
   display: flex;
   align-items: center;
   position: relative;
 }
-.nav-left__search {
+.header-search__input {
   background-color: transparent;
   padding-left: 10px;
   width: 224px;
@@ -112,27 +109,17 @@ body {
   height: 38px;
   color: #FFFFFF;
 }
-.nav-left__text {
-  position: absolute;
-  top: 4px;
-  left: 18px;
-  height: 24px;
-  bottom: 11px;
-  color: #FFFFFF;
-  font-size: 24px;
-  line-height: 30px;
-}
-.nav-left__svg {
+.header-search__svg {
   position: absolute;
   right: 10px;
 }
-.nav-right {
+.header-right {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-.nav-button {
+.header-button {
   color: #FFFFFF;
   cursor: pointer;
   font-size: 18px;
@@ -145,7 +132,7 @@ body {
   width: 135px;
   background-color: #FF0000;
 }
-.nav-button:hover {
+.header-button:hover {
   color: rgba(0, 0, 0, 0.94);
 }
 

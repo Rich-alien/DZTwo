@@ -11,7 +11,7 @@ body
   height: 100%
   width: 100%
 
-.header
+.container
   background-image: url("../../1. Основы HTML. Структура, теги, семантика/img/headerBG.png")
   background-size: cover
   background-repeat: no-repeat
@@ -55,7 +55,7 @@ body
       100%
         transform: translateY(0px)
 
-.nav
+.header
   min-width: 1196px
   margin: 40px auto 0
   height: 38px
@@ -67,17 +67,14 @@ body
     display: flex
     align-items: center
 
-    &__link
-      display: flex
-      min-width: 512px
-      margin-left: 105px
-      flex-direction: row
-      justify-content: space-between
-      align-items: center
-      height: 100%
-
-    &__li
-      list-style-type: none
+  &-nav
+    display: flex
+    min-width: 512px
+    margin-left: 105px
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    height: 100%
 
     &__href
       color: $white
@@ -88,12 +85,12 @@ body
     &__href:hover
       color: $red
 
-    &__label
-      display: flex
-      align-items: center
-      position: relative
+  &-search
+    display: flex
+    align-items: center
+    position: relative
 
-    &__search
+    &__input
       background-color: transparent
       padding-left: 10px
       width: 224px
@@ -101,16 +98,6 @@ body
       border-radius: 25px
       height: 38px
       color: $white
-
-    &__text
-      position: absolute
-      top: 4px
-      left: 18px
-      height: 24px
-      bottom: 11px
-      color: $white
-      font-size: 24px
-      line-height: 30px
 
     &__svg
       position: absolute
@@ -123,31 +110,34 @@ body
     height: 100%
 
   &-button
-      color: $white
-      cursor: pointer
-      font-size: 18px
-      line-height: 23px
-      margin-left: 40px
-      height: 38px
-      text-transform: uppercase
-      font-family: 'Sora', sans-serif
-      border-radius: 38px
-      width: 135px
-      background-color: $red
+    color: $white
+    cursor: pointer
+    font-size: 18px
+    line-height: 23px
+    margin-left: 40px
+    height: 38px
+    text-transform: uppercase
+    font-family: 'Sora', sans-serif
+    border-radius: 38px
+    width: 135px
+    background-color: $red
 
   &-button:hover
-      color: $black
+    color: $black
+
 .transition-block
   position: absolute
   bottom: 0
   width: 100%
   height: 66px
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(6, 4, 4, 0.2) 22.92%, rgba(5, 3, 3, 0.4) 38.02%, rgba(5, 3, 3, 0.6) 56.25%, rgba(4, 3, 3, 0.8) 76.04%, #0D0D0D 99.48%), rgba(55, 55, 54, 0.33)
+
 .main
   display: flex
   flex-direction: column
   background-color: $black
   height: 980px
+
 .cell
   display: flex
   max-width: 1440px
@@ -163,6 +153,7 @@ body
     display: flex
     justify-content: center
     flex-direction: column
+
     &_name
       display: flex
       margin-top: 42px
@@ -171,6 +162,7 @@ body
       font-family: 'Sora', sans-serif
       font-weight: normal
       font-size: 14px
+
     &_img
       margin: 48px auto 0
 
@@ -178,30 +170,35 @@ body
     width: 492px
     display: flex
     flex-wrap: wrap
+
   &-BigBlock
     width: 710px
     height: 380px
     background-color: $white
     border-radius: 5px
+
   &-BigBlockTop
     display: flex
     justify-content: space-between
     align-items: center
     margin-top: 90px
+
     &_svg
       cursor: pointer
-    //понять как лучше задать!
-    //&_svg:hover
-    //  fill: $red
+//понять как лучше задать!
+//&_svg:hover
+//  fill: $red
 .headerCategory
   display: flex
   flex-direction: column
   min-width: 1196px
   margin: 154px auto 0
   justify-content: flex-start
+
   &_notification
     display: flex
     align-items: center
+
     &-text
       font-size: 24px
       line-height: 30px
@@ -209,10 +206,12 @@ body
       color: $white
       font-family: 'Sora', sans-serif
       margin-left: 7px
+
   &_year
     display: flex
     margin-top: 17px
     justify-content: space-between
+
     &-a
       color: $white
       text-decoration: none
@@ -224,16 +223,19 @@ body
       letter-spacing: 0.40em
       border-top: 3px solid $white
       width: 100%
+
     &-a:hover
       //transition-duration: 0.5s
       border-left: 3px solid $white
       border-right: 3px solid $white
       border-top: none
+
 .footer
   background-color: $black
   display: flex
   flex-direction: column
   height: 980px
+
   &_top
     display: flex
     //background-image: url("../img/footer.png")
@@ -247,6 +249,7 @@ body
     //position: relative
     &-img
       width: 100%
+
   &_bottom
     background-color: black
     height: 488px
