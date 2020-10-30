@@ -25,7 +25,6 @@
       <change beforePath="$PROJECT_DIR$/2.2. Основы CSS/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/2.2. Основы CSS/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2.2. Основы CSS/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/2.2. Основы CSS/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2.2. Основы CSS/css/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/2.2. Основы CSS/css/style.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3. Основы CSS/css/style.css.map" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,35 +96,7 @@
       <workItem from="1603741975955" duration="7256000" />
       <workItem from="1603749821532" duration="884000" />
       <workItem from="1603889753653" duration="1750000" />
-      <workItem from="1604046215198" duration="6628000" />
-    </task>
-    <task id="LOCAL-00027" summary="style for cell">
-      <created>1603376728887</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1603376728887</updated>
-    </task>
-    <task id="LOCAL-00028" summary="git">
-      <created>1603376769262</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1603376769262</updated>
-    </task>
-    <task id="LOCAL-00029" summary="watcher">
-      <created>1603376784638</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1603376784638</updated>
-    </task>
-    <task id="LOCAL-00030" summary="watcher">
-      <created>1603376789152</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1603376789152</updated>
+      <workItem from="1604046215198" duration="9697000" />
     </task>
     <task id="LOCAL-00031" summary="img and svg for slider">
       <created>1603408899749</created>
@@ -442,7 +413,35 @@
       <option name="project" value="LOCAL" />
       <updated>1604052374227</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="refactoring banner">
+      <created>1604053055706</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1604053055707</updated>
+    </task>
+    <task id="LOCAL-00077" summary="add">
+      <created>1604053334226</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1604053334226</updated>
+    </task>
+    <task id="LOCAL-00078" summary="add">
+      <created>1604053339101</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1604053339101</updated>
+    </task>
+    <task id="LOCAL-00079" summary="rename class in main">
+      <created>1604062698710</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1604062698710</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,9 +461,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="git comment" />
-    <MESSAGE value="add href in navbar" />
-    <MESSAGE value="move to main folder" />
     <MESSAGE value="style for choice" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="2 lab starter" />
@@ -487,7 +483,10 @@
     <MESSAGE value="moved*" />
     <MESSAGE value="refactoring and rename header" />
     <MESSAGE value="refactoring container" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring container" />
+    <MESSAGE value="refactoring banner" />
+    <MESSAGE value="add" />
+    <MESSAGE value="rename class in main" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename class in main" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="218" key="#Inspections" timestamp="1603742004665">
@@ -574,9 +573,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="285" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603284173778" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604052837960">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604062811299">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604052837960" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604062811299" />
   </component>
 </project>

@@ -250,13 +250,15 @@ drop {
   flex-direction: column;
   height: 980px;
 }
-.footer_top {
+
+.top {
   display: flex;
 }
-.footer_top-img {
+.top-img {
   width: 100%;
 }
-.footer_bottom {
+
+.bottom {
   background-color: black;
   height: 488px;
 }
