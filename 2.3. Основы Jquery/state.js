@@ -2,13 +2,10 @@ let requestURL = 'http://localhost:3000/items';
 let request = new XMLHttpRequest();
 let counter = 1;
 let chooseItem = 0; // id выбранного товара в каталоге
-let CONTAINER = document.getElementById("container"),
-    IMG = document.getElementsByClassName("product-img"),
-    btnPlus = document.getElementById("plus"),
-// btnPlus =  document.getElementsById("btn-plus"),
+let btnPlus = document.getElementById("plus"),
     btnMinus = document.getElementById("minus"),
-    btnAdd = document.getElementsByClassName("btn-add");
-// btnPlus =  document.getElementsByClassName("btn-plus"),
+    IMG = document.querySelector(".product-img"),
+    btnAdd = document.querySelector(".product-add");
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
@@ -24,7 +21,6 @@ function throwMyEvent(){
     }));
 }
 function updateCounter(){
-
     btnPlus.onclick = function () {
         if (counter < 10)
             counter++;
@@ -35,14 +31,27 @@ function updateCounter(){
     };
     document.querySelector('.count-product').innerText = counter;
 }
-document.body.addEventListener('myNewEvent',updateCounter)
-setInterval(throwMyEvent,200)
+function addInCart(){
+
+}
+
 let createObj = (obj, id) => {
     let showInPage = obj[id];
     let name = document.createElement("div");
     name.className = "someClass";
     let text = document.createTextNode(showInPage.name);
     name.appendChild(text);
-    // CONTAINER.insertBefore(IMG, name);
+    //вывод информации о товаре из db
+    document.querySelector('.product-name').innerText = obj[id].name;
+    document.querySelector('.product-country').innerText = obj[id].country;
+    document.querySelector('.product-year').innerText = obj[id].year_of_issue;
+    document.querySelector('.product-blade').innerText = obj[id].blade;
+    document.querySelector('.product-description').innerText = obj[id].description;
+    document.querySelector('.product-price').innerText = obj[id].priceForOne;
+
+
+
     console.log(IMG, name);
 }
+document.body.addEventListener('myNewEvent',updateCounter)
+setInterval(throwMyEvent,200)
