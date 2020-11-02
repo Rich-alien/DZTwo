@@ -9,7 +9,8 @@
     "blade": "iron",
     "description": "normalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormnormalnormalnormalnormalnormalnormalnormalnormalnormal",
     "priceForOne": 300,
-    "count": 10
+    "count": 10,
+    "allPrice": 0
   },
   {
     "id": 2,
