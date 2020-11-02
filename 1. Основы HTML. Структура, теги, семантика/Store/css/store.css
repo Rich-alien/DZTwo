@@ -1,126 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  border: none;
-  box-sizing: border-box;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 16 |   background-color: $blackS
+ *    |                     ^^^^^^^
+ *    '
+ *   ..\..\..\1. основы html. структура, теги, семантика\store\css\store.sass 16:21  root stylesheet */
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.94);
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 16 \2502    background-color: $blackS\d\a    \2502                      ^^^^^^^\a    \2575 \a   ..\\..\\..\\1. \43e \441 \43d \43e \432 \44b  html. \441 \442 \440 \443 \43a \442 \443 \440 \430 , \442 \435 \433 \438 , \441 \435 \43c \430 \43d \442 \438 \43a \430 \\store\\css\\store.sass 16:21  root stylesheet";
 }
-
-.navBar {
-  min-width: 1196px;
-  margin: 40px auto 0;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.navBar-left {
-  display: flex;
-  align-items: center;
-}
-.navBar-link {
-  display: flex;
-  min-width: 512px;
-  margin-left: 105px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-.navBar-link_li {
-  list-style-type: none;
-}
-.navBar-link_a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-family: "Sora", sans-serif;
-  line-height: 30px;
-}
-.navBar-link_a:hover {
-  color: #FF0000;
-}
-.navBar-link_label {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.navBar-link_search {
-  background-color: transparent;
-  width: 224px;
-  border: 2px solid #FFFFFF;
-  border-radius: 25px;
-  height: 38px;
-  color: #FFFFFF;
-}
-.navBar-link_searchH {
-  position: absolute;
-  top: 4px;
-  left: 18px;
-  height: 24px;
-  bottom: 11px;
-  color: #FFFFFF;
-  font-size: 24px;
-  line-height: 30px;
-}
-.navBar-link_searchSVG {
-  position: absolute;
-  right: 10px;
-}
-.navBar-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-.navBar-right_button {
-  cursor: pointer;
-  color: #FFFFFF;
-  font-size: 18px;
-  line-height: 23px;
-  margin-left: 40px;
-  height: 38px;
-  text-transform: uppercase;
-  font-family: "Sora", sans-serif;
-  border-radius: 38px;
-  width: 135px;
-  background-color: #FF0000;
-}
-.navBar-right_button:hover {
-  color: rgba(0, 0, 0, 0.94);
-}
-
-.catalog {
-  border-top: 5px solid #FFFFFF;
-  min-width: 1196px;
-  margin: 63px auto 0;
-}
-.catalog_choice {
-  margin-top: 14px;
-}
-.catalog_choice-leftUL {
-  display: flex;
-}
-.catalog_choice-leftLI {
-  list-style-type: none;
-  margin-right: 40px;
-}
-.catalog_choice-leftP {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-family: "Sora", sans-serif;
-  font-size: 18px;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-}
-
-/*# sourceMappingURL=store.css.map */
