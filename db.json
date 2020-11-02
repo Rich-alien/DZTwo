@@ -4,9 +4,9 @@
     "id": 1,
     "img": "url//",
     "name": "Xeon 3000over",
-    "Country": "Russia",
-    "Year of issue": 1970,
-    "Blade": "iron",
+    "country": "Russia",
+    "year_of_issue": 1970,
+    "blade": "iron",
     "description": "normalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormnormalnormalnormalnormalnormalnormalnormalnormalnormal",
     "priceForOne": 300,
     "count": 10
@@ -14,10 +14,10 @@
   {
     "id": 2,
     "img": "url//",
-    "name": "Xeon 3020over",
-    "Country": "Russia",
-    "Year of issue": 1970,
-    "Blade": "iron",
+    "name": "Xeon 3000over",
+    "country": "Russia",
+    "year_of_issue": 1970,
+    "blade": "iron",
     "description": "normalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormnormalnormalnormalnormalnormalnormalnormalnormalnormal",
     "priceForOne": 300,
     "count": 10
@@ -25,10 +25,10 @@
   {
     "id": 3,
     "img": "url//",
-    "name": "Xeon 3001over",
-    "Country": "Russia",
-    "Year of issue": 1970,
-    "Blade": "iron",
+    "name": "Xeon 3000over",
+    "country": "Russia",
+    "year_of_issue": 1970,
+    "blade": "iron",
     "description": "normalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormnormalnormalnormalnormalnormalnormalnormalnormalnormal",
     "priceForOne": 300,
     "count": 10
