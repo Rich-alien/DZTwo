@@ -1,0 +1,122 @@
+*
+  margin: 0
+  padding: 0
+  outline: none
+  border: none
+  //overflow: hidden
+  box-sizing: border-box
+
+
+body
+  background-color: black
+.container
+  display: flex
+  margin: 0 auto
+  flex-direction: column
+  height: 100vh
+  &_product
+    display: flex
+.header
+  min-width: 1196px
+  margin: 40px auto 0
+  height: 38px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  &-cart
+    cursor: pointer
+  &-left
+    display: flex
+    align-items: center
+
+  &-nav
+    display: flex
+    min-width: 512px
+    margin-left: 105px
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    height: 100%
+
+    &__href
+      color: #fff
+      text-decoration: none
+      font-family: 'Sora', sans-serif
+      line-height: 30px
+
+    &__href:hover
+      color: red
+
+  &-search
+    display: flex
+    align-items: center
+    position: relative
+
+    &__input
+      background-color: transparent
+      padding-left: 10px
+      width: 224px
+      border: 2px solid #FFFFFF
+      border-radius: 25px
+      height: 38px
+      color: #fff
+
+    &__svg
+      position: absolute
+      right: 10px
+
+  &-right
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100%
+
+  &-button
+    color: #fff
+    cursor: pointer
+    font-size: 18px
+    line-height: 23px
+    margin-left: 40px
+    height: 38px
+    text-transform: uppercase
+    font-family: 'Sora', sans-serif
+    border-radius: 38px
+    width: 135px
+    background-color: red
+
+  &-button:hover
+    color: black
+.main
+  color: white
+  margin: 0 auto
+  &_container
+    display: flex
+    margin-top: 144px
+.product
+  padding-left: 45px
+  width: 466px
+  height: 710px
+  background: #FFFFFF
+  border-radius: 10px
+  &-img
+    background-color: black
+    border-radius: 90%
+    height: 710px
+    border: 5px solid #FFFFFF
+    width: 710px
+    margin-right: 20px
+  &-name
+    color: black
+  &-description
+    display: flex
+    color: black
+    width: 365px
+    height: 65px
+    &__text
+      color: black
+  &-country
+    display: flex
+.btnUp
+  cursor: pointer
+  width: 100px
+  height: 100px
