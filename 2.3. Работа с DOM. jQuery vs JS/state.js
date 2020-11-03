@@ -33,10 +33,12 @@ function updateCounter() {
     btnPlus.onclick = function () {
         if (counter < 10)
             counter++;
+        setInterval(throwMyEvent, 200)
     };
     btnMinus.onclick = function () {
         if (counter > 1)
             counter = counter - 1;
+        setInterval(throwMyEvent, 200)
     };
     //arr.splice(0,arr.length); для очистки массива , точнее удалениея, но из за моих костылей ,он ужасно получиться
     btnHideCart.onclick = function () {
@@ -69,8 +71,10 @@ function updateCounter() {
                 price.innerHTML = `Price: ${cart[i].priceForOne * cart[i].count}`;
                 element.appendChild(price);
             }
+
         }
         click++
+
     }
     document.querySelector('.header-cart__count').innerText = cart.length;
     document.querySelector('.count-product').innerText = counter;
@@ -92,6 +96,7 @@ function dropInCart(obj) {
             count: counter,
         })
         return cart;
+        setInterval(throwMyEvent, 200);
     }
 }
 
@@ -117,4 +122,4 @@ let createObj = (obj, id) => {
 
 
 document.body.addEventListener('myNewEvent', updateCounter)
-setInterval(throwMyEvent, 200)
+// setInterval(throwMyEvent, 200)
