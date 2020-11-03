@@ -14,8 +14,6 @@ body
   margin: 0 auto
   flex-direction: column
   height: 100vh
-  &_product
-    display: flex
 .header
   min-width: 1196px
   margin: 40px auto 0
@@ -25,6 +23,16 @@ body
   justify-content: space-between
   &-cart
     cursor: pointer
+    display: flex
+    &__count
+      margin-left: 3px
+      border-radius: 90%
+      width: 20px
+      height: 20px
+      background-color: green
+      color: #fff
+      text-align: center
+
   &-left
     display: flex
     align-items: center
@@ -88,10 +96,11 @@ body
     color: black
 .main
   color: white
-  margin: 0 auto
-  &_container
+
+  &-container
     display: flex
-    margin-top: 144px
+    margin: 144px auto 0
+
 .product
   padding-left: 45px
   width: 466px
@@ -108,15 +117,48 @@ body
   &-name
     color: black
   &-description
-    display: flex
     color: black
-    width: 365px
+    width: auto
     height: 65px
     &__text
       color: black
   &-country
     display: flex
-.btnUp
-  cursor: pointer
-  width: 100px
-  height: 100px
+  &-add
+    background-color: green
+    width: 264px
+    height: 39px
+    border-radius: 10px
+    color: #FFFFFF
+    text-align: center
+    margin-left: 56px
+.btn
+  &-plus
+    width: 100px
+    height: 50px
+  &-minus
+    width: 100px
+    height: 50px
+.one-line
+  display: flex
+.b-popup
+  display: none
+  width: 100%
+  min-height: 100%
+  background-color: rgba(0,0,0,0.5)
+  overflow: hidden
+  position: fixed
+  top: 0
+
+.b-popup .b-popup-content
+  margin: 40px auto 0 auto
+  width: 1000px
+  height: 400px
+  padding: 10px
+  background-color: #c5c5c5
+  border-radius: 5px
+  box-shadow: 0 0 10px #000
+.btn-popUp
+  width: 25px
+  height: 25px
+  background-color: red
