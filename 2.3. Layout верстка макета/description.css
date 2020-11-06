@@ -226,6 +226,35 @@ body {
   box-shadow: 0 0 10px #000;
 }
 
+.popup-container {
+  display: flex;
+}
+
+.cart-id {
+  height: 100%;
+  border: 2px solid black;
+  margin-right: 10px;
+  padding: 10px;
+}
+.cart-name {
+  height: 100%;
+  border: 2px solid black;
+  margin-right: 10px;
+  padding: 10px;
+}
+.cart-count {
+  height: 100%;
+  border: 2px solid black;
+  margin-right: 10px;
+  padding: 10px;
+}
+.cart-price {
+  height: 100%;
+  border: 2px solid black;
+  margin-right: 10px;
+  padding: 10px;
+}
+
 .btn-popUp {
   position: absolute;
   width: 25px;
@@ -233,6 +262,7 @@ body {
   background-color: red;
   transform: translateX(950px);
   border-radius: 50%;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=description.css.map */
