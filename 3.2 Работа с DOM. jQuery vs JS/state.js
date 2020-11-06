@@ -97,7 +97,8 @@ btnAdd.onclick = function () {
         })
     }
     console.log(cart);
-
+    let price = document.createElement('div');
+    let count = document.createElement('div');
     if (click<1) {
          click++;
         let element = document.querySelector(".popup-container");
@@ -110,18 +111,20 @@ btnAdd.onclick = function () {
         name.classList.add("cart-name")
         name.innerHTML = `Name: ${cart[0].name}`;
         element.appendChild(name);
-        let count = document.createElement('div');
+
         count.classList.add("cart-count")
-        count.innerHTML = `Count: ${cart[0].count}`;
+
         element.appendChild(count);
-        let price = document.createElement('div');
+
         price.classList.add("cart-price");
         price.innerHTML = `Price: ${cart[0].priceForOne * cart[0].count}`;
-
         element.appendChild(price);
 
     }
+    count.innerHTML = `Count: ${cart[0].count}`;
+    price.innerHTML = `Price: ${cart[0].priceForOne * cart[0].count}`;
     UPDATE;
+
     return cart;
 }
 
