@@ -10,20 +10,22 @@ let btnCounterUp = document.getElementById("plus"),
     btnHidePopup = document.querySelector(".btn-popUp"),
     btnAdd = document.querySelector(".product-add");
 const UPDATE = setInterval(throwMyEvent, 200);
- function getData () {
+
+function getData() {
     return {
-                id: 1,
-                img: "url//",
-                name: "Xeon 3000over",
-                country: "Russia",
-                year_of_issue: 1970,
-                blade: "iron",
-                description: "normalnormalnormalnormallnormal",
-                priceForOne: 300,
-                count: 10,
-                allPrice: 0
-            };
+        id: 1,
+        img: "url//",
+        name: "Xeon 3000over",
+        country: "Russia",
+        year_of_issue: 1970,
+        blade: "iron",
+        description: "normalnormalnormalnormallnormal",
+        priceForOne: 300,
+        count: 10,
+        allPrice: 0
+    };
 }
+
 console.log(getData().name);
 document.querySelector('.product-name').innerText = getData().name;
 document.querySelector('.product-name').innerText = getData().name;
@@ -72,10 +74,19 @@ function throwMyEvent() {
         bubbles: true
     }));
 }
-
-    btnAdd.onclick = function () {
-        // counter = 1;
+let click = 0;
+btnAdd.onclick = function () {
+    // counter = 1;
+    // for (let i = 0; i < cart.length; i++) {
+    //     if (cart[i].id === getData().id) {
+    //         alert("zz");
+    //     }
+    //     else {
+    if (cart.length > 0) {
+        cart[0].count += counter;
+    } else {
         cart.push({
+            id: getData().id,
             name: getData().name,
             country: getData().country,
             year_of_issue: getData().year_of_issue,
@@ -84,30 +95,35 @@ function throwMyEvent() {
             priceForOne: getData().priceForOne,
             count: counter,
         })
+    }
+    console.log(cart);
+
+    if (click<1) {
+         click++;
         let element = document.querySelector(".popup-container");
         let id = document.createElement('div');
         id.classList.add("cart-id");
-        id.innerHTML = idProductInCart;
+        id.innerHTML = cart[0].id;
         element.appendChild(id);
         idProductInCart++;
         let name = document.createElement('div');
         name.classList.add("cart-name")
-        name.innerHTML = `Name: ${getData().name}`;
+        name.innerHTML = `Name: ${cart[0].name}`;
         element.appendChild(name);
         let count = document.createElement('div');
         count.classList.add("cart-count")
-        count.innerHTML = `Count: ${counter}`;
+        count.innerHTML = `Count: ${cart[0].count}`;
         element.appendChild(count);
         let price = document.createElement('div');
         price.classList.add("cart-price");
-        price.innerHTML = `Price: ${getData().priceForOne * counter}`;
+        price.innerHTML = `Price: ${cart[0].priceForOne * cart[0].count}`;
+
         element.appendChild(price);
-        console.log(cart);
-        UPDATE;
-        return cart;
+
+    }
+    UPDATE;
+    return cart;
 }
-
-
 
 
 // хмм, времени мало , так что я запушу в массив , вместо POST в db, протите мою лень ... и да , я никогда не делал POST///
