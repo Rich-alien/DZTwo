@@ -117,12 +117,24 @@ body {
   border-radius: 10px;
 }
 .product-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   border-radius: 90%;
   height: 710px;
   border: 5px solid #FFFFFF;
   width: 710px;
   margin-right: 20px;
+}
+.product-img__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 467px;
+  height: 467px;
+  background-color: #fff;
+  border-radius: 50%;
 }
 .product-name {
   color: black;
