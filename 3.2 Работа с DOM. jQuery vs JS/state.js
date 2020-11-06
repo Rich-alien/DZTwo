@@ -14,7 +14,43 @@ request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 request.onload = function () {
-    let items = request.response;
+    // let items = request.response;
+    let items =  [
+            {
+                "id": 1,
+                "img": "url//",
+                "name": "Xeon 3000over",
+                "country": "Russia",
+                "year_of_issue": 1970,
+                "blade": "iron",
+                "description": "normalnormalnormalnormallnormal",
+                "priceForOne": 300,
+                "count": 10,
+                "allPrice": 0
+            },
+            {
+                "id": 2,
+                "img": "url//",
+                "name": "Xeon 3000over",
+                "country": "Russia",
+                "year_of_issue": 1970,
+                "blade": "iron",
+                "description": "normalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormnormalnormalnormalnormalnormalnormalnormalnormalnormal",
+                "priceForOne": 300,
+                "count": 10
+            },
+            {
+                "id": 3,
+                "img": "url//",
+                "name": "Xeon 3000over",
+                "country": "Russia",
+                "year_of_issue": 1970,
+                "blade": "iron",
+                "description": "normalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormnormalnormalnormalnormalnormalnormalnormalnormalnormal",
+                "priceForOne": 300,
+                "count": 10
+            }
+        ];
     createObj(items, chooseItem);
     var cart = dropInCart(items[chooseItem]); // пришлось , чтобы выводить кол-во эллементов в корзине
     updateCounter();
