@@ -74,6 +74,7 @@ function throwMyEvent() {
         bubbles: true
     }));
 }
+
 let click = 0;
 btnAdd.onclick = function () {
     // counter = 1;
@@ -97,10 +98,9 @@ btnAdd.onclick = function () {
         })
     }
     console.log(cart);
-    let price = document.createElement('div');
-    let count = document.createElement('div');
-    if (click<1) {
-         click++;
+
+    if (click < 1) {
+        click++;
         let element = document.querySelector(".popup-container");
         let id = document.createElement('div');
         id.classList.add("cart-id");
@@ -111,19 +111,19 @@ btnAdd.onclick = function () {
         name.classList.add("cart-name")
         name.innerHTML = `Name: ${cart[0].name}`;
         element.appendChild(name);
-
+        let count = document.createElement('div');
         count.classList.add("cart-count")
-
+        count.innerHTML = `Count: ${cart[0].count}`;
         element.appendChild(count);
-
+        let price = document.createElement('div');
         price.classList.add("cart-price");
         price.innerHTML = `Price: ${cart[0].priceForOne * cart[0].count}`;
+
         element.appendChild(price);
 
     }
-    count.innerHTML = `Count: ${cart[0].count}`;
-    price.innerHTML = `Price: ${cart[0].priceForOne * cart[0].count}`;
-    UPDATE;
+    document.querySelector('.cart-count').innerText = cart[0].count;
+    document.querySelector('.cart-price').innerText = cart[0].priceForOne * cart[0].count;
 
     return cart;
 }
