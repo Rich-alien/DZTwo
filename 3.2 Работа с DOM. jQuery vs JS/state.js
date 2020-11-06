@@ -10,52 +10,28 @@ let btnCounterUp = document.getElementById("plus"),
     btnHidePopup = document.querySelector(".btn-popUp"),
     btnAdd = document.querySelector(".product-add");
 const UPDATE = setInterval(throwMyEvent, 200);
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-request.onload = function () {
-    // let items = request.response;
-    let items =  [
-            {
-                "id": 1,
-                "img": "url//",
-                "name": "Xeon 3000over",
-                "country": "Russia",
-                "year_of_issue": 1970,
-                "blade": "iron",
-                "description": "normalnormalnormalnormallnormal",
-                "priceForOne": 300,
-                "count": 10,
-                "allPrice": 0
-            },
-            {
-                "id": 2,
-                "img": "url//",
-                "name": "Xeon 3000over",
-                "country": "Russia",
-                "year_of_issue": 1970,
-                "blade": "iron",
-                "description": "normalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormnormalnormalnormalnormalnormalnormalnormalnormalnormal",
-                "priceForOne": 300,
-                "count": 10
-            },
-            {
-                "id": 3,
-                "img": "url//",
-                "name": "Xeon 3000over",
-                "country": "Russia",
-                "year_of_issue": 1970,
-                "blade": "iron",
-                "description": "normalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormalnormnormalnormalnormalnormalnormalnormalnormalnormalnormal",
-                "priceForOne": 300,
-                "count": 10
-            }
-        ];
-    createObj(items, chooseItem);
-    var cart = dropInCart(items[chooseItem]); // пришлось , чтобы выводить кол-во эллементов в корзине
-    updateCounter();
+ function getData () {
+    return {
+                id: 1,
+                img: "url//",
+                name: "Xeon 3000over",
+                country: "Russia",
+                year_of_issue: 1970,
+                blade: "iron",
+                description: "normalnormalnormalnormallnormal",
+                priceForOne: 300,
+                count: 10,
+                allPrice: 0
+            };
 }
-
+console.log(getData().name);
+document.querySelector('.product-name').innerText = getData().name;
+document.querySelector('.product-name').innerText = getData().name;
+document.querySelector('.product-country').innerText = getData().country;
+document.querySelector('.product-year').innerText = getData().year_of_issue;
+document.querySelector('.product-blade').innerText = getData().blade;
+document.querySelector('.product-description').innerText = getData().description;
+document.querySelector('.product-price').innerText = getData().priceForOne;
 
 // скрытие порзины
 btnHidePopup.onclick = function () {
@@ -83,6 +59,7 @@ function updateCounter() {
     document.querySelector('.header-cart__count').innerText = cart.length;
     // вывод кол-во выбранного товара
     document.querySelector('.count-product').innerText = counter;
+    UPDATE;
 }
 
 //очистка массива данных коризны
@@ -96,36 +73,15 @@ function throwMyEvent() {
     }));
 }
 
-function showInCart() {
-    let element = document.querySelector(".popup-container");
-    let id = document.createElement('div');
-    id.classList.add("cart-id")
-    id.innerHTML = i;
-    element.appendChild(id);
-    let name = document.createElement('div');
-    name.classList.add("cart-name")
-    name.innerHTML = `Name: ${cart[i].name}`;
-    element.appendChild(name);
-    let count = document.createElement('div');
-    count.classList.add("cart-count")
-    count.innerHTML = `Count: ${cart[i].count}`;
-    element.appendChild(count);
-    let price = document.createElement('div');
-    price.classList.add("cart-price");
-    price.innerHTML = `Price: ${cart[i].priceForOne * cart[i].count}`;
-    element.appendChild(price);
-}
-
-function dropInCart(obj) {
     btnAdd.onclick = function () {
         // counter = 1;
         cart.push({
-            name: obj.name,
-            country: obj.country,
-            year_of_issue: obj.year_of_issue,
-            blade: obj.blade,
-            description: obj.description,
-            priceForOne: obj.priceForOne,
+            name: getData().name,
+            country: getData().country,
+            year_of_issue: getData().year_of_issue,
+            blade: getData().blade,
+            description: getData().description,
+            priceForOne: getData().priceForOne,
             count: counter,
         })
         let element = document.querySelector(".popup-container");
@@ -136,7 +92,7 @@ function dropInCart(obj) {
         idProductInCart++;
         let name = document.createElement('div');
         name.classList.add("cart-name")
-        name.innerHTML = `Name: ${obj.name}`;
+        name.innerHTML = `Name: ${getData().name}`;
         element.appendChild(name);
         let count = document.createElement('div');
         count.classList.add("cart-count")
@@ -144,30 +100,17 @@ function dropInCart(obj) {
         element.appendChild(count);
         let price = document.createElement('div');
         price.classList.add("cart-price");
-        price.innerHTML = `Price: ${obj.priceForOne * counter}`;
+        price.innerHTML = `Price: ${getData().priceForOne * counter}`;
         element.appendChild(price);
-        return cart;
+        console.log(cart);
         UPDATE;
-    }
+        return cart;
 }
 
 
 
-let createObj = (obj, id) => {
-    let showInPage = obj[id];
-    let name = document.createElement("div");
-    name.className = "someClass";
-    let text = document.createTextNode(showInPage.name);
-    name.appendChild(text);
-    //вывод информации о товаре из db
-    // тут можно и через цикл , для начала создать массив их свойств и крутануть...
-    document.querySelector('.product-name').innerText = obj[id].name;
-    document.querySelector('.product-country').innerText = obj[id].country;
-    document.querySelector('.product-year').innerText = obj[id].year_of_issue;
-    document.querySelector('.product-blade').innerText = obj[id].blade;
-    document.querySelector('.product-description').innerText = obj[id].description;
-    document.querySelector('.product-price').innerText = obj[id].priceForOne;
-}
+
 // хмм, времени мало , так что я запушу в массив , вместо POST в db, протите мою лень ... и да , я никогда не делал POST///
 document.body.addEventListener('myNewEvent', updateCounter)
+
 // setInterval(throwMyEvent, 200)
