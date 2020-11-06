@@ -9,11 +9,13 @@
 
 body
   background-color: black
+
 .container
   display: flex
   margin: 0 auto
   flex-direction: column
   height: 100vh
+
 .header
   min-width: 1196px
   margin: 40px auto 0
@@ -21,9 +23,11 @@ body
   display: flex
   align-items: center
   justify-content: space-between
+
   &-cart
     cursor: pointer
     display: flex
+
     &__count
       margin-left: 3px
       border-radius: 90%
@@ -94,6 +98,7 @@ body
 
   &-button:hover
     color: black
+
 .main
   color: white
 
@@ -107,6 +112,7 @@ body
   height: 710px
   background: #FFFFFF
   border-radius: 10px
+
   &-img
     background-color: black
     border-radius: 90%
@@ -114,17 +120,23 @@ body
     border: 5px solid #FFFFFF
     width: 710px
     margin-right: 20px
+
   &-name
     color: black
+
   &-description
     color: black
     width: auto
     height: 65px
+
     &__text
       color: black
+
   &-country
     display: flex
+
   &-add
+    cursor: pointer
     background-color: green
     width: 264px
     height: 39px
@@ -132,20 +144,47 @@ body
     color: #FFFFFF
     text-align: center
     margin-left: 56px
+  &-add:hover
+    color: black
+    text-transform: uppercase
+    //width: 244px
+
 .btn
   &-plus
-    width: 100px
-    height: 50px
+    cursor: pointer
+    width: 45px
+    height: 45px
+    background: #F2F4F6
+    border: 1px solid #EBEBEC
+    border-radius: 7px 0 0 7px
+
   &-minus
-    width: 100px
-    height: 50px
+    cursor: pointer
+    width: 45px
+    height: 45px
+    background: #F2F4F6
+    border: 1px solid #EBEBEC
+    border-radius: 7px 0 0 7px
+    transform: rotate(-180deg)
+.counter
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 45px
+  border-top: 1px solid #EBEBEC
+  border-bottom: 1px solid #EBEBEC
+  height: 45px
+
+.container-count
+  display: flex
 .one-line
   display: flex
+
 .b-popup
   display: none
   width: 100%
   min-height: 100%
-  background-color: rgba(0,0,0,0.5)
+  background-color: rgba(0, 0, 0, 0.5)
   overflow: hidden
   position: fixed
   top: 0
@@ -158,6 +197,7 @@ body
   background-color: #c5c5c5
   border-radius: 5px
   box-shadow: 0 0 10px #000
+
 .btn-popUp
   width: 25px
   height: 25px
