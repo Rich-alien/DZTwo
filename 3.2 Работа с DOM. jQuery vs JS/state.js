@@ -2,12 +2,12 @@ let requestURL = 'http://localhost:3000/items';
 let request = new XMLHttpRequest();
 let counter = 1;
 let cart = [];
-let click = 0
+let idProductInCart = 1;
 let chooseItem = 0; // id выбранного товара в каталоге
 let btnCounterUp = document.getElementById("plus"),
+    btnCounterDown = document.getElementById("minus"),
     btnShowPopup = document.querySelector(".header-cart"),
     btnHidePopup = document.querySelector(".btn-popUp"),
-    btnCounterDown = document.getElementById("minus"),
     btnAdd = document.querySelector(".product-add");
 const UPDATE = setInterval(throwMyEvent, 200);
 request.open('GET', requestURL);
@@ -60,37 +60,29 @@ function throwMyEvent() {
     }));
 }
 
-// btnCart.onclick = function () {
-//     document.querySelector(".b-popup").style.display = "block";
-//     //временное решение
-//     if (click < 1) {
-//         for (let i = 0; i < cart.length; i++) {
-//             let element = document.querySelector(".popup-container");
-//             let id = document.createElement('div');
-//             id.classList.add("cart-id")
-//             id.innerHTML = i;
-//             element.appendChild(id);
-//             let name = document.createElement('div');
-//             name.classList.add("cart-name")
-//             name.innerHTML = `Name: ${cart[i].name}`;
-//             element.appendChild(name);
-//             let count = document.createElement('div');
-//             count.classList.add("cart-count")
-//             count.innerHTML = `Count: ${cart[i].count}`;
-//             element.appendChild(count);
-//             let price = document.createElement('div');
-//             price.classList.add("cart-price");
-//             price.innerHTML = `Price: ${cart[i].priceForOne * cart[i].count}`;
-//             element.appendChild(price);
-//         }
-//
-//     }
-//     click++
-//
-// }
+function showInCart() {
+    let element = document.querySelector(".popup-container");
+    let id = document.createElement('div');
+    id.classList.add("cart-id")
+    id.innerHTML = i;
+    element.appendChild(id);
+    let name = document.createElement('div');
+    name.classList.add("cart-name")
+    name.innerHTML = `Name: ${cart[i].name}`;
+    element.appendChild(name);
+    let count = document.createElement('div');
+    count.classList.add("cart-count")
+    count.innerHTML = `Count: ${cart[i].count}`;
+    element.appendChild(count);
+    let price = document.createElement('div');
+    price.classList.add("cart-price");
+    price.innerHTML = `Price: ${cart[i].priceForOne * cart[i].count}`;
+    element.appendChild(price);
+}
+
 function dropInCart(obj) {
     btnAdd.onclick = function () {
-        counter = 1;
+        // counter = 1;
         cart.push({
             name: obj.name,
             country: obj.country,
@@ -100,10 +92,30 @@ function dropInCart(obj) {
             priceForOne: obj.priceForOne,
             count: counter,
         })
+        let element = document.querySelector(".popup-container");
+        let id = document.createElement('div');
+        id.classList.add("cart-id");
+        id.innerHTML = idProductInCart;
+        element.appendChild(id);
+        idProductInCart++;
+        let name = document.createElement('div');
+        name.classList.add("cart-name")
+        name.innerHTML = `Name: ${obj.name}`;
+        element.appendChild(name);
+        let count = document.createElement('div');
+        count.classList.add("cart-count")
+        count.innerHTML = `Count: ${counter}`;
+        element.appendChild(count);
+        let price = document.createElement('div');
+        price.classList.add("cart-price");
+        price.innerHTML = `Price: ${obj.priceForOne * counter}`;
+        element.appendChild(price);
         return cart;
         UPDATE;
     }
 }
+
+
 
 let createObj = (obj, id) => {
     let showInPage = obj[id];
