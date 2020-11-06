@@ -122,8 +122,8 @@ btnAdd.onclick = function () {
         element.appendChild(price);
 
     }
-    document.querySelector('.cart-count').innerText = cart[0].count;
-    document.querySelector('.cart-price').innerText = cart[0].priceForOne * cart[0].count;
+    document.querySelector('.cart-count').innerText = `Count: ${cart[0].count}`;
+    document.querySelector('.cart-price').innerText = `Price: ${cart[0].priceForOne * cart[0].count}`;
 
     return cart;
 }
