@@ -202,7 +202,20 @@ body
   overflow: hidden
   position: fixed
   top: 0
-
+.loader
+  display: none
+  align-items: center
+  width: 100%
+  min-height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  overflow: hidden
+  position: fixed
+  top: 0
+  &-img
+    color: #FFFFFF
+    height: 300px
+    width: 300px
+    margin: 0 auto
 .b-popup .b-popup-content
   display: flex
   margin: 40px auto 0 auto
@@ -214,27 +227,39 @@ body
   box-shadow: 0 0 10px #000
 .popup-container
   display: flex
+  flex-direction: column
+  &__top
+    width: 900px
+    display: flex
+    justify-content: space-between
+    padding-bottom: 5px
+    border-bottom: 2px solid black
+
+  &__product
+    width: 900px
+    display: flex
+    justify-content: space-between
 .cart
   &-id
     height: 100%
-    border: 2px solid black
-    margin-right: 10px
-    padding: 10px
+    //border: 2px solid black
+    //margin-right: 10px
+    //padding: 10px
   &-name
     height: 100%
-    border: 2px solid black
-    margin-right: 10px
-    padding: 10px
+    //border: 2px solid black
+    //margin-right: 10px
+    //padding: 10px
   &-count
     height: 100%
-    border: 2px solid black
-    margin-right: 10px
-    padding: 10px
+    //border: 2px solid black
+    //margin-right: 10px
+    //padding: 10px
   &-price
     height: 100%
-    border: 2px solid black
-    margin-right: 10px
-    padding: 10px
+    //border: 2px solid black
+    //margin-right: 10px
+    //padding: 10px
 .btn-popUp
   position: absolute
   width: 25px
