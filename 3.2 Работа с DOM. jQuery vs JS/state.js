@@ -41,7 +41,14 @@ btnHidePopup.onclick = function () {
 }
 // показ корзины
 btnShowPopup.onclick = function () {
-    document.querySelector(".b-popup").style.display = "block";
+    document.querySelector(".loader").style.display = "flex";
+    function loader() {
+        document.querySelector(".loader").style.display = "none";
+        document.querySelector(".b-popup").style.display = "block";
+
+    }setTimeout(loader, 3000)
+
+
 }
 // увеличение кол-во эллементов items
 btnCounterUp.onclick = function () {
@@ -77,12 +84,7 @@ function throwMyEvent() {
 
 let click = 0;
 btnAdd.onclick = function () {
-    // counter = 1;
-    // for (let i = 0; i < cart.length; i++) {
-    //     if (cart[i].id === getData().id) {
-    //         alert("zz");
-    //     }
-    //     else {
+
     if (cart.length > 0) {
         cart[0].count += counter;
     } else {
@@ -97,39 +99,29 @@ btnAdd.onclick = function () {
             count: counter,
         })
     }
-    console.log(cart);
-
     if (click < 1) {
         click++;
-        let element = document.querySelector(".popup-container");
+        let element = document.querySelector(".popup-container__product");
         let id = document.createElement('div');
         id.classList.add("cart-id");
         id.innerHTML = cart[0].id;
-        element.appendChild(id);
+        element.append(id);
         idProductInCart++;
         let name = document.createElement('div');
         name.classList.add("cart-name")
-        name.innerHTML = `Name: ${cart[0].name}`;
+        name.innerHTML = `${cart[0].name}`;
         element.appendChild(name);
         let count = document.createElement('div');
         count.classList.add("cart-count")
-        count.innerHTML = `Count: ${cart[0].count}`;
+        count.innerHTML = `${cart[0].count}`;
         element.appendChild(count);
         let price = document.createElement('div');
         price.classList.add("cart-price");
-        price.innerHTML = `Price: ${cart[0].priceForOne * cart[0].count}`;
-
+        price.innerHTML = `${cart[0].priceForOne * cart[0].count}`;
         element.appendChild(price);
-
     }
-    document.querySelector('.cart-count').innerText = `Count: ${cart[0].count}`;
-    document.querySelector('.cart-price').innerText = `Price: ${cart[0].priceForOne * cart[0].count}`;
-
+    document.querySelector('.cart-count').innerText = `${cart[0].count}`;
+    document.querySelector('.cart-price').innerText = `${cart[0].priceForOne * cart[0].count}`;
     return cart;
 }
-
-
-// хмм, времени мало , так что я запушу в массив , вместо POST в db, протите мою лень ... и да , я никогда не делал POST///
 document.body.addEventListener('myNewEvent', updateCounter)
-
-// setInterval(throwMyEvent, 200)
