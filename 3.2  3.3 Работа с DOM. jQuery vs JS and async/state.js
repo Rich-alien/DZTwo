@@ -1,16 +1,11 @@
-let requestURL = 'http://localhost:3000/items';
-let request = new XMLHttpRequest();
 let counter = 1;
 let cart = [];
 let idProductInCart = 1;
-let chooseItem = 0; // id выбранного товара в каталоге
 let btnCounterUp = document.getElementById("plus"),
     btnCounterDown = document.getElementById("minus"),
     btnShowPopup = document.querySelector(".header-cart"),
     btnHidePopup = document.querySelector(".btn-popUp"),
     btnAdd = document.querySelector(".product-add");
-const UPDATE = setInterval(throwMyEvent, 200);
-
 function getData() {
     return {
         id: 1,
@@ -54,15 +49,15 @@ btnShowPopup.onclick = function () {
 btnCounterUp.onclick = function () {
     if (counter < 10)
         counter++;
-    UPDATE;
+
 };
 // уменьшение кол-во эллементов items
 btnCounterDown.onclick = function () {
     if (counter > 1)
         counter = counter - 1;
-    UPDATE;
-};
 
+};
+const UPDATE = setInterval(throwMyEvent, 3000);
 function updateCounter() {
     //вывод кол-во эллементов в корзине
     document.querySelector('.header-cart__count').innerText = cart.length;
@@ -70,18 +65,12 @@ function updateCounter() {
     document.querySelector('.count-product').innerText = counter;
     UPDATE;
 }
-
-//очистка массива данных коризны
-function clearCart() {
-    //arr.splice(0,arr.length);
-}
-
 function throwMyEvent() {
     document.querySelector('.container').dispatchEvent(new Event('myNewEvent', {
         bubbles: true
     }));
 }
-
+document.body.addEventListener('myNewEvent', updateCounter);
 let click = 0;
 btnAdd.onclick = function () {
 
@@ -124,4 +113,4 @@ btnAdd.onclick = function () {
     document.querySelector('.cart-price').innerText = `${cart[0].priceForOne * cart[0].count}`;
     return cart;
 }
-document.body.addEventListener('myNewEvent', updateCounter)
+
