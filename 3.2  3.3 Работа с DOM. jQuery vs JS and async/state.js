@@ -20,8 +20,6 @@ function getData() {
         allPrice: 0
     };
 }
-
-console.log(getData().name);
 document.querySelector('.product-name').innerText = getData().name;
 document.querySelector('.product-name').innerText = getData().name;
 document.querySelector('.product-country').innerText = getData().country;
@@ -41,7 +39,7 @@ btnShowPopup.onclick = function () {
         document.querySelector(".loader").style.display = "none";
         document.querySelector(".b-popup").style.display = "block";
 
-    }setTimeout(loader, 3000)
+    }setTimeout(loader, 1000)
 
 
 }
@@ -57,13 +55,16 @@ btnCounterDown.onclick = function () {
         counter = counter - 1;
 
 };
-const UPDATE = setInterval(throwMyEvent, 3000);
+const UPDATE = setInterval(throwMyEvent, 200);
 function updateCounter() {
     //вывод кол-во эллементов в корзине
     document.querySelector('.header-cart__count').innerText = cart.length;
     // вывод кол-во выбранного товара
     document.querySelector('.count-product').innerText = counter;
-    UPDATE;
+    Array.observe(counter,UPDATE);
+    Array.observe(cart.length,UPDATE);
+
+
 }
 function throwMyEvent() {
     document.querySelector('.container').dispatchEvent(new Event('myNewEvent', {
