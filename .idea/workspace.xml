@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdc34c85-29e7-413b-a79f-daf70cb4e6da" name="Default Changelist" comment="">
+    <list default="true" id="bdc34c85-29e7-413b-a79f-daf70cb4e6da" name="Default Changelist" comment="вывод оставшейся инфолрмации о товаре">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.3. Основы Jquery/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/2.3. Основы Jquery/state.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.2  3.3 Работа с DOM. jQuery vs JS and async/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/3.2  3.3 Работа с DOM. jQuery vs JS and async/state.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,34 +46,39 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="15.0.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Store/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/1. Основы HTML. Структура, теги, семантика/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\3.2 Работа с DOM. jQuery vs JS" />
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\1. Основы HTML. Структура, теги, семантика\img" />
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\2.3. Layout верстка макета" />
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\1. Основы HTML. Структура, теги, семантика" />
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\1. Основы HTML. Структура, теги, семантика\img" />
       <recent name="C:\Users\richa\WebstormProjects\DZTwo\Store\css" />
       <recent name="C:\Users\richa\WebstormProjects\DZTwo\img" />
       <recent name="C:\Users\richa\WebstormProjects\DZTwo" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\richa\WebstormProjects\DZTwo\1. Основы HTML. Структура, теги, семантика" />
-      <recent name="C:\Users\richa\WebstormProjects\DZTwo" />
-      <recent name="C:\Users\richa\WebstormProjects\DZTwo\3. Основы CSS" />
-      <recent name="C:\Users\richa\WebstormProjects\DZTwo\Основы HTML. Структура, теги, семантика" />
-      <recent name="C:\Users\richa\WebstormProjects\DZTwo\store\css" />
-    </key>
   </component>
-  <component name="RunManager" selected="Node.js.script.js">
+  <component name="RunManager" selected="Node.js.state.js">
     <configuration name="data.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2. Основы JS/data.js" working-dir="$PROJECT_DIR$/2. Основы JS">
       <method v="2" />
     </configuration>
     <configuration name="script.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2. Основы JS/script.js" working-dir="$PROJECT_DIR$/2. Основы JS">
       <method v="2" />
     </configuration>
+    <configuration name="state.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/3.2  3.3 Работа с DOM. jQuery vs JS and async/state.js" working-dir="$PROJECT_DIR$/3.2  3.3 Работа с DOM. jQuery vs JS and async">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.state.js" />
         <item itemvalue="Node.js.script.js" />
         <item itemvalue="Node.js.data.js" />
       </list>
@@ -97,231 +101,11 @@
       <workItem from="1604046215198" duration="11566000" />
       <workItem from="1604238098399" duration="1584000" />
       <workItem from="1604266388375" duration="856000" />
-      <workItem from="1604270557769" duration="9753000" />
-    </task>
-    <task id="LOCAL-00046" summary="add href in store">
-      <created>1603460120463</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1603460120463</updated>
-    </task>
-    <task id="LOCAL-00047" summary="style:&#10;black bgc and add style for navbar">
-      <created>1603460154391</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1603460154391</updated>
-    </task>
-    <task id="LOCAL-00048" summary=" add  navbar">
-      <created>1603460165222</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1603460165222</updated>
-    </task>
-    <task id="LOCAL-00049" summary="css colorStore">
-      <created>1603460182099</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1603460182099</updated>
-    </task>
-    <task id="LOCAL-00050" summary="git comment">
-      <created>1603460192324</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1603460192324</updated>
-    </task>
-    <task id="LOCAL-00051" summary="add href in navbar">
-      <created>1603460489576</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1603460489577</updated>
-    </task>
-    <task id="LOCAL-00052" summary="move to main folder">
-      <created>1603461739747</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1603461739748</updated>
-    </task>
-    <task id="LOCAL-00053" summary="refactoring">
-      <created>1603461811349</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1603461811349</updated>
-    </task>
-    <task id="LOCAL-00054" summary="style for choice">
-      <created>1603482589893</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1603482589893</updated>
-    </task>
-    <task id="LOCAL-00055" summary="refactoring">
-      <created>1603482600199</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1603482600199</updated>
-    </task>
-    <task id="LOCAL-00056" summary="2 lab starter">
-      <created>1603484122335</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1603484122335</updated>
-    </task>
-    <task id="LOCAL-00057" summary="add function filterEngineer();&#10;                 sortSalary();&#10;                 deleteExcess();">
-      <created>1603485399058</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1603485399058</updated>
-    </task>
-    <task id="LOCAL-00058" summary="второе задане выполненно, забыл , что такое коммит...">
-      <created>1603489544217</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1603489544218</updated>
-    </task>
-    <task id="LOCAL-00059" summary="gitignore with rule">
-      <created>1603743325040</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1603743325041</updated>
-    </task>
-    <task id="LOCAL-00060" summary="all data">
-      <created>1603743335676</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1603743335676</updated>
-    </task>
-    <task id="LOCAL-00061" summary="fix module type">
-      <created>1603743369477</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1603743369477</updated>
-    </task>
-    <task id="LOCAL-00062" summary="babel++">
-      <created>1603743389906</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1603743389906</updated>
-    </task>
-    <task id="LOCAL-00063" summary="mappings">
-      <created>1603743408555</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1603743408555</updated>
-    </task>
-    <task id="LOCAL-00064" summary="refactoring filterPosition, just use instead filter, Set">
-      <created>1603746490376</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1603746490376</updated>
-    </task>
-    <task id="LOCAL-00065" summary="count double return????">
-      <created>1603747073948</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1603747073948</updated>
-    </task>
-    <task id="LOCAL-00066" summary="///">
-      <created>1603747232386</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1603747232386</updated>
-    </task>
-    <task id="LOCAL-00067" summary="fix getCount">
-      <created>1603749224689</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1603749224689</updated>
-    </task>
-    <task id="LOCAL-00068" summary="zero">
-      <created>1603749238154</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1603749238154</updated>
-    </task>
-    <task id="LOCAL-00069" summary="move css in new catalog">
-      <created>1603816634329</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1603816634329</updated>
-    </task>
-    <task id="LOCAL-00070" summary="refactoring left navbar">
-      <created>1604047855123</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1604047855124</updated>
-    </task>
-    <task id="LOCAL-00071" summary="refactoring right navbar and header main">
-      <created>1604048596474</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1604048596474</updated>
-    </task>
-    <task id="LOCAL-00072" summary="navBar-&gt; nav">
-      <created>1604049072121</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1604049072121</updated>
-    </task>
-    <task id="LOCAL-00073" summary="moved*">
-      <created>1604049110694</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1604049110694</updated>
-    </task>
-    <task id="LOCAL-00074" summary="refactoring and rename header">
-      <created>1604052104332</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1604052104332</updated>
-    </task>
-    <task id="LOCAL-00075" summary="refactoring container">
-      <created>1604052374227</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1604052374227</updated>
-    </task>
-    <task id="LOCAL-00076" summary="refactoring banner">
-      <created>1604053055706</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1604053055707</updated>
-    </task>
-    <task id="LOCAL-00077" summary="add">
-      <created>1604053334226</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1604053334226</updated>
+      <workItem from="1604270557769" duration="20494000" />
+      <workItem from="1604357453475" duration="12206000" />
+      <workItem from="1604541588894" duration="165000" />
+      <workItem from="1604541949143" duration="43437000" />
+      <workItem from="1604862217876" duration="6621000" />
     </task>
     <task id="LOCAL-00078" summary="add">
       <created>1604053339101</created>
@@ -442,7 +226,231 @@
       <option name="project" value="LOCAL" />
       <updated>1604278713508</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="bag">
+      <created>1604281087283</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1604281087283</updated>
+    </task>
+    <task id="LOCAL-00096" summary="restart">
+      <created>1604311046349</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1604311046349</updated>
+    </task>
+    <task id="LOCAL-00097" summary="получение json объекта по url и вывод в консоль">
+      <created>1604318822026</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1604318822026</updated>
+    </task>
+    <task id="LOCAL-00098" summary="click plus and minus and input count">
+      <created>1604329432944</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1604329432944</updated>
+    </task>
+    <task id="LOCAL-00099" summary="fix description">
+      <created>1604347177363</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1604347177363</updated>
+    </task>
+    <task id="LOCAL-00100" summary="вывод оставшейся инфолрмации о товаре">
+      <created>1604347204951</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1604347204951</updated>
+    </task>
+    <task id="LOCAL-00101" summary="вывод кол-во эллементов и начало создание попапа">
+      <created>1604364901295</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1604364901296</updated>
+    </task>
+    <task id="LOCAL-00102" summary="допилин вывод корзины">
+      <created>1604368827601</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1604368827601</updated>
+    </task>
+    <task id="LOCAL-00103" summary="space">
+      <created>1604368905477</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1604368905477</updated>
+    </task>
+    <task id="LOCAL-00104" summary="style для popUp">
+      <created>1604368926169</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1604368926169</updated>
+    </task>
+    <task id="LOCAL-00105" summary="popUp and product">
+      <created>1604368946933</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1604368946933</updated>
+    </task>
+    <task id="LOCAL-00106" summary="refactoring name dir">
+      <created>1604369015397</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1604369015397</updated>
+    </task>
+    <task id="LOCAL-00107" summary="fix">
+      <created>1604414311160</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1604414311160</updated>
+    </task>
+    <task id="LOCAL-00108" summary="refactoring dir, function">
+      <created>1604650455564</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1604650455565</updated>
+    </task>
+    <task id="LOCAL-00109" summary="fix dropInCart function">
+      <created>1604652768342</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1604652768342</updated>
+    </task>
+    <task id="LOCAL-00110" summary="add style for counter product">
+      <created>1604652788243</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1604652788243</updated>
+    </task>
+    <task id="LOCAL-00111" summary="fix">
+      <created>1604652800096</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1604652800096</updated>
+    </task>
+    <task id="LOCAL-00112" summary="картинка для продукта , а так же стили для его контейнера , + выравнивание по высоте и ширине">
+      <created>1604653599977</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1604653599977</updated>
+    </task>
+    <task id="LOCAL-00113" summary="без json-server">
+      <created>1604661764676</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1604661764677</updated>
+    </task>
+    <task id="LOCAL-00114" summary="смена полюсов и изменение hover для кнопки">
+      <created>1604661805004</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1604661805004</updated>
+    </task>
+    <task id="LOCAL-00115" summary="fix">
+      <created>1604663748200</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1604663748200</updated>
+    </task>
+    <task id="LOCAL-00116" summary="fix">
+      <created>1604663755444</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1604663755445</updated>
+    </task>
+    <task id="LOCAL-00117" summary="чтобы текс дышал, + on fonts">
+      <created>1604665955360</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1604665955360</updated>
+    </task>
+    <task id="LOCAL-00118" summary="теперь идет проверка на схожесть">
+      <created>1604675574401</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1604675574401</updated>
+    </task>
+    <task id="LOCAL-00119" summary="вынесение за условие">
+      <created>1604675867120</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1604675867120</updated>
+    </task>
+    <task id="LOCAL-00120" summary="fix">
+      <created>1604676042557</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1604676042557</updated>
+    </task>
+    <task id="LOCAL-00121" summary="fix">
+      <created>1604678538678</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1604678538678</updated>
+    </task>
+    <task id="LOCAL-00122" summary="add border">
+      <created>1604678549646</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1604678549646</updated>
+    </task>
+    <task id="LOCAL-00123" summary="стили для контейнера с гифкой">
+      <created>1604868059333</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1604868059333</updated>
+    </task>
+    <task id="LOCAL-00124" summary=" гифка загруки">
+      <created>1604868069622</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1604868069622</updated>
+    </task>
+    <task id="LOCAL-00125" summary="показ гифки и закрытие её">
+      <created>1604868096221</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1604868096221</updated>
+    </task>
+    <task id="LOCAL-00126" summary="rename">
+      <created>1604868251528</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1604868251528</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,32 +470,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="zero" />
-    <MESSAGE value="move css in new catalog" />
-    <MESSAGE value="refactoring left navbar" />
-    <MESSAGE value="refactoring right navbar and header main" />
-    <MESSAGE value="navBar-&gt; nav" />
-    <MESSAGE value="moved*" />
-    <MESSAGE value="refactoring and rename header" />
-    <MESSAGE value="refactoring container" />
-    <MESSAGE value="refactoring banner" />
-    <MESSAGE value="add" />
-    <MESSAGE value="rename class in footer" />
-    <MESSAGE value="rename class in main" />
-    <MESSAGE value="create base api" />
-    <MESSAGE value="create base html doc" />
-    <MESSAGE value="jquery file for count items in cart" />
-    <MESSAGE value="renamed" />
-    <MESSAGE value="get data into db and show" />
-    <MESSAGE value="add style for product" />
-    <MESSAGE value="npm jquery" />
-    <MESSAGE value="add header + script" />
+    <MESSAGE value="получение json объекта по url и вывод в консоль" />
+    <MESSAGE value="click plus and minus and input count" />
+    <MESSAGE value="fix description" />
+    <MESSAGE value="вывод оставшейся инфолрмации о товаре" />
+    <MESSAGE value="вывод кол-во эллементов и начало создание попапа" />
+    <MESSAGE value="допилин вывод корзины" />
+    <MESSAGE value="space" />
+    <MESSAGE value="style для popUp" />
+    <MESSAGE value="popUp and product" />
+    <MESSAGE value="refactoring name dir" />
+    <MESSAGE value="refactoring dir, function" />
+    <MESSAGE value="fix dropInCart function" />
+    <MESSAGE value="add style for counter product" />
+    <MESSAGE value="картинка для продукта , а так же стили для его контейнера , + выравнивание по высоте и ширине" />
+    <MESSAGE value="без json-server" />
+    <MESSAGE value="смена полюсов и изменение hover для кнопки" />
+    <MESSAGE value="чтобы текс дышал, + on fonts" />
+    <MESSAGE value="теперь идет проверка на схожесть" />
+    <MESSAGE value="вынесение за условие" />
     <MESSAGE value="fix" />
+    <MESSAGE value="add border" />
+    <MESSAGE value="стили для контейнера с гифкой" />
+    <MESSAGE value=" гифка загруки" />
+    <MESSAGE value="показ гифки и закрытие её" />
     <MESSAGE value="rename" />
-    <MESSAGE value=" &lt;orderEntry type=&quot;library&quot; name=&quot;jquery&quot; level=&quot;application&quot; /&gt;" />
-    <MESSAGE value=" &lt;file url=&quot;PROJECT&quot; libraries=&quot;{jquery}&quot; /&gt;" />
-    <MESSAGE value="css and map" />
-    <option name="LAST_COMMIT_MESSAGE" value="css and map" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="218" key="#Inspections" timestamp="1603742004665">
@@ -506,22 +514,26 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="629" y="318" key="EditFileWatcherDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603314661400" />
-    <state width="1899" height="365" key="GridCell.Tab.0.bottom" timestamp="1603749298074">
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1604541671883">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="365" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603749298074" />
-    <state width="1899" height="365" key="GridCell.Tab.0.center" timestamp="1603749298074">
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604541671883" />
+    <state width="1899" height="338" key="GridCell.Tab.0.bottom" timestamp="1604330692573">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="365" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603749298074" />
-    <state width="1899" height="365" key="GridCell.Tab.0.left" timestamp="1603749298074">
+    <state width="1899" height="338" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604330692573" />
+    <state width="1899" height="338" key="GridCell.Tab.0.center" timestamp="1604330692572">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="365" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603749298074" />
-    <state width="1899" height="365" key="GridCell.Tab.0.right" timestamp="1603749298074">
+    <state width="1899" height="338" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604330692572" />
+    <state width="1899" height="338" key="GridCell.Tab.0.left" timestamp="1604330692572">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="365" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603749298074" />
+    <state width="1899" height="338" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604330692572" />
+    <state width="1899" height="338" key="GridCell.Tab.0.right" timestamp="1604330692572">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="338" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604330692572" />
     <state width="1899" height="365" key="GridCell.Tab.1.bottom" timestamp="1603749298075">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -570,13 +582,19 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="365" key="GridCell.Tab.3.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1603749298076" />
-    <state x="285" y="78" key="SettingsEditor" timestamp="1603284173778">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="285" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603284173778" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604278727255">
+    <state x="356" y="98" key="SettingsEditor" timestamp="1604568504893">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604278727255" />
+    <state x="285" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603284173778" />
+    <state x="356" y="98" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604568504893" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604868258151">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604868258151" />
+    <state x="2472" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604678552009" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1604866522750">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604866522750" />
   </component>
 </project>
