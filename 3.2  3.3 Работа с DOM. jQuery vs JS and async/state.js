@@ -61,8 +61,7 @@ function updateCounter() {
     document.querySelector('.header-cart__count').innerText = cart.length;
     // вывод кол-во выбранного товара
     document.querySelector('.count-product').innerText = counter;
-    Array.observe(counter,UPDATE);
-    Array.observe(cart.length,UPDATE);
+
 
 
 }
