@@ -5,7 +5,10 @@ let btnCounterUp = document.getElementById("plus"),
     btnCounterDown = document.getElementById("minus"),
     btnShowPopup = document.querySelector(".header-cart"),
     btnHidePopup = document.querySelector(".btn-popUp"),
-    btnAdd = document.querySelector(".product-add");
+    btnAdd = document.querySelector(".product-add"),
+    btnBurger = document.querySelector(".header-burger-menu");
+    btnBack = document.querySelector(".header-back");
+
 function getData() {
     return {
         id: 1,
@@ -14,12 +17,13 @@ function getData() {
         country: "Russia",
         year_of_issue: 1970,
         blade: "iron",
-        description: "normalnormalnormalnormallnormal",
+        description: "normalnormalnorallnormal",
         priceForOne: 300,
         count: 10,
         allPrice: 0
     };
 }
+
 document.querySelector('.product-name').innerText = getData().name;
 document.querySelector('.product-name').innerText = getData().name;
 document.querySelector('.product-country').innerText = getData().country;
@@ -28,6 +32,17 @@ document.querySelector('.product-blade').innerText = getData().blade;
 document.querySelector('.product-description').innerText = getData().description;
 document.querySelector('.product-price').innerText = getData().priceForOne;
 
+btnBurger.onclick = function () {
+    document.querySelector(".header").style.display = "flex";
+    // document.querySelector(".header").style.overflow = "hide";
+    btnBurger.style.display = "none";
+
+}
+btnBack.onclick =function (){
+    document.querySelector(".header").style.display = "none";
+    // document.querySelector(".header").style.overflow = "hide";
+    btnBurger.style.display = "flex";
+}
 // скрытие порзины
 btnHidePopup.onclick = function () {
     document.querySelector(".b-popup").style.display = "none";
@@ -35,11 +50,14 @@ btnHidePopup.onclick = function () {
 // показ корзины
 btnShowPopup.onclick = function () {
     document.querySelector(".loader").style.display = "flex";
+
     function loader() {
         document.querySelector(".loader").style.display = "none";
         document.querySelector(".b-popup").style.display = "block";
 
-    }setTimeout(loader, 1000)
+    }
+
+    setTimeout(loader, 1000)
 
 
 }
@@ -56,6 +74,7 @@ btnCounterDown.onclick = function () {
 
 };
 const UPDATE = setInterval(throwMyEvent, 200);
+
 function updateCounter() {
     //вывод кол-во эллементов в корзине
     document.querySelector('.header-cart__count').innerText = cart.length;
@@ -63,13 +82,14 @@ function updateCounter() {
     document.querySelector('.count-product').innerText = counter;
 
 
-
 }
+
 function throwMyEvent() {
     document.querySelector('.container').dispatchEvent(new Event('myNewEvent', {
         bubbles: true
     }));
 }
+
 document.body.addEventListener('myNewEvent', updateCounter);
 let click = 0;
 btnAdd.onclick = function () {
