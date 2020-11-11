@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bdc34c85-29e7-413b-a79f-daf70cb4e6da" name="Default Changelist" comment="вывод оставшейся инфолрмации о товаре">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3.2  3.3 Работа с DOM. jQuery vs JS and async/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/3.2  3.3 Работа с DOM. jQuery vs JS and async/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.3. Layout верстка макета/description.css" beforeDir="false" afterPath="$PROJECT_DIR$/2.4. Адаптивный дизайн/description.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.3. Layout верстка макета/description.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/2.4. Адаптивный дизайн/description.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.3. Layout верстка макета/description.sass" beforeDir="false" afterPath="$PROJECT_DIR$/2.4. Адаптивный дизайн/description.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.2  3.3 Работа с DOM. jQuery vs JS and async/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/3.2  3.3 Работа с DOM. jQuery vs JS and async/description.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,18 +55,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\richa\WebstormProjects\DZTwo\3.2 Работа с DOM. jQuery vs JS" />
-      <recent name="C:\Users\richa\WebstormProjects\DZTwo\1. Основы HTML. Структура, теги, семантика\img" />
-      <recent name="C:\Users\richa\WebstormProjects\DZTwo\2.3. Layout верстка макета" />
-      <recent name="C:\Users\richa\WebstormProjects\DZTwo\1. Основы HTML. Структура, теги, семантика" />
-      <recent name="C:\Users\richa\WebstormProjects\DZTwo" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\richa\WebstormProjects\DZTwo\1. Основы HTML. Структура, теги, семантика\img" />
       <recent name="C:\Users\richa\WebstormProjects\DZTwo\Store\css" />
       <recent name="C:\Users\richa\WebstormProjects\DZTwo\img" />
       <recent name="C:\Users\richa\WebstormProjects\DZTwo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\2.4. Адаптивный дизайн" />
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\3.2 Работа с DOM. jQuery vs JS" />
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\1. Основы HTML. Структура, теги, семантика\img" />
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\2.3. Layout верстка макета" />
+      <recent name="C:\Users\richa\WebstormProjects\DZTwo\1. Основы HTML. Структура, теги, семантика" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.state.js">
@@ -106,48 +109,8 @@
       <workItem from="1604541588894" duration="165000" />
       <workItem from="1604541949143" duration="43437000" />
       <workItem from="1604862217876" duration="6621000" />
-    </task>
-    <task id="LOCAL-00078" summary="add">
-      <created>1604053339101</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1604053339101</updated>
-    </task>
-    <task id="LOCAL-00079" summary="rename class in main">
-      <created>1604062698710</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1604062698710</updated>
-    </task>
-    <task id="LOCAL-00080" summary="rename class in footer">
-      <created>1604062846096</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1604062846096</updated>
-    </task>
-    <task id="LOCAL-00081" summary="rename class in main">
-      <created>1604065967962</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1604065967963</updated>
-    </task>
-    <task id="LOCAL-00082" summary="create base api">
-      <created>1604271815087</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1604271815087</updated>
-    </task>
-    <task id="LOCAL-00083" summary="create base html doc">
-      <created>1604271828487</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1604271828487</updated>
+      <workItem from="1605001457982" duration="48000" />
+      <workItem from="1605131085661" duration="5596000" />
     </task>
     <task id="LOCAL-00084" summary="jquery file for count items in cart">
       <created>1604272031118</created>
@@ -450,7 +413,49 @@
       <option name="project" value="LOCAL" />
       <updated>1604868251528</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="refactoring">
+      <created>1605001473877</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1605001473877</updated>
+    </task>
+    <task id="LOCAL-00128" summary="ws">
+      <created>1605001489822</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1605001489822</updated>
+    </task>
+    <task id="LOCAL-00129" summary="add burger menu and media for closing old header">
+      <created>1605132324152</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1605132324152</updated>
+    </task>
+    <task id="LOCAL-00130" summary="fix send spam">
+      <created>1605132342231</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1605132342231</updated>
+    </task>
+    <task id="LOCAL-00131" summary="media for product and header">
+      <created>1605136592788</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1605136592788</updated>
+    </task>
+    <task id="LOCAL-00132" summary="a button has been added that hides the menu">
+      <created>1605136647083</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1605136647083</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,12 +475,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="получение json объекта по url и вывод в консоль" />
-    <MESSAGE value="click plus and minus and input count" />
-    <MESSAGE value="fix description" />
-    <MESSAGE value="вывод оставшейся инфолрмации о товаре" />
-    <MESSAGE value="вывод кол-во эллементов и начало создание попапа" />
-    <MESSAGE value="допилин вывод корзины" />
     <MESSAGE value="space" />
     <MESSAGE value="style для popUp" />
     <MESSAGE value="popUp and product" />
@@ -495,7 +494,13 @@
     <MESSAGE value=" гифка загруки" />
     <MESSAGE value="показ гифки и закрытие её" />
     <MESSAGE value="rename" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename" />
+    <MESSAGE value="refactoring" />
+    <MESSAGE value="ws" />
+    <MESSAGE value="add burger menu and media for closing old header" />
+    <MESSAGE value="fix send spam" />
+    <MESSAGE value="media for product and header" />
+    <MESSAGE value="a button has been added that hides the menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="a button has been added that hides the menu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="218" key="#Inspections" timestamp="1603742004665">
@@ -587,11 +592,15 @@
     </state>
     <state x="285" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603284173778" />
     <state x="356" y="98" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604568504893" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604868258151">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605136651158">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1604868258151" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1605136651158" />
     <state x="2472" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604678552009" />
+    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605131291444">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1605131291444" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1604866522750">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
