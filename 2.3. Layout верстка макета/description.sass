@@ -17,6 +17,9 @@ body
   flex-direction: column
   height: 100vh
 
+
+
+
 .header
   min-width: 1196px
   margin: 40px auto 0
@@ -24,7 +27,16 @@ body
   display: flex
   align-items: center
   justify-content: space-between
-
+  @media screen and (max-width: 1196px)
+    min-width: 1000px
+  //появление бургер меню
+  @media screen and (max-width: 1000px)
+    display: none
+  &-burger-menu
+    display: none
+    @media screen and (max-width: 1000px)
+      display: flex
+      height: 38px
   &-cart
     cursor: pointer
     display: flex

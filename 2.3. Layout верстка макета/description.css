@@ -26,6 +26,25 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 1196px) {
+  .header {
+    min-width: 1000px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header {
+    display: none;
+  }
+}
+.header-burger-menu {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .header-burger-menu {
+    display: flex;
+    height: 38px;
+  }
+}
 .header-cart {
   cursor: pointer;
   display: flex;
