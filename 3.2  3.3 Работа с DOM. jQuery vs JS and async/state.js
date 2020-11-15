@@ -7,8 +7,8 @@ let btnCounterUp = document.getElementById("plus"),
     btnHidePopup = document.querySelector(".btn-popUp"),
     btnAdd = document.querySelector(".product-add"),
     btnBurgerShow = document.querySelector(".header-burger-menu__svg-show");
-    btnBurgerClose = document.querySelector(".header-burger-menu__svg-close");
-    btnBack = document.querySelector(".header-back");
+btnBurgerClose = document.querySelector(".header-burger-menu__svg-close");
+btnBack = document.querySelector(".header-back");
 
 function getData() {
     return {
@@ -33,23 +33,21 @@ document.querySelector('.product-blade').innerText = getData().blade;
 document.querySelector('.product-description').innerText = getData().description;
 document.querySelector('.product-price').innerText = getData().priceForOne;
 
-btnBurgerShow.onclick = function () {
+btnBurgerShow.onclick = ShowBurger => {
     document.querySelector(".header-burger-menu").style.display = "flex";
-    // document.querySelector(".header").style.overflow = "hide";
     btnBurgerShow.style.display = "none";
 
 }
-btnBurgerClose.onclick =function (){
+btnBurgerClose.onclick = closeBurger => {
     document.querySelector(".header-burger-menu").style.display = "none";
-    // document.querySelector(".header").style.overflow = "hide";
     btnBurgerShow.style.display = "flex";
 }
 // скрытие корзины
-btnHidePopup.onclick = function () {
+btnHidePopup.onclick = closePopup => {
     document.querySelector(".b-popup").style.display = "none";
 }
 // показ корзины
-btnShowPopup.onclick = function () {
+btnShowPopup.onclick = showPopup => {
     document.querySelector(".loader").style.display = "flex";
 
     function loader() {
@@ -59,23 +57,20 @@ btnShowPopup.onclick = function () {
     }
 
     setTimeout(loader, 1000)
-
-
 }
 // увеличение кол-во эллементов items
-btnCounterUp.onclick = function () {
+btnCounterUp.onclick = countUp => {
     if (counter < 10)
         counter++;
 
 };
 // уменьшение кол-во эллементов items
-btnCounterDown.onclick = function () {
+btnCounterDown.onclick = countDown => {
     if (counter > 1)
         counter = counter - 1;
 
 };
 const UPDATE = setInterval(throwMyEvent, 200);
-
 function updateCounter() {
     //вывод кол-во эллементов в корзине
     document.querySelector('.header-cart__count').innerText = cart.length;
@@ -93,8 +88,7 @@ function throwMyEvent() {
 
 document.body.addEventListener('myNewEvent', updateCounter);
 let click = 0;
-btnAdd.onclick = function () {
-
+btnAdd.onclick = addItems => {
     if (cart.length > 0) {
         cart[0].count += counter;
     } else {
