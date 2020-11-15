@@ -6,15 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../2.4.%20Адаптивный%20дизайн/description.css">
+    <link rel="stylesheet" href="description.css">
+<!--    <link rel="stylesheet" href="2.4.%20Адаптивный%20дизайн/adaptivHelper.css">-->
     <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
     <header class="header">
-        <div class="header-back">
-            go back
-        </div>
+<!--        <div class="header-back">-->
+<!--            go back-->
+<!--        </div>-->
         <div class="header-left">
             <div class="header-logo">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,20 +29,26 @@
                     <line x1="16.6" y1="36.0001" x2="16.6" y2="9.15527e-05" stroke="#FF0000" stroke-width="4"/>
                 </svg>
             </div>
+
             <nav class="header-nav">
-                <a class="header-nav__href" href="./../1.%20Основы%20HTML.%20Структура,%20теги,%20семантика/index.html">Home</a>
+                <a class="header-nav__href" href="../1.%20Основы%20HTML.%20Структура,%20теги,%20семантика/index.html">Home</a>
                 <a class="header-nav__href" href="#">Store</a>
                 <a class="header-nav__href" href="#">News</a>
-                <label class="header-search">
-                    <input class="header-search__input" placeholder="Search..." type="search">
-                    <svg class="header-search__svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path class="svg" d="M17.5764 18.9986L12.8089 14.2326C10.6525 15.655 7.76938 15.215 6.13553 13.2141C4.50168 11.2133 4.64715 8.30073 6.47224 6.4726C8.30023 4.64699 11.2134 4.50091 13.2149 6.13449C15.2164 7.76806 15.6567 10.6512 14.234 12.8076L18.9995 17.5756L17.5764 18.9986ZM10.0326 7.01259C8.5917 7.01168 7.35081 8.02862 7.06879 9.4415C6.78676 10.8544 7.54216 12.2697 8.87301 12.822C10.2039 13.3742 11.7395 12.9095 12.5408 11.7121C13.3422 10.5147 13.186 8.91806 12.1678 7.8986C11.603 7.32994 10.8341 7.0109 10.0326 7.01259Z"
-                              fill="white"/>
-                    </svg>
-                </label>
             </nav>
+
+            <label class="header-search">
+                <input class="header-search__input" placeholder="Search..." type="search">
+                <svg class="header-search__svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path class="svg" d="M17.5764 18.9986L12.8089 14.2326C10.6525 15.655 7.76938 15.215 6.13553 13.2141C4.50168 11.2133 4.64715 8.30073 6.47224 6.4726C8.30023 4.64699 11.2134 4.50091 13.2149 6.13449C15.2164 7.76806 15.6567 10.6512 14.234 12.8076L18.9995 17.5756L17.5764 18.9986ZM10.0326 7.01259C8.5917 7.01168 7.35081 8.02862 7.06879 9.4415C6.78676 10.8544 7.54216 12.2697 8.87301 12.822C10.2039 13.3742 11.7395 12.9095 12.5408 11.7121C13.3422 10.5147 13.186 8.91806 12.1678 7.8986C11.603 7.32994 10.8341 7.0109 10.0326 7.01259Z"
+                          fill="white"/>
+                </svg>
+            </label>
+
         </div>
+        <svg class="header-burger-menu__svg-show" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 18H3V16H21V18ZM21 13H3V11H21V13ZM21 8H3V6H21V8Z" fill="white"/>
+        </svg>
         <div class="header-right">
             <div class="header-cart">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,14 +77,20 @@
                 sign in
             </button>
         </div>
+
     </header>
     <div class="header-burger-menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="header-burger-menu__svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 18H3V16H21V18ZM21 13H3V11H21V13ZM21 8H3V6H21V8Z" fill="white"/>
         </svg>
+        <nav class="header-burger-menu__nav">
+            <a class="header-burger-menu-nav__href" href="../1.%20Основы%20HTML.%20Структура,%20теги,%20семантика/index.html">Home</a>
+            <a class="header-burger-menu-nav__href" href="#">Store</a>
+            <a class="header-burger-menu-nav__href" href="#">News</a>
+        </nav>
     </div>
     <div class="loader">
-        <img src="loading_spinner.gif" class="loader-img"/>
+        <img src="../3.2%20%203.3%20Работа%20с%20DOM.%20jQuery%20vs%20JS%20and%20async/loading_spinner.gif" class="loader-img"/>
     </div>
     <div class="b-popup" id="popup1">
         <div class="b-popup-content">
@@ -138,6 +151,6 @@
         </div>
     </div>
 </div>
-<script src="state.js"></script>
+<script src="../3.2%20%203.3%20Работа%20с%20DOM.%20jQuery%20vs%20JS%20and%20async/state.js"></script>
 </body>
 </html>
