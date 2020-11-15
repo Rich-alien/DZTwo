@@ -1,3 +1,4 @@
+@import "adaptivHelper"
 *
   margin: 0
   padding: 0
@@ -15,7 +16,7 @@ body
   margin: 0 auto
   flex-direction: column
   height: 100vh
-  //@media screen and (max-width: 600px)
+  //@media screen and (max-width: $page-min-width)
   //  margin: 0
 .header
   min-width: 1196px
@@ -35,11 +36,11 @@ body
     margin-top: 10px
     height: 39px
     border-radius: 10px
-    @media screen and (max-width: 1196px)
+    @media screen and (max-width: $desktop-max-width)
       display: flex
 
 
-  @media screen and (max-width: 1196px)
+  @media screen and (max-width: $desktop-max-width)
     color: black
     //position: absolute
     margin: 0
@@ -49,13 +50,13 @@ body
     min-width: auto
     background-color: white
   //появление бургер меню
-  @media screen and (max-width: 1000px)
+  @media screen and (max-width: $tablet-min-width)
     display: none
     //background-color: #FFFFFF
     height: 100%
     flex-direction: column
   &-logo
-    @media screen and (max-width: 1000px)
+    @media screen and (max-width: $tablet-min-width)
       display: none
   &-burger-menu
     display: none
@@ -63,7 +64,7 @@ body
     margin: 40px auto 0
     height: 38px
     cursor: pointer
-    @media screen and (max-width: 1000px)
+    @media screen and (max-width: $tablet-min-width)
       display: flex
 
   &-cart
@@ -82,7 +83,7 @@ body
   &-left
     display: flex
     align-items: center
-    @media screen and (max-width: 1000px)
+    @media screen and (max-width: $tablet-min-width)
       width: 431px
 
   &-nav
@@ -93,7 +94,7 @@ body
     justify-content: space-between
     align-items: center
     height: 100%
-    @media screen and (max-width: 1000px)
+    @media screen and (max-width: $tablet-min-width)
       min-width: 431px
       flex-direction: column
       margin-left: 0
@@ -102,7 +103,7 @@ body
       text-decoration: none
       font-family: 'Sora', sans-serif
       line-height: 30px
-      @media screen and (max-width: 1192px)
+      @media screen and (max-width: $desktop-max-width)
         color: black
     &__href:hover
       color: red
@@ -120,7 +121,7 @@ body
       border-radius: 25px
       height: 38px
       color: #fff
-      @media screen and (max-width: 1192px)
+      @media screen and (max-width: $desktop-max-width)
         border-color: black
         color: black
     &__svg
@@ -133,7 +134,7 @@ body
     justify-content: space-between
     align-items: center
     height: 100%
-    @media screen and (max-width: 1000px)
+    @media screen and (max-width: $tablet-min-width)
       height: 300px
       width: 431px
       flex-direction: column
@@ -150,7 +151,7 @@ body
     border-radius: 38px
     width: 135px
     background-color: red
-    @media screen and (max-width: 1000px)
+    @media screen and (max-width: $tablet-min-width)
       margin-left: 0
 
   &-button:hover
@@ -163,7 +164,7 @@ body
     display: flex
     margin: 144px auto 0
     z-index: 1
-    @media screen and (max-width: 1196px)
+    @media screen and (max-width: $desktop-max-width)
       flex-direction: column
       align-items: center
 
@@ -173,7 +174,7 @@ body
   height: 710px
   background: #FFFFFF
   border-radius: 10px
-  @media screen and (max-width: 488px)
+  @media screen and (max-width: $page-min-width)
     width: 400px
 
   &-img
@@ -186,10 +187,10 @@ body
     border: 5px solid #FFFFFF
     width: 710px
     margin-right: 20px
-    @media screen and (max-width: 1196px)
+    @media screen and (max-width: $desktop-max-width)
       margin-bottom: 20px
       margin-right: 0
-    @media screen and (max-width: 731px)
+    @media screen and (max-width: $tablet-min-width)
       height: 431px
       width: 431px
 
@@ -201,7 +202,7 @@ body
       height: 467px
       background-color: #fff
       border-radius: 50%
-      @media screen and (max-width: 731px)
+      @media screen and (max-width: $tablet-min-width)
         height: 300px
         width: 300px
 
@@ -232,7 +233,7 @@ body
     text-align: center
     margin-left: 56px
     margin-top: 50px
-    @media screen and (max-width: 488px)
+    @media screen and (max-width: $page-min-width)
       margin-left: 30px
 
   &-add:hover
