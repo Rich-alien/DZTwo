@@ -28,11 +28,13 @@ body {
 }
 @media screen and (max-width: 768px) {
   .header {
+    margin: 40px 40px;
     width: 418px;
   }
 }
 .header-burger-menu {
-  display: flex;
+  display: none;
+  justify-content: center;
   position: absolute;
   z-index: 3;
   height: 100vh;
@@ -41,10 +43,7 @@ body {
 }
 .header-burger-menu-nav {
   display: flex;
-  min-width: 318px;
-  margin-left: 105px;
-  margin-right: 105px;
-  flex-direction: row;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   height: 100%;
