@@ -6,7 +6,8 @@ let btnCounterUp = document.getElementById("plus"),
     btnShowPopup = document.querySelector(".header-cart"),
     btnHidePopup = document.querySelector(".btn-popUp"),
     btnAdd = document.querySelector(".product-add"),
-    btnBurger = document.querySelector(".header-burger-menu");
+    btnBurgerShow = document.querySelector(".header-burger-menu__svg-show");
+    btnBurgerClose = document.querySelector(".header-burger-menu__svg-close");
     btnBack = document.querySelector(".header-back");
 
 function getData() {
@@ -32,18 +33,18 @@ document.querySelector('.product-blade').innerText = getData().blade;
 document.querySelector('.product-description').innerText = getData().description;
 document.querySelector('.product-price').innerText = getData().priceForOne;
 
-btnBurger.onclick = function () {
-    document.querySelector(".header").style.display = "flex";
+btnBurgerShow.onclick = function () {
+    document.querySelector(".header-burger-menu").style.display = "flex";
     // document.querySelector(".header").style.overflow = "hide";
-    btnBurger.style.display = "none";
+    btnBurgerShow.style.display = "none";
 
 }
-btnBack.onclick =function (){
-    document.querySelector(".header").style.display = "none";
+btnBurgerClose.onclick =function (){
+    document.querySelector(".header-burger-menu").style.display = "none";
     // document.querySelector(".header").style.overflow = "hide";
-    btnBurger.style.display = "flex";
+    btnBurgerShow.style.display = "flex";
 }
-// скрытие порзины
+// скрытие корзины
 btnHidePopup.onclick = function () {
     document.querySelector(".b-popup").style.display = "none";
 }
