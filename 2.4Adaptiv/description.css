@@ -20,7 +20,7 @@ body {
 
 .header {
   width: 1196px;
-  margin: 40px auto 0;
+  margin: 20px auto 0;
   height: 38px;
   display: flex;
   align-items: center;
@@ -29,14 +29,15 @@ body {
 @media screen and (max-width: 768px) {
   .header {
     margin: 40px 40px;
-    width: 418px;
+    width: 325px;
   }
 }
 .header-burger-menu {
   display: none;
+  position: fixed;
   justify-content: center;
-  position: absolute;
   z-index: 3;
+  padding-top: 20px;
   height: 100vh;
   width: 100%;
   background-color: white;
@@ -137,6 +138,11 @@ body {
   height: 38px;
   color: #fff;
 }
+@media screen and (max-width: 488px) {
+  .header-search__input {
+    width: 124px;
+  }
+}
 .header-search__svg {
   position: absolute;
   right: 10px;
@@ -183,6 +189,16 @@ body {
     align-items: center;
   }
 }
+@media screen and (max-width: 488px) {
+  .main-container {
+    margin: 20px;
+  }
+}
+
+.imgZ {
+  width: 325px;
+  height: 200px;
+}
 
 .product {
   padding-left: 45px;
@@ -193,7 +209,7 @@ body {
 }
 @media screen and (max-width: 488px) {
   .product {
-    width: 400px;
+    width: 300px;
   }
 }
 .product-img {
@@ -217,6 +233,12 @@ body {
   .product-img {
     height: 431px;
     width: 431px;
+  }
+}
+@media screen and (max-width: 488px) {
+  .product-img {
+    height: 350px;
+    width: 350px;
   }
 }
 .product-img__container {
@@ -263,7 +285,7 @@ body {
 }
 @media screen and (max-width: 488px) {
   .product-add {
-    margin-left: 30px;
+    margin-left: -30px;
   }
 }
 .product-add:hover {
