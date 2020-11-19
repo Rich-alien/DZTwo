@@ -15,6 +15,7 @@ body
   margin: 0 auto
   flex-direction: column
   height: 100vh
+
 .header
   width: 1196px
   margin: 20px auto 0
@@ -25,6 +26,7 @@ body
   @media screen and (max-width: $tablet-min-width)
     margin: 40px 40px
     width: 325px
+
   &-burger-menu
     display: none
     position: fixed
@@ -42,21 +44,26 @@ body
       justify-content: space-between
       align-items: center
       height: 100%
+
       &__href
         color: black
         text-decoration: none
         font-family: 'Sora', sans-serif
         line-height: 30px
+
       &__href:hover
         color: red
         cursor: pointer
+
     &__svg-show
       display: none
       @media screen and (max-width: $tablet-min-width)
         display: flex
         cursor: pointer
+
     &__svg-close
       cursor: pointer
+
   &-back
     display: none
     color: white
@@ -68,32 +75,9 @@ body
     margin-top: 10px
     height: 39px
     border-radius: 10px
-    //@media screen and (max-width: $tablet-min-width)
-    //  display: flex
 
-  //@media screen and (max-width: $desktop-max-width)
-  //  color: black
-  //  //position: absolute
-  //  margin: 0
-  //  height: 200vh
-  //  width: 100%
-  //  z-index: 2
-  //  min-width: auto
-  //  background-color: white
-  //появление бургер меню
-  //@media screen and (max-width: $tablet-min-width)
-  //  display: none
-  //  //background-color: #FFFFFF
-  //  height: 100%
-  //  flex-direction: column
   &-logo
     margin-right: 10px
-    //@media screen and (max-width: $tablet-min-width)
-    //  display: none
-
-
-    //@media screen and (max-width: $tablet-min-width)
-    //  display: flex
 
   &-cart
     cursor: pointer
@@ -111,8 +95,6 @@ body
   &-left
     display: flex
     align-items: center
-    //@media screen and (max-width: $tablet-min-width)
-    //  width: 431px
 
   &-nav
     display: flex
@@ -124,14 +106,14 @@ body
     align-items: center
     height: 100%
     @media screen and (max-width: $tablet-min-width)
-     display: none
+      display: none
+
     &__href
       color: #fff
       text-decoration: none
       font-family: 'Sora', sans-serif
       line-height: 30px
-      //@media screen and (max-width: $desktop-max-width)
-      //  color: black
+
     &__href:hover
       color: red
 
@@ -150,6 +132,7 @@ body
       color: #fff
       @media screen and (max-width: $page-min-width)
         width: 124px
+
     &__svg
       position: absolute
       right: 10px
@@ -160,11 +143,7 @@ body
     justify-content: space-between
     align-items: center
     height: 100%
-    //@media screen and (max-width: $tablet-min-width)
-    //  height: 300px
-    //  width: 431px
-    //  flex-direction: column
-    //  justify-content: center
+
   &-button
     color: #fff
     cursor: pointer
@@ -185,6 +164,7 @@ body
 
 .main
   color: white
+
   &-container
     display: flex
     margin: 144px auto 0
@@ -194,9 +174,11 @@ body
       align-items: center
     @media screen and (max-width: $page-min-width)
       margin: 20px
+
 .imgZ
   width: 325px
   height: 200px
+
 .product
   padding-left: 45px
   width: 466px
@@ -247,6 +229,7 @@ body
     color: black
     width: auto
     height: 65px
+
     &__text
       color: black
 
@@ -269,7 +252,6 @@ body
   &-add:hover
     color: black
     background-color: #003900
-//width: 244px
 
 .btn
   &-plus
@@ -359,24 +341,16 @@ body
 .cart
   &-id
     height: 100%
-  //border: 2px solid black
-  //margin-right: 10px
-  //padding: 10px
+
   &-name
     height: 100%
-  //border: 2px solid black
-  //margin-right: 10px
-  //padding: 10px
+
   &-count
     height: 100%
-  //border: 2px solid black
-  //margin-right: 10px
-  //padding: 10px
+
   &-price
     height: 100%
-//border: 2px solid black
-//margin-right: 10px
-//padding: 10px
+
 .btn-popUp
   cursor: pointer
   position: absolute
@@ -389,6 +363,3 @@ body
   transform: translateX(950px)
   border-radius: 50%
   font-weight: bold
-//.svg
-//  @media screen and (max-width: 1000px)
-//    fill: black
