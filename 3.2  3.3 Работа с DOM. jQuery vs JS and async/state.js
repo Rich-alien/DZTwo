@@ -44,7 +44,7 @@ let closePopup = () => {
 let showPopup = () => {
     let someCounter = click
     loaderImg.style.display = "flex";
-    if (click === someCounter) {//тут будет проверка , чтобы была просто перерисовка !
+    if (click === someCounter) { //тут можно было как в redux делаем копию и проверяем, но пока рано
         let element = document.querySelector(".popup-container__product");
         let id = document.createElement('div');
         id.classList.add("cart-id");
