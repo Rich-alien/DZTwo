@@ -33,12 +33,9 @@ document.querySelector('.product-price').innerText = getData().priceForOne;
 
 let showBurger = () => {
     burgerMenu.style.display = "flex";
-    btnBurgerShow.style.display = "none";
-
 }
 let closeBurger = () => {
     burgerMenu.style.display = "none";
-    btnBurgerShow.style.display = "flex";
 }
 // скрытие корзины
 let closePopup = () => {
@@ -47,7 +44,7 @@ let closePopup = () => {
 // показ корзины
 let showPopup = () => {
     loaderImg.style.display = "flex";
-    if(1){//тут будет проверка , чтобы была просто перерисовка !
+    if (1) {//тут будет проверка , чтобы была просто перерисовка !
         let element = document.querySelector(".popup-container__product");
         let id = document.createElement('div');
         id.classList.add("cart-id");
@@ -97,7 +94,7 @@ let setCart = () => {
             priceForOne: getData().priceForOne,
             count: counter,
         });
-        document.querySelector('.header-cart__count').innerText =click+1;
+        document.querySelector('.header-cart__count').innerText = click + 1;
         cart.set(click, temporaryBasket);
         click++;
         // console.log(cart.get(0)[0].name);
@@ -105,7 +102,7 @@ let setCart = () => {
         console.log(cart.get(0)[0].count)
     } else {
         if (getData().name === cart.get(0)[0].name) { //проверка на повторение, если схоже
-            cart.get(0)[0].count+=counter;
+            cart.get(0)[0].count += counter;
         } else {
             temporaryBasket.push({
                 id: getData().id,
