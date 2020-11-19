@@ -83,7 +83,7 @@ let setCart = () => {
         cart.set(click,temporaryBasket);
         click++;
     } else {
-
+    // тут проверка на схожесть
     }
     console.log(cart);
 }
