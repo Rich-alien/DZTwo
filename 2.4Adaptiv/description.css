@@ -12,6 +12,7 @@ body {
 }
 
 .container {
+  max-width: 1192px;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
@@ -19,17 +20,29 @@ body {
 }
 
 .header {
-  width: 1196px;
-  margin: 20px auto 0;
+  width: 100%;
+  margin: 40px auto;
   height: 38px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 1196px) {
+  .header {
+    width: 90%;
+    margin: 40px auto;
+  }
+}
 @media screen and (max-width: 768px) {
   .header {
-    margin: 40px 40px;
-    width: 325px;
+    margin: 40px auto;
+    width: 500px;
+  }
+}
+@media screen and (max-width: 545px) {
+  .header {
+    margin: 20px auto;
+    width: 300px;
   }
 }
 .header-burger-menu {
@@ -61,6 +74,9 @@ body {
 }
 .header-burger-menu__svg-show {
   display: none;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
 }
 @media screen and (max-width: 768px) {
   .header-burger-menu__svg-show {
@@ -87,6 +103,7 @@ body {
   margin-right: 10px;
 }
 .header-cart {
+  margin-left: 25px;
   cursor: pointer;
   display: flex;
 }
@@ -105,9 +122,7 @@ body {
 }
 .header-nav {
   display: flex;
-  min-width: 318px;
-  margin-left: 105px;
-  margin-right: 105px;
+  width: auto;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -120,6 +135,8 @@ body {
 }
 .header-nav__href {
   color: #fff;
+  margin-left: 5px;
+  margin-right: 5px;
   text-decoration: none;
   font-family: "Sora", sans-serif;
   line-height: 30px;
