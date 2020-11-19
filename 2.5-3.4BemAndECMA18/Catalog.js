@@ -1,5 +1,5 @@
 //наши товары
-let data = [
+let getData = [
     {
         id: 0,
         img: "url//",
@@ -134,8 +134,12 @@ let data = [
     },
 
 ];
+let click = 0;
+let cart = new Map;
+//перенос данных из ужасного bd в мир html
 let createProduct = () => {
-    data.forEach((item, index, array) => {
+    $(".basket__counter").append(cart.size);
+    getData.forEach((item, index, array) => {
         $('.product-list').append(`
 <div class="product-card">
     <div class="product-card__image">
@@ -154,6 +158,46 @@ let createProduct = () => {
 </div>`)
     })
 }
-let pressBuy = (id)=>{
-    console.log(id)
+let setData = (id)=>{
+    return (
+        {
+            id: getData[id].id,
+            name: getData[id].name,
+            country: getData[id].country,
+            year: getData[id].year,
+            blade: getData[id].blade,
+            description: getData[id].description,
+            price: getData[id].price,
+            count: getData[id].count,
+        }
+    )
+}
+let preBasket = [];
+let pressBuy = (id) => {
+    //первый эллемент точно будет уникальным в корзине
+    if (cart.size === 0) {
+        preBasket.push(setData(id))
+        cart.set(click, preBasket);
+        // console.log(cart);
+        $(".basket__counter").append(cart.size);
+    } else if (conflictTest(id, cart)) {
+
+        preBasket.push(setData(id))
+        // conflictTest(id, cart)
+    }else{
+        console.log('fuck');
+    }
+
+}
+
+let conflictTest = (id, basket) => {
+    let tester =[];
+    for (let product of basket) {
+        for (let i = 0; i < product[1].length; i++) {
+            tester.push(product[1][i].id !== id);
+        }
+    }
+    console.log(tester);
+    return 1;
+
 }
