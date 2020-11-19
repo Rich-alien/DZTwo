@@ -158,7 +158,7 @@ let createProduct = () => {
 </div>`)
     })
 }
-let setData = (id)=>{
+let setData = (id) => {
     return (
         {
             id: getData[id].id,
@@ -176,28 +176,30 @@ let preBasket = [];
 let pressBuy = (id) => {
     //первый эллемент точно будет уникальным в корзине
     if (cart.size === 0) {
-        preBasket.push(setData(id))
+        preBasket.push(setData(id));
         cart.set(click, preBasket);
-        // console.log(cart);
         $(".basket__counter").append(cart.size);
     } else if (conflictTest(id, cart)) {
-
-        preBasket.push(setData(id))
-        // conflictTest(id, cart)
-    }else{
-        console.log('fuck');
+        preBasket.push(setData(id));
+        console.log("++");
+    } else {
+        // console.log('fuck');
     }
 
 }
 
 let conflictTest = (id, basket) => {
-    let tester =[];
+    let tester = [];
     for (let product of basket) {
         for (let i = 0; i < product[1].length; i++) {
             tester.push(product[1][i].id !== id);
         }
     }
-    console.log(tester);
-    return 1;
+    if (tester.indexOf(false) === -1) {
+        return 1;
+    } else {
+        return 0;
+    }
+
 
 }
