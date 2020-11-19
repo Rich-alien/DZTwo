@@ -9,7 +9,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
     {
         id: 1,
@@ -20,7 +20,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
     {
         id: 2,
@@ -31,7 +31,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
     {
         id: 3,
@@ -42,7 +42,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
     {
         id: 4,
@@ -53,7 +53,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
     {
         id: 5,
@@ -63,8 +63,8 @@ let getData = [
         year: 1970,
         blade: "iron",
         description: "normalnormalnorallnormal",
-        priceForOne: 300,
-        count: 10,
+        price: 300,
+        count: 1,
     },
     {
         id: 6,
@@ -75,7 +75,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
     {
         id: 7,
@@ -86,7 +86,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
     {
         id: 8,
@@ -97,7 +97,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
     {
         id: 9,
@@ -108,7 +108,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
     {
         id: 10,
@@ -119,7 +119,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
     {
         id: 11,
@@ -130,7 +130,7 @@ let getData = [
         blade: "iron",
         description: "normalnormalnorallnormal",
         price: 300,
-        count: 10,
+        count: 1,
     },
 
 ];
@@ -181,13 +181,25 @@ let pressBuy = (id) => {
         $(".basket__counter").append(cart.size);
     } else if (conflictTest(id, cart)) {
         preBasket.push(setData(id));
-        console.log("++");
     } else {
-       // console.log(cart[]);
+       // console.log(getID(id,cart));
+       //  cart[getID(id,cart)].value;
+        for (let value of cart) {
+           value[1][getID(id,cart)].count+=1;
+        }
     }
 
 }
-
+let getID = (id,cart)=>{
+    let saveID = [];
+    console.log(cart);
+    for (let product of cart) {
+        for (let i = 0; i < product[1].length; i++) {
+            saveID.push(product[1][i].id);
+        }
+    }
+    return saveID.indexOf(id);
+}
 let conflictTest = (id, basket) => {
     let tester = [];
     for (let product of basket) {
