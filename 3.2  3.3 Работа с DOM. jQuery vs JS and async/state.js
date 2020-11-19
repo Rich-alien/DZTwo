@@ -64,24 +64,7 @@ let showPopup = () => {
         price.innerHTML = `${cart.get(0)[0].priceForOne * cart.get(0)[0].count}`;
         element.appendChild(price);
     } else {
-        let element = document.querySelector(".popup-container__product");
-        let id = document.createElement('div');
-        id.classList.add("cart-id");
-        id.innerHTML = cart.get(0)[0].id;
-        element.append(id);
-        idProductInCart++;
-        let name = document.createElement('div');
-        name.classList.add("cart-name")
-        name.innerHTML = `${cart.get(0)[0].name}`;
-        element.appendChild(name);
-        let count = document.createElement('div');
-        count.classList.add("cart-count")
-        count.innerHTML = `${cart.get(0)[0].count}`;
-        element.appendChild(count);
-        let price = document.createElement('div');
-        price.classList.add("cart-price");
-        price.innerHTML = `${cart.get(0)[0].priceForOne * cart.get(0)[0].count}`;
-        element.appendChild(price);
+
     }
     let loader = () => {
         loaderImg.style.display = "none";

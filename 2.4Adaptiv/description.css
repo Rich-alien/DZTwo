@@ -179,10 +179,10 @@ body {
   line-height: 23px;
   margin-left: 40px;
   height: 38px;
+  width: 135px;
   text-transform: uppercase;
   font-family: "Sora", sans-serif;
   border-radius: 38px;
-  width: 135px;
   background-color: red;
 }
 @media screen and (max-width: 768px) {
