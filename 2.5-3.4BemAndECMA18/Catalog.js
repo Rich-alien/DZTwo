@@ -183,7 +183,7 @@ let pressBuy = (id) => {
         preBasket.push(setData(id));
         console.log("++");
     } else {
-        // console.log('fuck');
+       // console.log(cart[]);
     }
 
 }
