@@ -1,8 +1,11 @@
 let counter = 1;
 let cart = new Map;
 let idProductInCart = 1;
-let btnBurgerShow = document.querySelector(".header-burger-menu__svg-show");
-btnBurgerClose = document.querySelector(".header-burger-menu__svg-close");
+let btnBurgerShow = document.querySelector(".header-burger-menu__svg-show"),
+    popup = document.querySelector(".b-popup"),
+    loaderImg = document.querySelector(".loader"),
+    productCount = document.querySelector(".count-product"),
+    burgerMenu = document.querySelector(".header-burger-menu");
 let click = 0;
 btnBack = document.querySelector(".header-back");
 
@@ -29,25 +32,25 @@ document.querySelector('.product-description').innerText = getData().description
 document.querySelector('.product-price').innerText = getData().priceForOne;
 
 let showBurger = () => {
-    document.querySelector(".header-burger-menu").style.display = "flex";
+    burgerMenu.style.display = "flex";
     btnBurgerShow.style.display = "none";
 
 }
 let closeBurger = () => {
-    document.querySelector(".header-burger-menu").style.display = "none";
+    burgerMenu.style.display = "none";
     btnBurgerShow.style.display = "flex";
 }
 // скрытие корзины
 let closePopup = () => {
-    document.querySelector(".b-popup").style.display = "none";
+    popup.style.display = "none";
 }
 // показ корзины
 let showPopup = () => {
-    document.querySelector(".loader").style.display = "flex";
+    loaderImg.style.display = "flex";
 
-    function loader() {
-        document.querySelector(".loader").style.display = "none";
-        document.querySelector(".b-popup").style.display = "block";
+    let loader = () => {
+        loaderImg.style.display = "none";
+        popup.style.display = "block";
 
     }
 
@@ -56,15 +59,33 @@ let showPopup = () => {
 // увеличение кол-во эллементов items
 let countUp = () => {
     if (counter < 10)
-        document.querySelector('.count-product').innerText = counter++;
+        productCount.innerText = counter++;
 };
 // уменьшение кол-во эллементов items
 let countDown = () => {
     if (counter > 1)
-        document.querySelector('.count-product').innerText = counter-=1;
+        productCount.innerText = counter -= 1;
 };
 let setCart = () => {
+    if (click === 0) {
+        let temporaryBasket=[];
+        temporaryBasket.push({
+            id: getData().id,
+            name: getData().name,
+            country: getData().country,
+            year_of_issue: getData().year_of_issue,
+            blade: getData().blade,
+            description: getData().description,
+            priceForOne: getData().priceForOne,
+            count: counter,
+        });
+        document.querySelector('.header-cart__count').innerText = click;
+        cart.set(click,temporaryBasket);
+        click++;
+    } else {
 
+    }
+    console.log(cart);
 }
 // document.querySelector('.count-product').innerText = counter;
 // let setCart = () => {
