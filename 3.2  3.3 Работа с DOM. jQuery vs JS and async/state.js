@@ -1,8 +1,7 @@
 let counter = 1;
 let cart = new Map;
 let idProductInCart = 1;
-let btnBurgerShow = document.querySelector(".header-burger-menu__svg-show"),
-    popup = document.querySelector(".b-popup"),
+let popup = document.querySelector(".b-popup"),
     loaderImg = document.querySelector(".loader"),
     productCount = document.querySelector(".count-product"),
     burgerMenu = document.querySelector(".header-burger-menu");
@@ -43,25 +42,45 @@ let closePopup = () => {
 }
 // показ корзины
 let showPopup = () => {
+    let someCounter = click
     loaderImg.style.display = "flex";
-    if (1) {//тут будет проверка , чтобы была просто перерисовка !
+    if (click === someCounter) {//тут будет проверка , чтобы была просто перерисовка !
         let element = document.querySelector(".popup-container__product");
         let id = document.createElement('div');
         id.classList.add("cart-id");
-        id.innerHTML = cart[0].id;
+        id.innerHTML = cart.get(0)[0].id;
         element.append(id);
         idProductInCart++;
         let name = document.createElement('div');
         name.classList.add("cart-name")
-        name.innerHTML = `${cart[0].name}`;
+        name.innerHTML = `${cart.get(0)[0].name}`;
         element.appendChild(name);
         let count = document.createElement('div');
         count.classList.add("cart-count")
-        count.innerHTML = `${cart[0].count}`;
+        count.innerHTML = `${cart.get(0)[0].count}`;
         element.appendChild(count);
         let price = document.createElement('div');
         price.classList.add("cart-price");
-        price.innerHTML = `${cart[0].priceForOne * cart[0].count}`;
+        price.innerHTML = `${cart.get(0)[0].priceForOne * cart.get(0)[0].count}`;
+        element.appendChild(price);
+    } else {
+        let element = document.querySelector(".popup-container__product");
+        let id = document.createElement('div');
+        id.classList.add("cart-id");
+        id.innerHTML = cart.get(0)[0].id;
+        element.append(id);
+        idProductInCart++;
+        let name = document.createElement('div');
+        name.classList.add("cart-name")
+        name.innerHTML = `${cart.get(0)[0].name}`;
+        element.appendChild(name);
+        let count = document.createElement('div');
+        count.classList.add("cart-count")
+        count.innerHTML = `${cart.get(0)[0].count}`;
+        element.appendChild(count);
+        let price = document.createElement('div');
+        price.classList.add("cart-price");
+        price.innerHTML = `${cart.get(0)[0].priceForOne * cart.get(0)[0].count}`;
         element.appendChild(price);
     }
     let loader = () => {
@@ -101,7 +120,7 @@ let setCart = () => {
         // console.log(getData().name);
         console.log(cart.get(0)[0].count)
     } else {
-        if (getData().name === cart.get(0)[0].name) { //проверка на повторение, если схоже
+        if (getData().name === cart.get(0)[0].name) { //в нашем случае , у нас один эллемент, если бы было больше , то нужен был цикл
             cart.get(0)[0].count += counter;
         } else {
             temporaryBasket.push({
