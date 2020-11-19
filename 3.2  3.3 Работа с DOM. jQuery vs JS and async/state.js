@@ -47,13 +47,30 @@ let closePopup = () => {
 // показ корзины
 let showPopup = () => {
     loaderImg.style.display = "flex";
-
+    if(1){//тут будет проверка , чтобы была просто перерисовка !
+        let element = document.querySelector(".popup-container__product");
+        let id = document.createElement('div');
+        id.classList.add("cart-id");
+        id.innerHTML = cart[0].id;
+        element.append(id);
+        idProductInCart++;
+        let name = document.createElement('div');
+        name.classList.add("cart-name")
+        name.innerHTML = `${cart[0].name}`;
+        element.appendChild(name);
+        let count = document.createElement('div');
+        count.classList.add("cart-count")
+        count.innerHTML = `${cart[0].count}`;
+        element.appendChild(count);
+        let price = document.createElement('div');
+        price.classList.add("cart-price");
+        price.innerHTML = `${cart[0].priceForOne * cart[0].count}`;
+        element.appendChild(price);
+    }
     let loader = () => {
         loaderImg.style.display = "none";
         popup.style.display = "block";
-
     }
-
     setTimeout(loader, 1000)
 }
 // увеличение кол-во эллементов items
@@ -66,9 +83,10 @@ let countDown = () => {
     if (counter > 1)
         productCount.innerText = counter -= 1;
 };
+let temporaryBasket = [];
 let setCart = () => {
     if (click === 0) {
-        let temporaryBasket=[];
+
         temporaryBasket.push({
             id: getData().id,
             name: getData().name,
@@ -79,11 +97,28 @@ let setCart = () => {
             priceForOne: getData().priceForOne,
             count: counter,
         });
-        document.querySelector('.header-cart__count').innerText = click;
-        cart.set(click,temporaryBasket);
+        document.querySelector('.header-cart__count').innerText =click+1;
+        cart.set(click, temporaryBasket);
         click++;
+        // console.log(cart.get(0)[0].name);
+        // console.log(getData().name);
+        console.log(cart.get(0)[0].count)
     } else {
-    // тут проверка на схожесть
+        if (getData().name === cart.get(0)[0].name) { //проверка на повторение, если схоже
+            cart.get(0)[0].count+=counter;
+        } else {
+            temporaryBasket.push({
+                id: getData().id,
+                name: getData().name,
+                country: getData().country,
+                year_of_issue: getData().year_of_issue,
+                blade: getData().blade,
+                description: getData().description,
+                priceForOne: getData().priceForOne,
+                count: counter,
+            });
+            cart.set(click, temporaryBasket);
+        }
     }
     console.log(cart);
 }
