@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./Catalog.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="createProduct()">
 <header class="header">
     <div class="header__logo">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">-->
@@ -79,21 +79,7 @@
 </header>
 <main class="main">
     <div class="product-list">
-        <div class="product-card">
-            <div class="product-card__image">
-                //image
-            </div>
-            <div class="product-cart__info">
-                <div class="product-card__info-name">Name</div>
-                <div class="product-card__info-country">country</div>
-                <div class="product-card__info-year">year</div>
-                <div class="product-card__info-blade">blade</div>
-            </div>
-            <div class="product-card__more-info">
-                <button class="product-card__button">description</button>
-            </div>
-        </div>
-<!--      ! end first card  -->
+
     </div>
     <footer class="footer">
         <img src="" alt="" class="footer__image">
@@ -102,5 +88,7 @@
         </div>
     </footer>
 </main>
-</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="Catalog.js"></script>
+</body >
 </html>
