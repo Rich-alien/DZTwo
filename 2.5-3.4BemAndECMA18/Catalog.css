@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+  color: white;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
+  line-height: 30px;
+  margin-right: 5px;
+}
+.nav__link link:last-child {
+  margin-right: 0;
+}
+.nav__link link:hover {
+  color: red;
+}
+
+body {
+  max-width: 1192px;
+  margin: 20px auto;
+  background-color: black;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=Catalog.css.map */
