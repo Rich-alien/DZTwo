@@ -35,7 +35,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .header {
-    margin: 40px auto;
+    margin: 20px auto;
     width: 500px;
   }
 }
@@ -103,7 +103,6 @@ body {
   margin-right: 10px;
 }
 .header-cart {
-  margin-left: 25px;
   cursor: pointer;
   display: flex;
 }
@@ -158,7 +157,7 @@ body {
   height: 38px;
   color: #fff;
 }
-@media screen and (max-width: 488px) {
+@media screen and (max-width: 768px) {
   .header-search__input {
     width: 124px;
   }
