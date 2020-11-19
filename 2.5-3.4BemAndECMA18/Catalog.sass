@@ -24,25 +24,74 @@ body
   width: 100%
   display: flex
   justify-content: space-between
+  align-items: center
 
 
-  //&-search
-  //  display: flex
-  //  align-items: center
-  //  position: relative
-  //
-  //  &__input
-  //    background-color: transparent
-  //    padding-left: 10px
-  //    width: 224px
-  //    border: 2px solid #FFFFFF
-  //    border-radius: 25px
-  //    height: 38px
-  //    color: #fff
-  //    @media screen and (max-width: $tablet-min-width)
-  //      width: 124px
-  //
-  //  &__svg
-  //
-  //    position: absolute
-  //    right: 10px
+.search
+  display: flex
+  align-items: center
+  position: relative
+  &__input
+    background-color: transparent
+    padding-left: 10px
+    width: 224px
+    border: 2px solid #FFFFFF
+    border-radius: 25px
+    height: 38px
+    color: #fff
+  &__icon
+    position: absolute
+    right: 10px
+.basket
+  display: flex
+  align-items: center
+  &__icon
+    margin-right: 5px
+.login
+  &__button
+    color: #fff
+    cursor: pointer
+    font-size: 18px
+    line-height: 23px
+    margin-left: 40px
+    text-transform: uppercase
+    border-radius: 38px
+    background-color: red
+    padding: 5px 0
+    text-align: center
+    width: 135px
+
+.product-list
+  display: flex
+  margin-top: 60px
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+.product-card
+  border: 5px solid white
+  border-radius: 15px
+  margin: 10px
+  padding: 10px
+  width: auto
+  &__image
+    margin: 30px
+    border-bottom: 5px solid white
+  &__image:hover
+    border-bottom-color: red
+  &__info
+    &-name
+      margin-top: 10px
+    &-country
+      margin-top: 10px
+    &-year
+      margin-top: 10px
+    &-blade
+      margin-top: 10px
+    &-price
+      margin-top: 10px
+  &__button
+    margin-top: 10px
+    cursor: pointer
+    border-radius: 10px
+    padding: 5px
+    background-color: green
