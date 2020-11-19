@@ -1,16 +1,12 @@
 let counter = 1;
-let cart = [];
+let cart = new Map;
 let idProductInCart = 1;
-let btnCounterUp = document.getElementById("plus"),
-    btnCounterDown = document.getElementById("minus"),
-    btnShowPopup = document.querySelector(".header-cart"),
-    btnHidePopup = document.querySelector(".btn-popUp"),
-    btnAdd = document.querySelector(".product-add"),
-    btnBurgerShow = document.querySelector(".header-burger-menu__svg-show");
+let btnBurgerShow = document.querySelector(".header-burger-menu__svg-show");
 btnBurgerClose = document.querySelector(".header-burger-menu__svg-close");
+let click = 0;
 btnBack = document.querySelector(".header-back");
 
-function getData() {
+let getData = () => {
     return {
         id: 1,
         img: "url//",
@@ -24,7 +20,6 @@ function getData() {
         allPrice: 0
     };
 }
-
 document.querySelector('.product-name').innerText = getData().name;
 document.querySelector('.product-name').innerText = getData().name;
 document.querySelector('.product-country').innerText = getData().country;
@@ -33,21 +28,21 @@ document.querySelector('.product-blade').innerText = getData().blade;
 document.querySelector('.product-description').innerText = getData().description;
 document.querySelector('.product-price').innerText = getData().priceForOne;
 
-btnBurgerShow.onclick = ShowBurger => {
+let showBurger = () => {
     document.querySelector(".header-burger-menu").style.display = "flex";
     btnBurgerShow.style.display = "none";
 
 }
-btnBurgerClose.onclick = closeBurger => {
+let closeBurger = () => {
     document.querySelector(".header-burger-menu").style.display = "none";
     btnBurgerShow.style.display = "flex";
 }
 // скрытие корзины
-btnHidePopup.onclick = closePopup => {
+let closePopup = () => {
     document.querySelector(".b-popup").style.display = "none";
 }
 // показ корзины
-btnShowPopup.onclick = showPopup => {
+let showPopup = () => {
     document.querySelector(".loader").style.display = "flex";
 
     function loader() {
@@ -59,73 +54,60 @@ btnShowPopup.onclick = showPopup => {
     setTimeout(loader, 1000)
 }
 // увеличение кол-во эллементов items
-btnCounterUp.onclick = countUp => {
+let countUp = () => {
     if (counter < 10)
-        counter++;
-
+        document.querySelector('.count-product').innerText = counter++;
 };
 // уменьшение кол-во эллементов items
-btnCounterDown.onclick = countDown => {
+let countDown = () => {
     if (counter > 1)
-        counter = counter - 1;
-
+        document.querySelector('.count-product').innerText = counter-=1;
 };
-const UPDATE = setInterval(throwMyEvent, 200);
-function updateCounter() {
-    //вывод кол-во эллементов в корзине
-    document.querySelector('.header-cart__count').innerText = cart.length;
-    // вывод кол-во выбранного товара
-    document.querySelector('.count-product').innerText = counter;
-
+let setCart = () => {
 
 }
-
-function throwMyEvent() {
-    document.querySelector('.container').dispatchEvent(new Event('myNewEvent', {
-        bubbles: true
-    }));
-}
-
-document.body.addEventListener('myNewEvent', updateCounter);
-let click = 0;
-btnAdd.onclick = addItems => {
-    if (cart.length > 0) {
-        cart[0].count += counter;
-    } else {
-        cart.push({
-            id: getData().id,
-            name: getData().name,
-            country: getData().country,
-            year_of_issue: getData().year_of_issue,
-            blade: getData().blade,
-            description: getData().description,
-            priceForOne: getData().priceForOne,
-            count: counter,
-        })
-    }
-    if (click < 1) {
-        click++;
-        let element = document.querySelector(".popup-container__product");
-        let id = document.createElement('div');
-        id.classList.add("cart-id");
-        id.innerHTML = cart[0].id;
-        element.append(id);
-        idProductInCart++;
-        let name = document.createElement('div');
-        name.classList.add("cart-name")
-        name.innerHTML = `${cart[0].name}`;
-        element.appendChild(name);
-        let count = document.createElement('div');
-        count.classList.add("cart-count")
-        count.innerHTML = `${cart[0].count}`;
-        element.appendChild(count);
-        let price = document.createElement('div');
-        price.classList.add("cart-price");
-        price.innerHTML = `${cart[0].priceForOne * cart[0].count}`;
-        element.appendChild(price);
-    }
-    document.querySelector('.cart-count').innerText = `${cart[0].count}`;
-    document.querySelector('.cart-price').innerText = `${cart[0].priceForOne * cart[0].count}`;
-    return cart;
-}
+// document.querySelector('.count-product').innerText = counter;
+// let setCart = () => {
+//     console.log("click")
+//     if (cart.length > 0) {
+//         cart[0].count += counter;
+//     } else {
+//         cart.push({
+//             id: getData().id,
+//             name: getData().name,
+//             country: getData().country,
+//             year_of_issue: getData().year_of_issue,
+//             blade: getData().blade,
+//             description: getData().description,
+//             priceForOne: getData().priceForOne,
+//             count: counter,
+//         })
+//
+//     }
+//     if (click < 1) {
+//         click++;
+//         let element = document.querySelector(".popup-container__product");
+//         let id = document.createElement('div');
+//         id.classList.add("cart-id");
+//         id.innerHTML = cart[0].id;
+//         element.append(id);
+//         idProductInCart++;
+//         let name = document.createElement('div');
+//         name.classList.add("cart-name")
+//         name.innerHTML = `${cart[0].name}`;
+//         element.appendChild(name);
+//         let count = document.createElement('div');
+//         count.classList.add("cart-count")
+//         count.innerHTML = `${cart[0].count}`;
+//         element.appendChild(count);
+//         let price = document.createElement('div');
+//         price.classList.add("cart-price");
+//         price.innerHTML = `${cart[0].priceForOne * cart[0].count}`;
+//         element.appendChild(price);
+//     }
+//     console.log(cart);
+//     document.querySelector('.cart-count').innerText = `${cart[0].count}`;
+//     document.querySelector('.cart-price').innerText = `${cart[0].priceForOne * cart[0].count}`;
+//     return cart;
+// }
 
