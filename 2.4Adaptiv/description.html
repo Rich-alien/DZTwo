@@ -46,11 +46,11 @@
             </label>
 
         </div>
-        <svg class="header-burger-menu__svg-show" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg  class="header-burger-menu__svg-show" onclick="showBurger()" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 18H3V16H21V18ZM21 13H3V11H21V13ZM21 8H3V6H21V8Z" fill="white"/>
         </svg>
         <div class="header-right">
-            <div class="header-cart">
+            <div class="header-cart" onclick={showPopup()}>
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
                         <path  d="M10.4826 19.6694C9.27027 19.6694 8.28394 20.6557 8.28394 21.8681C8.28394 23.0804 9.27027 24.0667 10.4826 24.0667C11.695 24.0667 12.6813 23.0804 12.6813 21.8681C12.6813 20.6557 11.6949 19.6694 10.4826 19.6694ZM10.4826 22.839C9.94717 22.839 9.51157 22.4034 9.51157 21.868C9.51157 21.3325 9.94722 20.8969 10.4826 20.8969C11.018 20.8969 11.4537 21.3326 11.4537 21.868C11.4537 22.4035 11.018 22.839 10.4826 22.839Z"
@@ -69,10 +69,9 @@
                     </defs>
                 </svg>
                 <div class="header-cart__count">
-
+            0
                 </div>
             </div>
-
             <button class="header-button">
                 sign in
             </button>
@@ -80,7 +79,7 @@
 
     </header>
     <div class="header-burger-menu">
-        <svg class="header-burger-menu__svg-close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg onclick="closeBurger()" class="header-burger-menu__svg-close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 18H3V16H21V18ZM21 13H3V11H21V13ZM21 8H3V6H21V8Z" fill="black"/>
         </svg>
         <nav class="header-burger-menu__nav">
@@ -105,7 +104,11 @@
                 <div class="popup-container__product">
                 </div>
             </div>
-            <button class="btn-popUp">X</button>
+            <button onclick={closePopup()} class="btn-popUp">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z" fill="#FFFDFD"/>
+                </svg>
+            </button>
         </div>
     </div>
     <div class="main-container">
@@ -138,16 +141,16 @@
             </div>
 
             <div class="container-count">
-                <button class="btn-minus" id="minus">-</button>
+                <button onclick="countDown()" class="btn-minus" id="minus">-</button>
                 <div class="counter">
-                    <span class="count-product"></span>
+                    <span class="count-product">0</span>
                 </div>
-                <button class="btn-plus" id="plus">+</button>
+                <button onclick="countUp()" class="btn-plus" id="plus">+</button>
 
             </div>
 
 
-            <button class="product-add">add product</button>
+            <button class="product-add" onclick={setCart()}>add product</button>
         </div>
     </div>
 </div>

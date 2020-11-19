@@ -55,6 +55,8 @@ body
       @media screen and (max-width: $tablet-min-width)
         display: flex
         cursor: pointer
+    &__svg-close
+      cursor: pointer
   &-back
     display: none
     color: white
@@ -376,13 +378,17 @@ body
 //margin-right: 10px
 //padding: 10px
 .btn-popUp
+  cursor: pointer
   position: absolute
+  display: flex
+  align-items: center
+  justify-content: center
   width: 25px
   height: 25px
   background-color: red
   transform: translateX(950px)
   border-radius: 50%
   font-weight: bold
-.svg
-  @media screen and (max-width: 1000px)
-    fill: black
+//.svg
+//  @media screen and (max-width: 1000px)
+//    fill: black
