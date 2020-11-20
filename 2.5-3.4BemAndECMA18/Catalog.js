@@ -1,5 +1,5 @@
 //наши товары
-let getData = [
+const data = [
     {
         id: 0,
         img: "url//",
@@ -153,7 +153,7 @@ let getCart = () => {
 }
 let createProduct = () => {
     $(".basket__counter").append(cart.size);
-    getData.forEach((item, index, array) => {
+    data.forEach((item, index, array) => {
         $('.product-list').append(`
 <div class="product-card">
     <div class="product-card__image">
@@ -193,14 +193,14 @@ let hideCart = () => {
 let setData = (id) => {
     return (
         {
-            id: getData[id].id,
-            name: getData[id].name,
-            country: getData[id].country,
-            year: getData[id].year,
-            blade: getData[id].blade,
-            description: getData[id].description,
-            price: getData[id].price,
-            count: getData[id].count,
+            id: data[id].id,
+            name: data[id].name,
+            country: data[id].country,
+            year: data[id].year,
+            blade: data[id].blade,
+            description: data[id].description,
+            price: data[id].price,
+            count: data[id].count,
         }
     )
 }
