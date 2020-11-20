@@ -138,10 +138,12 @@ let click = 0;
 let cart = new Map;
 let count = 0;
 let basketCount = $(".basket__counter");
+let cartPopup = $(".b-popup");
+let containerCart = $('.popup-container__product');
 let preBasket = [];
 //перенос данных из ужасного bd в мир html
 let getCart = () => {
-    let impregnatedArray=[]
+    let impregnatedArray = []
     for (let product of cart) {
         for (let i = 0; i < product[1].length; i++) {
             impregnatedArray.push(product[1][i]);
@@ -171,7 +173,22 @@ let createProduct = () => {
     })
 }
 let createCart = () => {
-    console.log(getCart());
+    getCart().forEach((item, index, array) => {
+        containerCart.append(`
+        <div class="basket">
+            <div class="basket__name">Name: <p class="basket__name-info">${array[index].name}</p></div>
+            <div class="basket__country">country: <p class="basket__country-info">${array[index].country}</p></div>
+            <div class="basket__year">year: <p class="basket__year-info">${array[index].year}</p></div>
+            <div class="basket__blade">blade:<p class="basket__blade-info">${array[index].blade}</p></div>
+            <div class="basket__price">price:<p class="basket__price-info">${array[index].price}</p></div>
+        </div>
+        `)
+    })
+    cartPopup.show();
+}
+let hideCart = () => {
+    cartPopup.hide();
+    containerCart.empty()
 }
 //
 let setData = (id) => {
