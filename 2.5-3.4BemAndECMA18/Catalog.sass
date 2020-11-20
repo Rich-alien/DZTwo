@@ -95,3 +95,61 @@ body
     border-radius: 10px
     padding: 5px
     background-color: green
+.basket
+  cursor: pointer
+.b-popup
+  display: none
+  width: 100%
+  min-height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  overflow: hidden
+  position: fixed
+  top: 0
+.b-popup .b-popup-content
+  display: flex
+  margin: 40px auto 0 auto
+  width: 1000px
+  height: auto
+  padding: 10px
+  background-color: #c5c5c5
+  border-radius: 5px
+  box-shadow: 0 0 10px #000
+  &__top
+    width: 900px
+    display: flex
+    justify-content: space-between
+    padding-bottom: 5px
+    border-bottom: 2px solid black
+
+  &__product
+    width: 900px
+    display: flex
+    justify-content: space-between
+
+.cart
+  &-id
+    height: 100%
+
+  &-name
+    height: 100%
+
+  &-count
+    height: 100%
+
+  &-price
+    height: 100%
+.popup-container
+  display: flex
+  flex-direction: column
+.button__popup
+  cursor: pointer
+  position: absolute
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 25px
+  height: 25px
+  background-color: red
+  transform: translateX(950px)
+  border-radius: 50%
+  font-weight: bold
