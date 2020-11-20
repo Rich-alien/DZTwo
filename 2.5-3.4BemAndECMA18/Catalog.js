@@ -176,11 +176,10 @@ let createCart = () => {
     getCart().forEach((item, index, array) => {
         containerCart.append(`
         <div class="basket">
-            <div class="basket__name">Name: <p class="basket__name-info">${array[index].name}</p></div>
-            <div class="basket__country">country: <p class="basket__country-info">${array[index].country}</p></div>
-            <div class="basket__year">year: <p class="basket__year-info">${array[index].year}</p></div>
-            <div class="basket__blade">blade:<p class="basket__blade-info">${array[index].blade}</p></div>
-            <div class="basket__price">price:<p class="basket__price-info">${array[index].price}</p></div>
+            <p class="basket__name">${array[index].name}</p>
+            <p class="basket__country">${array[index].country}</p>
+            <p class="basket__count">${array[index].count}</p>
+            <p class="basket__price">${array[index].price * array[index].count}</p>
         </div>
         `)
     })
