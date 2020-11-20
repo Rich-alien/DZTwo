@@ -43,9 +43,9 @@
         </div>
     </div>
     <div class="header__basket">
-        <div class="basket">
+        <div onclick="createCart()" class="basket">
             <div class="basket__icon">
-                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
                         <path d="M10.4826 19.6694C9.27027 19.6694 8.28394 20.6557 8.28394 21.8681C8.28394 23.0804 9.27027 24.0667 10.4826 24.0667C11.695 24.0667 12.6813 23.0804 12.6813 21.8681C12.6813 20.6557 11.6949 19.6694 10.4826 19.6694ZM10.4826 22.839C9.94717 22.839 9.51157 22.4034 9.51157 21.868C9.51157 21.3325 9.94722 20.8969 10.4826 20.8969C11.018 20.8969 11.4537 21.3326 11.4537 21.868C11.4537 22.4035 11.018 22.839 10.4826 22.839Z"
                               fill="white"/>
@@ -64,8 +64,28 @@
                 </svg>
             </div>
             <div class="basket__counter">
-                0
+
             </div>
+        </div>
+    </div>
+    <div class="b-popup">
+        <div class="b-popup-content">
+            <div class="popup-container">
+                <div class="popup-container__top">
+                    <div class="id">id</div>
+                    <div class="name">name</div>
+                    <div class="count">count</div>
+                    <div class="price">price</div>
+                </div>
+                <div class="popup-container__product">
+                </div>
+            </div>
+            <button class="button__popup" onclick="hideCart()" >
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z"
+                          fill="#FFFDFD"/>
+                </svg>
+            </button>
         </div>
     </div>
     <div class="header__login">
@@ -78,9 +98,8 @@
 
 </header>
 <main class="main">
-    <div class="product-list">
-
-    </div>
+    <div class="product-list"></div>
+    <div class="cart"></div>
     <footer class="footer">
         <img src="" alt="" class="footer__image">
         <div class="footer__information">
