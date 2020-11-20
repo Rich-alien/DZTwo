@@ -142,7 +142,7 @@ let cartPopup = $(".b-popup");
 let containerCart = $('.popup-container__product');
 let preBasket = [];
 //перенос данных из ужасного bd в мир html
-let getCart = () => {
+const getCart = () => {
     let impregnatedArray = []
     for (let product of cart) {
         for (let i = 0; i < product[1].length; i++) {
@@ -151,7 +151,7 @@ let getCart = () => {
     }
     return impregnatedArray;
 }
-let createProduct = () => {
+const createProduct = () => {
     $(".basket__counter").append(cart.size);
     data.forEach((item, index, array) => {
         $('.product-list').append(`
@@ -172,7 +172,7 @@ let createProduct = () => {
 </div>`)
     })
 }
-let createCart = () => {
+const createCart = () => {
     getCart().forEach((item, index, array) => {
         containerCart.append(`
         <div class="basket">
@@ -185,12 +185,12 @@ let createCart = () => {
     })
     cartPopup.show();
 }
-let hideCart = () => {
+const hideCart = () => {
     cartPopup.hide();
     containerCart.empty()
 }
 //
-let setData = (id) => {
+const setData = (id) => {
     return (
         {
             id: data[id].id,
@@ -204,7 +204,7 @@ let setData = (id) => {
         }
     )
 }
-let pressBuy = (id) => {
+const pressBuy = (id) => {
     //первый эллемент точно будет уникальным в корзине
 
     if (cart.size === 0) {
@@ -227,7 +227,7 @@ let pressBuy = (id) => {
     }
 
 }
-let getID = (id, cart) => {
+const getID = (id, cart) => {
     let saveID = [];
     for (let product of cart) {
         for (let i = 0; i < product[1].length; i++) {
@@ -236,7 +236,7 @@ let getID = (id, cart) => {
     }
     return saveID.indexOf(id);
 }
-let conflictTest = (id, basket) => {
+const conflictTest = (id, basket) => {
     let tester = [];
     for (let product of basket) {
         for (let i = 0; i < product[1].length; i++) {
