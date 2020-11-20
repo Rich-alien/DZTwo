@@ -136,7 +136,19 @@ let getData = [
 ];
 let click = 0;
 let cart = new Map;
+let count = 0;
+let basketCount = $(".basket__counter");
+let preBasket = [];
 //перенос данных из ужасного bd в мир html
+let getCart = () => {
+    let impregnatedArray=[]
+    for (let product of cart) {
+        for (let i = 0; i < product[1].length; i++) {
+            impregnatedArray.push(product[1][i]);
+        }
+    }
+    return impregnatedArray;
+}
 let createProduct = () => {
     $(".basket__counter").append(cart.size);
     getData.forEach((item, index, array) => {
@@ -158,6 +170,10 @@ let createProduct = () => {
 </div>`)
     })
 }
+let createCart = () => {
+    console.log(getCart());
+}
+//
 let setData = (id) => {
     return (
         {
@@ -172,27 +188,31 @@ let setData = (id) => {
         }
     )
 }
-let preBasket = [];
 let pressBuy = (id) => {
     //первый эллемент точно будет уникальным в корзине
+
     if (cart.size === 0) {
+        count++;
         preBasket.push(setData(id));
         cart.set(click, preBasket);
-        $(".basket__counter").append(cart.size);
+        basketCount.empty()
+        basketCount.append(count);
     } else if (conflictTest(id, cart)) {
+        count++;
         preBasket.push(setData(id));
+        basketCount.empty()
+        basketCount.append(count);
+
     } else {
-       // console.log(getID(id,cart));
-       //  cart[getID(id,cart)].value;
+
         for (let value of cart) {
-           value[1][getID(id,cart)].count+=1;
+            value[1][getID(id, cart)].count += 1;
         }
     }
 
 }
-let getID = (id,cart)=>{
+let getID = (id, cart) => {
     let saveID = [];
-    console.log(cart);
     for (let product of cart) {
         for (let i = 0; i < product[1].length; i++) {
             saveID.push(product[1][i].id);
