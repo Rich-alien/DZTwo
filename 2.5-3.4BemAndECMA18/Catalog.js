@@ -141,7 +141,68 @@ let basketCount = $(".basket__counter");
 let cartPopup = $(".b-popup");
 let containerCart = $('.popup-container__product');
 let preBasket = [];
+
 //перенос данных из ужасного bd в мир html
+class Container {
+    _arr = [];
+
+    set array(arr) {
+        this._arr = arr;
+    }
+
+    get array() {
+        return this._arr;
+    }
+
+    setCount = (data) => {
+        const counter = new Container(data);
+    }
+
+    constructor(array) {
+
+        array.forEach((item, index, arr) => {
+
+            containerCart.append(`
+        <div class="basket">
+            <p class="basket__name">${arr[index].name}</p> 
+            <p class="basket__country">${arr[index].country}</p>
+            ${this.setCount(arr[index].count)}
+            <p class="basket__price">${arr[index].price * array[index].count}</p>
+        </div>
+        `)
+
+        })
+
+    }
+}
+
+class Counter {
+    _count = 0;
+    set count(count) {
+        this._count = count;
+    }
+
+    get count() {
+        return this._count
+    }
+
+    constructor(count) {
+        `<p class="basket__count">${count}</p>`
+    }
+
+    increase = () => {
+        this._count++;
+    }
+    decrease = () => {
+        this._count--;
+    }
+
+}
+
+const createCart = () => {
+    const container = new Container(getCart());
+    cartPopup.show();
+}
 const getCart = () => {
     let impregnatedArray = []
     for (let product of cart) {
@@ -153,7 +214,9 @@ const getCart = () => {
 }
 const createProduct = () => {
     $(".basket__counter").append(cart.size);
+
     data.forEach((item, index, array) => {
+
         $('.product-list').append(`
 <div class="product-card">
     <div class="product-card__image">
@@ -172,19 +235,7 @@ const createProduct = () => {
 </div>`)
     })
 }
-const createCart = () => {
-    getCart().forEach((item, index, array) => {
-        containerCart.append(`
-        <div class="basket">
-            <p class="basket__name">${array[index].name}</p>
-            <p class="basket__country">${array[index].country}</p>
-            <p class="basket__count">${array[index].count}</p>
-            <p class="basket__price">${array[index].price * array[index].count}</p>
-        </div>
-        `)
-    })
-    cartPopup.show();
-}
+
 const hideCart = () => {
     cartPopup.hide();
     containerCart.empty()
@@ -222,7 +273,7 @@ const pressBuy = (id) => {
     } else {
 
         for (let value of cart) {
-            value[1][getID(id, cart)].count += 1;
+            value[1][getID(id, cart)].count++;
         }
     }
 
