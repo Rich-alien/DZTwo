@@ -145,6 +145,7 @@ let preBasket = [];
 //перенос данных из ужасного bd в мир html
 class Container {
     _arr = [];
+    _count = 0;
 
     set array(arr) {
         this._arr = arr;
@@ -154,30 +155,26 @@ class Container {
         return this._arr;
     }
 
-    setCount = (data) => {
-        const counter = new Container(data);
+    count(data) {
+        const container = new Container(data);
     }
 
-    constructor(array) {
-
-        array.forEach((item, index, arr) => {
-
-            containerCart.append(`
+    constructor(array, index) {
+        containerCart.append(`
         <div class="basket">
-            <p class="basket__name">${arr[index].name}</p> 
-            <p class="basket__country">${arr[index].country}</p>
-            ${this.setCount(arr[index].count)}
-            <p class="basket__price">${arr[index].price * array[index].count}</p>
+            <p class="basket__name">${array[index].name}</p> 
+            <p class="basket__country">${array[index].country}</p>
+            
+            <p class="basket__price">${array[index].price * array[index].count}</p>
         </div>
         `)
-
-        })
-
+// ${this.count(array[index].count)} пытаюсь
     }
+
 }
 
 class Counter {
-    _count = 0;
+    _count = [];
     set count(count) {
         this._count = count;
     }
@@ -188,6 +185,7 @@ class Counter {
 
     constructor(count) {
         `<p class="basket__count">${count}</p>`
+
     }
 
     increase = () => {
@@ -200,7 +198,11 @@ class Counter {
 }
 
 const createCart = () => {
-    const container = new Container(getCart());
+    for (let i = 0; i < getCart().length; i++) {
+        const container = new Container(getCart(), i);
+    }
+
+
     cartPopup.show();
 }
 const getCart = () => {
