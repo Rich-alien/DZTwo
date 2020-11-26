@@ -139,14 +139,13 @@ let cart = new Map;
 let count = 0;
 let basketCount = $(".basket__counter");
 let cartPopup = $(".b-popup");
-let containerProduct = $('.popup-container__product');
-let containerPopup = $('.popup-container');
+let containerCart = $('.popup-container__product');
 let preBasket = [];
 
 //перенос данных из ужасного bd в мир html
 class Container {
     _arr = [];
-    product;
+    _count = 0;
 
     set array(arr) {
         this._arr = arr;
@@ -156,53 +155,39 @@ class Container {
         return this._arr;
     }
 
-
-    constructor(arr) {
-        containerPopup.append(`
-            <div class="popup-container__product">
-            ${this.product = new Product(arr)}
-            
-            </div>
-        `);
-    console.log(this.product);
-
+    getCount(data) {
+        let productCount = new Counter(data);
+       return  productCount.count;
     }
 
-}
-
-class Product {
-    _arr = [];
-    _count = 0;
-
-    set array(arr) {
-        this._arr = arr;
-    }
-
-    get array() {
-        return this._arr
-    }
-
-    constructor(array) {
-        (`
-            <p>${array[0].name}</p>
+    constructor(array, index) {
+        containerCart.append(`
+        <div class="basket">
+            <p class="basket__name">${array[index].name}</p> 
+            <p class="basket__country">${array[index].country}</p>
+               ${this.getCount(array[index].count)}
+            <p class="basket__price">${array[index].price * array[index].count}</p>
+        </div>
         `)
     }
 
 }
 
 class Counter {
-    _count = [];
+    _count = 0;
     set count(count) {
         this._count = count;
     }
 
     get count() {
-        return this._count
+        debugger;
+        return `<p class="basket__count">${this._count}</p>`
     }
 
-    constructor(count) {
-
-    }
+    // constructor(count) {
+    //     `<p class="basket__count">${count}</p>`
+    //
+    // }
 
     increase = () => {
         this._count++;
@@ -214,7 +199,11 @@ class Counter {
 }
 
 const createCart = () => {
-    const container = new Container(getCart());
+    for (let i = 0; i < getCart().length; i++) {
+        const container = new Container(getCart(), i);
+    }
+
+
     cartPopup.show();
 }
 const getCart = () => {
@@ -252,7 +241,7 @@ const createProduct = () => {
 
 const hideCart = () => {
     cartPopup.hide();
-    containerProduct.empty()
+    containerCart.empty()
 }
 //
 const setData = (id) => {
