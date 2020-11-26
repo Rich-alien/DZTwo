@@ -145,7 +145,7 @@ let preBasket = [];
 //перенос данных из ужасного bd в мир html
 class Container {
     _arr = [];
-    _count = 0;
+
 
     set array(arr) {
         this._arr = arr;
@@ -155,9 +155,12 @@ class Container {
         return this._arr;
     }
 
-    getCount(data) {
-        let productCount = new Counter(data);
-       return  productCount.count;
+    getCount(setCount) {
+        let productCount = new Counter(setCount);
+        return productCount.count;
+    }
+    incrementFun = ()=> {
+
     }
 
     constructor(array, index) {
@@ -165,6 +168,7 @@ class Container {
         <div class="basket">
             <p class="basket__name">${array[index].name}</p> 
             <p class="basket__country">${array[index].country}</p>
+            <div onclick="" ">+</div>
                ${this.getCount(array[index].count)}
             <p class="basket__price">${array[index].price * array[index].count}</p>
         </div>
@@ -175,22 +179,28 @@ class Container {
 
 class Counter {
     _count = 0;
-    set count(count) {
+
+    constructor(count) {
         this._count = count;
     }
 
-    get count() {
-        debugger;
-        return `<p class="basket__count">${this._count}</p>`
+    set count(setCount) {
+        this._count = setCount;
     }
 
-    // constructor(count) {
-    //     `<p class="basket__count">${count}</p>`
-    //
-    // }
+    get count() {
+
+        return `
+<!--                <div onclick="this.increase()">+</div>-->
+                <p class="basket__count">${this._count}</p>
+                `
+    }
+
 
     increase = () => {
-        this._count++;
+
+        console.log('hi');
+         this._count++;
     }
     decrease = () => {
         this._count--;
