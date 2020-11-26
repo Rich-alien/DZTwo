@@ -140,80 +140,111 @@ let count = 0;
 let basketCount = $(".basket__counter");
 let cartPopup = $(".b-popup");
 let containerCart = $('.popup-container__product');
+let containerPopup = $('.popup-container');
 let preBasket = [];
-
+let product = []
 //перенос данных из ужасного bd в мир html
+// class Container {
+//     _data = []
+//
+//     constructor(data) {
+//         this._data = data;
+//     }
+//
+//     set container(data) {
+//         this._data = data;
+//     }
+//     getProduct=()=>{
+//         for(let i=0;i<this._data.length;i++){
+//             let product =new Product(this._data,i);
+//             product.array;
+//         }
+//
+//     }
+//     get container() {
+//
+//         return containerPopup.append(`
+//         <div class="popup-container__product">
+//             ${this.getProduct()}
+//         </div>
+//
+//         `)
+//
+//     }
+// }
 class Container {
-    _arr = [];
-
-
-    set array(arr) {
-        this._arr = arr;
-    }
-
-    get array() {
-        return this._arr;
-    }
-
-    getCount(setCount) {
-        let productCount = new Counter(setCount);
-        return productCount.count;
-    }
-    incrementFun = ()=> {
-
-    }
-
-    constructor(array, index) {
-        containerCart.append(`
-        <div class="basket">
-            <p class="basket__name">${array[index].name}</p> 
-            <p class="basket__country">${array[index].country}</p>
-            <div onclick="" ">+</div>
-               ${this.getCount(array[index].count)}
-            <p class="basket__price">${array[index].price * array[index].count}</p>
-        </div>
-        `)
-    }
 
 }
-
-class Counter {
-    _count = 0;
-
-    constructor(count) {
-        this._count = count;
-    }
-
-    set count(setCount) {
-        this._count = setCount;
-    }
-
-    get count() {
-
-        return `
-<!--                <div onclick="this.increase()">+</div>-->
-                <p class="basket__count">${this._count}</p>
-                `
-    }
-
-
-    increase = () => {
-
-        console.log('hi');
-         this._count++;
-    }
-    decrease = () => {
-        this._count--;
-    }
-
-}
+// class Product {
+//     _arr = [];
+//     _index = 0;
+//
+//
+//     set array(arr) {
+//         this._arr = arr;
+//     }
+//
+//     get array() {
+//         return  containerCart.append(`
+//         <div class="basket">
+//             <p class="basket__name">${this._arr[this._index].name}</p>
+//             <p class="basket__country">${this._arr[this._index].country}</p>
+// <!--                <div onclick="this.increment()">+</div>-->
+//
+//                <div>-</div>
+//             <p class="basket__price">${this._arr[this._index].price * this._arr[this._index].count}</p>
+//         </div>
+//         `)
+//         // ${this.getCount(this._arr[this._index].count)}
+//     }
+//
+//     getCount(setCount) {
+//         debugger;
+//         const productCount = new Counter(setCount);
+//         return productCount.count;
+//     }
+//
+//
+//     constructor(array, index) {
+//        this._arr = array;
+//        this._index = index;
+//     }
+//
+// }
+//
+// class Counter {
+//     _count = 0;
+//
+//     constructor(count) {
+//         this._count = count;
+//     }
+//
+//     set count(setCount) {
+//         this._count = setCount;
+//     }
+//
+//     get count() {
+//
+//         return `
+//                    <div onclick="this.increase()">+</div>
+//                 <p class="basket__count">${this._count}</p>
+//                 `
+//     }
+//
+//
+//     increase() {
+//         console.log('hi');
+//         return this._count++;
+//     }
+//
+//     decrease = () => {
+//         return this._count--;
+//     }
+//
+// }
 
 const createCart = () => {
-    for (let i = 0; i < getCart().length; i++) {
-        const container = new Container(getCart(), i);
-    }
-
-
+        const container = new Container();
     cartPopup.show();
 }
 const getCart = () => {
@@ -248,12 +279,10 @@ const createProduct = () => {
 </div>`)
     })
 }
-
 const hideCart = () => {
     cartPopup.hide();
     containerCart.empty()
 }
-//
 const setData = (id) => {
     return (
         {
@@ -301,17 +330,12 @@ const getID = (id, cart) => {
     return saveID.indexOf(id);
 }
 const conflictTest = (id, basket) => {
-    let tester = [];
-    for (let product of basket) {
-        for (let i = 0; i < product[1].length; i++) {
-            tester.push(product[1][i].id !== id);
-        }
-    }
-    if (tester.indexOf(false) === -1) {
-        return 1;
-    } else {
-        return 0;
-    }
-
-
+   for (let product of basket) {
+       for(let i=0;i<product[i].length;i++){
+           if(product[1][i].id===id){
+               return false
+           }
+       }
+   }
+   return true;
 }
