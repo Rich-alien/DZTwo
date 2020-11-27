@@ -134,6 +134,7 @@ const data = [
     },
 
 ];
+
 let click = 0;
 let cart = new Map;
 let count = 0;
@@ -143,44 +144,30 @@ let containerCart = $('.popup-container__product');
 let containerPopup = $('.popup-container');
 let preBasket = [];
 let product = []
-class Container {
-    data;
-
-    constructor(cartData) {
-        this.data = cartData;
-        containerPopup.append('<div class="popup-container__product"></div>')
-    }
-
-    get createProduct() {
-                let newProduct = new Product(this.data);
-                return newProduct.onCreateProduct;
-    }
-
-}
 
 class Product {
     _product;
     // _index;
 
-    constructor(productData, index) {
+    constructor(productData) {
         this._product = productData;
+        this.onCreateProduct();
         // this._index = index;
     }
 
-    get onCreateProduct() {
-    for(let i =0;i<this._product.length;i++) {
-        return $('.popup-container__product').append(`
-        <div class="basket">
-        <p class="basket__name">${this._product[i].name}</p>
-            <p class="basket__country">${this._product[i].country}</p>
-            <div>+</div>
-             <p class="basket__country">${this._product[i].count}</p>
-            <div>-</div>
-            <p class="basket__price">${this._product[i].price * this._product[i].count}</p>
-        </div>
-        `)
-
-    }
+    onCreateProduct() {
+        this._product.forEach(item => {
+            $('.popup-container__product').append(`
+            <div class="basket">
+            <p class="basket__name">${item.name}</p>
+                <p class="basket__country">${item.country}</p>
+                <div>+</div>
+                 <p class="basket__country">${item.count}</p>
+                <div>-</div>
+                <p class="basket__price">${item.price * item.count}</p>
+            </div>
+            `)
+        })
     }
 
 }
@@ -217,46 +204,34 @@ class Product {
 //
 // }
 
-const createCart = () => {
-    const newContainer = new Container(getCart());
-    newContainer.createProduct;
+const createCart = function() {
+    const newContainer = new Product(preBasket);
     cartPopup.show();
 }
-const getCart = () => {
-    let impregnatedArray = []
-    for (let product of cart) {
-        for (let i = 0; i < product[1].length; i++) {
-            impregnatedArray.push(product[1][i]);
-        }
-    }
-    return impregnatedArray;
-}
-const createProduct = () => {
+const initProducts = () => {
     $(".basket__counter").append(cart.size);
-
-    data.forEach((item, index, array) => {
-
+    data.forEach(item => {
         $('.product-list').append(`
-<div class="product-card">
-    <div class="product-card__image">
-        <img style="width: auto" src="" alt="zzzz">
-     </div>
-     <div class="product-cart__info">
-         <div class="product-card__info-name">Name: <p class="product-card__name">${array[index].name}</p></div>
-         <div class="product-card__info-country">country: <p class="product-card__country">${array[index].country}</p></div>
-        <div class="product-card__info-year">year: <p class="product-card__year">${array[index].year}</p></div>
-        <div class="product-card__info-blade">blade:<p class="product-card__blade">${array[index].blade}</p></div>
-        <div class="product-card__info-price">price:<p class="product-card__price">${array[index].price}</p></div>
-     </div>
-    <div class="product-card__more-info">
-         <button onclick="pressBuy(${array[index].id})" class="product-card__button">buy</button>
-     </div>
-</div>`)
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img style="width: auto" src="" alt="zzzz">
+                </div>
+                <div class="product-cart__info">
+                    <div class="product-card__info-name">Name: <p class="product-card__name">${item.name}</p></div>
+                    <div class="product-card__info-country">country: <p class="product-card__country">${item.country}</p></div>
+                    <div class="product-card__info-year">year: <p class="product-card__year">${item.year}</p></div>
+                    <div class="product-card__info-blade">blade:<p class="product-card__blade">${item.blade}</p></div>
+                    <div class="product-card__info-price">price:<p class="product-card__price">${item.price}</p></div>
+                </div>
+                <div class="product-card__more-info">
+                     <button onclick="pressBuy(${item.id})" class="product-card__button">buy</button>
+                 </div>
+            </div>`)
     })
 }
 const hideCart = () => {
     cartPopup.hide();
-    containerCart.empty()
+    containerCart.empty();
 }
 const setData = (id) => {
     return (
@@ -274,27 +249,25 @@ const setData = (id) => {
 }
 const pressBuy = (id) => {
     //первый эллемент точно будет уникальным в корзине
-
     if (cart.size === 0) {
         count++;
         preBasket.push(setData(id));
         cart.set(click, preBasket);
         basketCount.empty()
         basketCount.append(count);
-    } else if (conflictTest(id, cart)) {
+    } else if (isExistProductById(id, cart)) {
         count++;
         preBasket.push(setData(id));
         basketCount.empty()
         basketCount.append(count);
-
     } else {
-
         for (let value of cart) {
             value[1][getID(id, cart)].count++;
         }
     }
 
 }
+
 const getID = (id, cart) => {
     let saveID = [];
     for (let product of cart) {
@@ -304,18 +277,14 @@ const getID = (id, cart) => {
     }
     return saveID.indexOf(id);
 }
-const conflictTest = (id, basket) => {
-    let tester = [];
+
+const isExistProductById = (id, basket) => {
     for (let product of basket) {
         for (let i = 0; i < product[1].length; i++) {
-            tester.push(product[1][i].id !== id);
+            if (product[1][i].id === id) {
+                return false;
+            }
         }
     }
-    if (tester.indexOf(false) === -1) {
-        return 1;
-    } else {
-        return 0;
-    }
-
-
+    return true;
 }
