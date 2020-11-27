@@ -143,50 +143,7 @@ let containerCart = $('.popup-container__product');
 let containerPopup = $('.popup-container');
 let preBasket = [];
 let product = []
-//перенос данных из ужасного bd в мир html
-// class Container {
-//     _data = []
-//
-//     constructor(data) {
-//         this._data = data;
-//     }
-//
-//     set container(data) {
-//         this._data = data;
-//     }
-//     getProduct=()=>{
-//         for(let i=0;i<this._data.length;i++){
-//             let product =new Product(this._data,i);
-//             product.array;
-//         }
-//
-//     }
-//     get container() {
-//
-//         return containerPopup.append(`
-//         <div class="popup-container__product">
-//             ${this.getProduct()}
-//         </div>
-//
-//         `)
-//
-//     }
-// }
-class Container {
-
-}
-// class Product {
-//     _arr = [];
-//     _index = 0;
-//
-//
-//     set array(arr) {
-//         this._arr = arr;
-//     }
-//
-//     get array() {
-//         return  containerCart.append(`
-//         <div class="basket">
+// <div class="basket">
 //             <p class="basket__name">${this._arr[this._index].name}</p>
 //             <p class="basket__country">${this._arr[this._index].country}</p>
 // <!--                <div onclick="this.increment()">+</div>-->
@@ -194,23 +151,50 @@ class Container {
 //                <div>-</div>
 //             <p class="basket__price">${this._arr[this._index].price * this._arr[this._index].count}</p>
 //         </div>
-//         `)
-//         // ${this.getCount(this._arr[this._index].count)}
-//     }
-//
-//     getCount(setCount) {
-//         debugger;
-//         const productCount = new Counter(setCount);
-//         return productCount.count;
-//     }
-//
-//
-//     constructor(array, index) {
-//        this._arr = array;
-//        this._index = index;
-//     }
-//
-// }
+class Container {
+    data;
+
+    constructor(cartData) {
+        this.data = cartData;
+        containerPopup.append('<div class="popup-container__product"></div>')
+    }
+
+    get createProduct() {
+        for (let i = 0; i < this.data.length; i++) {
+            let newProduct = new Product(this.data, i);
+            return newProduct.onCreateProduct;
+        }
+    }
+
+}
+
+class Product {
+    _product;
+    _index;
+
+    constructor(productData, index) {
+        console.log(productData);
+        this._product = productData;
+        this._index = index;
+    }
+
+    get onCreateProduct() {
+        return $('.popup-container__product').append(`
+        <div class="basket">
+        <p class="basket__name">${this._product[this._index].name}</p>
+            <p class="basket__country">${this._product[this._index].country}</p>
+
+
+               <div>-</div>
+            <p class="basket__price">${this._product[this._index].price * this._product[this._index].count}</p>
+        </div>
+        `)
+
+
+    }
+
+}
+
 //
 // class Counter {
 //     _count = 0;
@@ -244,7 +228,8 @@ class Container {
 // }
 
 const createCart = () => {
-        const container = new Container();
+    const newContainer = new Container(getCart());
+    newContainer.createProduct;
     cartPopup.show();
 }
 const getCart = () => {
@@ -330,12 +315,12 @@ const getID = (id, cart) => {
     return saveID.indexOf(id);
 }
 const conflictTest = (id, basket) => {
-   for (let product of basket) {
-       for(let i=0;i<product[i].length;i++){
-           if(product[1][i].id===id){
-               return false
-           }
-       }
-   }
-   return true;
+    for (let product of basket) {
+        for (let i = 0; i < product[i].length; i++) {
+            if (product[1][i].id === id) {
+                return false
+            }
+        }
+    }
+    return true;
 }
