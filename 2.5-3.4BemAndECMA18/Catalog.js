@@ -147,12 +147,11 @@ let product = []
 
 class Product {
     _product;
-    // _index;
-
+    newCount;
     constructor(productData) {
         this._product = productData;
         this.onCreateProduct();
-        // this._index = index;
+
     }
 
     onCreateProduct() {
@@ -161,50 +160,34 @@ class Product {
             <div class="basket">
             <p class="basket__name">${item.name}</p>
                 <p class="basket__country">${item.country}</p>
-                <div>+</div>
-                 <p class="basket__country">${item.count}</p>
-                <div>-</div>
+                ${this.newCount = new Count(item.count)}
                 <p class="basket__price">${item.price * item.count}</p>
             </div>
             `)
         })
     }
-
 }
 
-//
-// class Counter {
-//     _count = 0;
-//
-//     constructor(count) {
-//         this._count = count;
-//     }
-//
-//     set count(setCount) {
-//         this._count = setCount;
-//     }
-//
-//     get count() {
-//
-//         return `
-//                    <div onclick="this.increase()">+</div>
-//                 <p class="basket__count">${this._count}</p>
-//                 `
-//     }
-//
-//
-//     increase() {
-//         console.log('hi');
-//         return this._count++;
-//     }
-//
-//     decrease = () => {
-//         return this._count--;
-//     }
-//
-// }
+class Count {
+    _count;
 
-const createCart = function() {
+    constructor(count) {
+        this._count = count
+        console.log( this._count);
+        this.onCreateCount()
+    }
+
+    onCreateCount() {`<div>+</div>
+            <p class="basket__country">${this._count}</p>
+         <div>-</div>`
+    }
+
+    increment() {
+        console.log(this._count);
+    }
+}
+
+const createCart = function () {
     const newContainer = new Product(preBasket);
     cartPopup.show();
 }
