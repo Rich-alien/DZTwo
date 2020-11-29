@@ -190,12 +190,7 @@ class Count  {
         this.inner =  this.getInnerHTML(count);
         this._count = count;
         console.log(this.inner);
-        this.template.innerHTML = `<div>
-        <div onclick="this.increment()">+</div>
-        <p class="basket__count">${count}</p>
-        <div>-</div>
-        </div>
-        `;
+        this.template.innerHTML = this.inner;
         console.log(this.template);
     }
 
