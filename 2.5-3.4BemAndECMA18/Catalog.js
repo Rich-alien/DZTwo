@@ -157,48 +157,70 @@ class Product {
 
         let template = document.createElement("div");
         template.className=("basket");
-
-         console.log(template);
             template.innerHTML=`<p class="basket__name">${this._product.name}</p>
                 <p class="basket__country">${this._product.country}</p>
               <p class="basket__price">${this._product.price * this._product.count}</p>
            `;
+            console.log(this._product.count);
         let newCounter = new Count(this._product.count,template);
-        console.log( template);
        this.wrapper.append(template);
 
     }
 }
 
 class Count  {
-    _count;
+    _count=0;
     template;
     inner;
 
-    increment() {
-       this._count++;
-    }
-     getInnerHTML(count) { return(`
+     getInnerHTML(count) { return `
         <div class="increment">+</div>
-        <p class="basket__count">${count}</p>
+        <p class="product__count">${count}</p>
         <div class="decrement">-</div>
-        `);
+        ` ;
     }
     constructor(count,template) {
-        console.log(template);
         this.template = template;
         this.inner =  this.getInnerHTML(count);
+        console.log(count);
         this._count = count;
-        document.querySelector(".increment").addEventListener("click" , this.increment);
-        console.log(this.inner);
+
         let counterDiv = document.createElement("div");
         counterDiv.className= "container-count";
         counterDiv.innerHTML = this.inner;
-        console.log(counterDiv);
         this.template.appendChild(counterDiv);
+        console.log(this.template);
+        console.log(counterDiv.querySelector(".increment"));
+        counterDiv.querySelector(".increment").addEventListener("click" , this.increment);
+        counterDiv.querySelector(".decrement").addEventListener("click" , this.decrement);
+
+
 
     }
+    getCount  ()  {
+        return this._count;
 
+    }
+    increment=()=> {
+         if(this._count<20){
+
+             $(".product__count").empty();
+             this._count++;
+             $(".product__count").append(this._count);
+
+         }
+
+        console.log("in");
+    }
+    decrement=()=> {
+        if(this._count>0){
+            $(".product__count").empty();
+            this._count--;
+            $(".product__count").append(this._count);
+
+        }
+        console.log("de");
+    }
 }
 
 class Popup {
