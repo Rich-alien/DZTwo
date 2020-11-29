@@ -176,10 +176,11 @@ class Count  {
     inner;
 
     increment() {
+        console.log("hi");
         this._count++;
     }
      getInnerHTML(count) { return(`
-        <div onclick="this.increment()">+</div>
+        <div onclick="this._count++">+</div>
         <p class="basket__count">${count}</p>
         <div>-</div>
         `);
