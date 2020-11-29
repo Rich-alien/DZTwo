@@ -146,22 +146,31 @@ let product = []
 
 class Product {
     _product;
-
+    wrapper;
     constructor(product,wrapper) {
         this._product = product;
+        this.wrapper = wrapper
         this.createProduct();
     }
 
     createProduct() {
-            $(".popup-container__product").append(`
+        this.wrapper.insertBefore(`
             <div class="basket">
             <p class="basket__name">${this._product.name}</p>
                 <p class="basket__country">${this._product.country}</p>
-                
-                <p class="basket__price">${this._product.price * this._product.count}</p>
+              <p class="basket__price">${this._product.price * this._product.count}</p>
             </div>
-            `)
-        }
+           `)
+    }
+      // $(".popup-container__product").append(`
+      //       <div class="basket">
+      //       <p class="basket__name">${this._product.name}</p>
+      //           <p class="basket__country">${this._product.country}</p>
+      //
+      //           <p class="basket__price">${this._product.price * this._product.count}</p>
+      //       </div>
+      //       `)
+      //   }
 
 }
 
