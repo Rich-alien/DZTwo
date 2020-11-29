@@ -157,14 +157,15 @@ class Product {
     createProduct() {
         let template = document.createElement("div");
         template.className=("basket")
-        template.innerHTML=(`
+        template.innerHTML=`
             <p class="basket__name">${this._product.name}</p>
                 <p class="basket__country">${this._product.country}</p>
               <p class="basket__price">${this._product.price * this._product.count}</p>
             
-           `)
+           `
         console.log(template);
-        this.wrapper.insertBefore(template);
+        // let insert =  this.wrapper.insertBefore(template);
+        this.wrapper.append=template;
 
     }
       // $(".popup-container__product").append(`
