@@ -176,13 +176,12 @@ class Count  {
     inner;
 
     increment() {
-        console.log("hi");
-        this._count++;
+       this._count++;
     }
      getInnerHTML(count) { return(`
-        <div onclick="this._count++">+</div>
+        <div class="increment">+</div>
         <p class="basket__count">${count}</p>
-        <div>-</div>
+        <div class="decrement">-</div>
         `);
     }
     constructor(count,template) {
@@ -190,6 +189,7 @@ class Count  {
         this.template = template;
         this.inner =  this.getInnerHTML(count);
         this._count = count;
+        document.querySelector(".increment").addEventListener("click" , this.increment);
         console.log(this.inner);
         let counterDiv = document.createElement("div");
         counterDiv.className= "container-count";
