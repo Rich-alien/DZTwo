@@ -154,7 +154,7 @@ class Count  {
     }
     get getInnerHTML() {
         return `
-        <div class="basket__increment">+</div>
+        
         <p class="basket__count">${this._count}</p>
         <div>-</div>
         `
@@ -181,7 +181,7 @@ class Product extends Count{
             <div class="basket">
             <p class="basket__name">${item.name}</p>
                 <p class="basket__country">${item.country}</p>
-                ${document.querySelector('.basket__increment').onclick(super.increment())}
+                <div onclick="super.increment()" class="basket__increment">+</div>
                 ${super.getInnerHTML}
                 <p class="basket__price">${item.price * item.count}</p>
             </div>
