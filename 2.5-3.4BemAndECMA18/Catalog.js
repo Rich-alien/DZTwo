@@ -141,48 +141,25 @@ let count = 0;
 let basketCount = $(".basket__counter");
 let cartPopup = $(".b-popup");
 let containerCart = $('.popup-container__product');
-let incButton = document.querySelector('.basket__increment');
 let preBasket = [];
 let product = []
-class Count  {
-    _count;
 
-    setCount(count){
-        this._count = count
-    }
-    constructor(data) {
-    }
-    get getInnerHTML() {
-        return `
-        
-        <p class="basket__count">${this._count}</p>
-        <div>-</div>
-        `
-    }
-    increment() {
-        console.log("hi");
-         this._count++;
-    }
-}
-class Product extends Count{
+class Product {
     _product;
 
     constructor(productData) {
-        let data = "hi";
-        super(data);
         this._product = productData;
         this.onCreateProduct();
     }
 
     onCreateProduct() {
         this._product.forEach(item => {
-            item.counter = super.setCount(item.count);
+            item.counter = new Count(item.count);
             $(".popup-container__product").append(`
             <div class="basket">
             <p class="basket__name">${item.name}</p>
                 <p class="basket__country">${item.country}</p>
-                <div onclick="super.increment()" class="basket__increment">+</div>
-                ${super.getInnerHTML}
+              ${item.counter.getInnerHTML}
                 <p class="basket__price">${item.price * item.count}</p>
             </div>
             `)
@@ -191,8 +168,23 @@ class Product extends Count{
 
 }
 
+class Count  {
+    _count;
+    increment() {
+        this._count++;
+    }
+    get getInnerHTML() {
+        return `
+        <div onclick="this.increment()">+</div>
+        <p class="basket__count">${this._count}</p>
+        <div>-</div>
+        `
+    }
+    constructor(count) {
+        this._count = count;
+    }
 
-
+}
 
 const createCart = function () {
     const newContainer = new Product(preBasket);
