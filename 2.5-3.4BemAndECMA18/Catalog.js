@@ -148,6 +148,7 @@ let product = []
 class Product {
     _product;
     newCount;
+
     constructor(productData) {
         this._product = productData;
         this.onCreateProduct();
@@ -160,7 +161,9 @@ class Product {
             <div class="basket">
             <p class="basket__name">${item.name}</p>
                 <p class="basket__country">${item.country}</p>
-                ${this.newCount = new Count(item.count)}
+                <div class="basket-decrease">-</div>
+                <p class="basket__count">${this.newCount = new Count(item.count)}</p>
+                <div class="basket-increase">+</div>
                 <p class="basket__price">${item.price * item.count}</p>
             </div>
             `)
@@ -169,23 +172,42 @@ class Product {
 }
 
 class Count {
-    _count;
+    set value(val) {
+        this.value = isNaN(val) ? 0 : val;
 
-    constructor(count) {
-        this._count = count
-        console.log( this._count);
-        this.onCreateCount()
     }
 
-    onCreateCount() {`<div>+</div>
-            <p class="basket__country">${this._count}</p>
-         <div>-</div>`
+    get value() {
+        return this.value;
     }
-
-    increment() {
-        console.log(this._count);
+    constructor(wrapper) {
+        const template  = document.querySelector(".basket__count");
+        const content = document.importNode(template.content,true);
+        this.value
     }
 }
+
+// class Count {p
+//     _count;
+//
+//     constructor(count) {
+//         this._count = count
+//         console.log( this._count);
+//     }
+//     get getCount(){
+//         console.log(this.onCreateCount())
+//         this.onCreateCount()
+//     }
+//     onCreateCount() { return (`<div onclick="this.increment()" >+</div>
+//             <p class="basket__country">${this._count}</p>
+//          <div>-</div>`)
+//     }
+//
+//     increment() {
+//         console.log(this._count);
+//         this._count++;
+//     }
+// }
 
 const createCart = function () {
     const newContainer = new Product(preBasket);
