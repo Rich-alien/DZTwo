@@ -148,38 +148,24 @@ class Product {
     _product;
     wrapper;
     constructor(product,wrapper) {
-        console.log(wrapper);
         this._product = product;
         this.wrapper = wrapper
-        console.log(wrapper)
         this.createProduct();
     }
 
     createProduct() {
         let template = document.createElement("div");
-        template.className=("basket")
+        template.className=("basket");
         template.innerHTML=`
             <p class="basket__name">${this._product.name}</p>
                 <p class="basket__country">${this._product.country}</p>
               <p class="basket__price">${this._product.price * this._product.count}</p>
-            
-           `
-        console.log(template);
-        // let insert =  this.wrapper.insertBefore(template);
-        console.log(this.wrapper);
-        this.wrapper.append=template;
+           `;
+       return  this.wrapper.appendChild(template);
 
 
     }
-      // $(".popup-container__product").append(`
-      //       <div class="basket">
-      //       <p class="basket__name">${this._product.name}</p>
-      //           <p class="basket__country">${this._product.country}</p>
-      //
-      //           <p class="basket__price">${this._product.price * this._product.count}</p>
-      //       </div>
-      //       `)
-      //   }
+
 
 }
 
@@ -210,7 +196,7 @@ class Popup {
         _productData;
 
         mapProductData (productData){
-           let popupContainer = document.querySelector(".basket__counter");
+           let popupContainer = document.querySelector(".popup-container__product");
             popupContainer.append(
                 productData.forEach(item=>{
                     item.counter = new Product(item,popupContainer);
