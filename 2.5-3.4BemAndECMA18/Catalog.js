@@ -154,8 +154,11 @@ class Product {
     }
 
     createProduct() {
+
         let template = document.createElement("div");
         template.className=("basket");
+         let newCounter = new Count(this._product.count,template);
+         console.log(template);
         template.innerHTML=`
             <p class="basket__name">${this._product.name}</p>
                 <p class="basket__country">${this._product.country}</p>
@@ -163,33 +166,29 @@ class Product {
            `;
         console.log( template);
        this.wrapper.append(template);
-       console.log( this.wrapper);
-
 
     }
-
-
 }
 
 class Count  {
     _count;
-    wrapper;
-    innerHTML;
+    template;
+    inner;
 
     increment() {
         this._count++;
     }
-     getInnerHTML(count) { return( `
+     getInnerHTML(count) { `
         <div onclick="this.increment()">+</div>
         <p class="basket__count">${count}</p>
         <div>-</div>
-        `);
+        `;
     }
-    constructor(count) {
-        this.wrapper = document.createElement("div");
-        this.innerHTML =  this.getInnerHTML(count);
+    constructor(count,template) {
+        this.template = template;
+        this.inner =  this.getInnerHTML(count);
         this._count = count;
-        this.wrapper.innerHTML = this.innerHTML;
+        this.template.innerHTML = this.inner;
     }
 
 }
