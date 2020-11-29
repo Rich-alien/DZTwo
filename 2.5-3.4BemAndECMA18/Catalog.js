@@ -161,7 +161,9 @@ class Product {
                 <p class="basket__country">${this._product.country}</p>
               <p class="basket__price">${this._product.price * this._product.count}</p>
            `;
-       return  this.wrapper.appendChild(template);
+        console.log( template);
+       this.wrapper.append(template);
+       console.log( this.wrapper);
 
 
     }
@@ -197,7 +199,7 @@ class Popup {
 
         mapProductData (productData){
            let popupContainer = document.querySelector(".popup-container__product");
-            popupContainer.append(
+            basketCount.append(
                 productData.forEach(item=>{
                     item.counter = new Product(item,popupContainer);
                 })
