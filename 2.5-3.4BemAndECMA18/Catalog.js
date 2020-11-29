@@ -141,13 +141,12 @@ let count = 0;
 let basketCount = $(".basket__counter");
 let cartPopup = $(".b-popup");
 let containerCart = $('.popup-container__product');
+let incButton = document.querySelector('.basket__increment');
 let preBasket = [];
 let product = []
 class Count  {
     _count;
-    increment() {
-        return this._count++;
-    }
+
     setCount(count){
         this._count = count
     }
@@ -155,10 +154,14 @@ class Count  {
     }
     get getInnerHTML() {
         return `
-        <div onclick="this.increment()">+</div>
+        <div class="basket__increment">+</div>
         <p class="basket__count">${this._count}</p>
         <div>-</div>
         `
+    }
+    increment() {
+        console.log("hi");
+         this._count++;
     }
 }
 class Product extends Count{
@@ -178,6 +181,7 @@ class Product extends Count{
             <div class="basket">
             <p class="basket__name">${item.name}</p>
                 <p class="basket__country">${item.country}</p>
+                ${document.querySelector('.basket__increment').onclick(super.increment())}
                 ${super.getInnerHTML}
                 <p class="basket__price">${item.price * item.count}</p>
             </div>
