@@ -147,18 +147,17 @@ let product = []
 class Product {
     _product;
 
-    constructor(product) {
+    constructor(product,wrapper) {
         this._product = product;
-        console.log(this._product);
-        this.onCreateProduct();
+        this.createProduct();
     }
 
-    onCreateProduct() {
+    createProduct() {
             $(".popup-container__product").append(`
             <div class="basket">
             <p class="basket__name">${this._product.name}</p>
                 <p class="basket__country">${this._product.country}</p>
-                <p class="basket__country">${this._product.count}</p>
+                
                 <p class="basket__price">${this._product.price * this._product.count}</p>
             </div>
             `)
@@ -166,40 +165,39 @@ class Product {
 
 }
 
-// class Count  {
-//     _count;
-//     wrapper;
-//     innerHTML;
-//
-//     increment() {
-//         this._count++;
-//     }
-//      getInnerHTML(count) { return( `
-//         <div onclick="this.increment()">+</div>
-//         <p class="basket__count">${count}</p>
-//         <div>-</div>
-//         `);
-//     }
-//     constructor(count) {
-//         this.wrapper = document.createElement("div");
-//         this.innerHTML =  this.getInnerHTML(count);
-//         this._count = count;
-//         this.wrapper.innerHTML = this.innerHTML;
-//     }
-//
-// }
+class Count  {
+    _count;
+    wrapper;
+    innerHTML;
+
+    increment() {
+        this._count++;
+    }
+     getInnerHTML(count) { return( `
+        <div onclick="this.increment()">+</div>
+        <p class="basket__count">${count}</p>
+        <div>-</div>
+        `);
+    }
+    constructor(count) {
+        this.wrapper = document.createElement("div");
+        this.innerHTML =  this.getInnerHTML(count);
+        this._count = count;
+        this.wrapper.innerHTML = this.innerHTML;
+    }
+
+}
 
 class Popup {
         _productData;
         mapProductData (productData){
             basketCount.append(
                 productData.forEach(item=>{
-                    item.counter = new Product(item);
+                    item.counter = new Product(item,basketCount);
                 })
             )
         }
         constructor(productData) {
-            console.log(productData);
         this._productData = productData;
         this.mapProductData(this._productData);
 
