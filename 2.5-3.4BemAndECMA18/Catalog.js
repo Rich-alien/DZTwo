@@ -159,7 +159,7 @@ class Product {
         template.className=("basket");
          let newCounter = new Count(this._product.count,template);
          console.log(template);
-        template.innerHTML=`
+            template.innerHTML=`
             <p class="basket__name">${this._product.name}</p>
                 <p class="basket__country">${this._product.country}</p>
               <p class="basket__price">${this._product.price * this._product.count}</p>
@@ -178,17 +178,20 @@ class Count  {
     increment() {
         this._count++;
     }
-     getInnerHTML(count) { `
+     getInnerHTML(count) { return (`
         <div onclick="this.increment()">+</div>
         <p class="basket__count">${count}</p>
         <div>-</div>
-        `;
+        `);
     }
     constructor(count,template) {
+        console.log(template);
         this.template = template;
         this.inner =  this.getInnerHTML(count);
         this._count = count;
+        console.log(this.inner);
         this.template.innerHTML = this.inner;
+        console.log(this.template);
     }
 
 }
