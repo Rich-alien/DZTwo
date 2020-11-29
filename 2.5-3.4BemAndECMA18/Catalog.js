@@ -159,8 +159,8 @@ class Product {
             <div class="basket">
             <p class="basket__name">${item.name}</p>
                 <p class="basket__country">${item.country}</p>
-              ${item.counter.getInnerHTML}
-              ${console.log(item.counter)}
+              ${item.counter.wrapper}
+              ${console.log(item.counter.wrapper)}
                 <p class="basket__price">${item.price * item.count}</p>
             </div>
             `)
@@ -184,6 +184,7 @@ class Count  {
     }
     constructor(count) {
         this.wrapper = document.createElement("div");
+        this.getInnerHTML;
         this.wrapper.innerHTML = this.getInnerHTML;
         this._count = count;
 
