@@ -148,6 +148,7 @@ class Product {
     _product;
     wrapper;
     constructor(product,wrapper) {
+        console.log(wrapper);
         this._product = product;
         this.wrapper = wrapper
         console.log(wrapper)
@@ -165,7 +166,9 @@ class Product {
            `
         console.log(template);
         // let insert =  this.wrapper.insertBefore(template);
+        console.log(this.wrapper);
         this.wrapper.append=template;
+
 
     }
       // $(".popup-container__product").append(`
@@ -205,10 +208,12 @@ class Count  {
 
 class Popup {
         _productData;
+
         mapProductData (productData){
-            basketCount.append(
+           let popupContainer = document.querySelector(".basket__counter");
+            popupContainer.append(
                 productData.forEach(item=>{
-                    item.counter = new Product(item,basketCount);
+                    item.counter = new Product(item,popupContainer);
                 })
             )
         }
