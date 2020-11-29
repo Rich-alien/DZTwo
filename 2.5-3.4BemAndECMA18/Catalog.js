@@ -141,50 +141,51 @@ let count = 0;
 let basketCount = $(".basket__counter");
 let cartPopup = $(".b-popup");
 let containerCart = $('.popup-container__product');
-let containerPopup = $('.popup-container');
 let preBasket = [];
 let product = []
 
 class Product {
     _product;
-    newCount;
 
     constructor(productData) {
         this._product = productData;
         this.onCreateProduct();
-
     }
 
     onCreateProduct() {
         this._product.forEach(item => {
-            $('.popup-container__product').append(`
+            item.counter = new Count(item.count);
+            $(".popup-container__product").append(`
             <div class="basket">
             <p class="basket__name">${item.name}</p>
                 <p class="basket__country">${item.country}</p>
-                <div class="basket-decrease">-</div>
-                <p class="basket__count">${this.newCount = new Count(item.count)}</p>
-                <div class="basket-increase">+</div>
+               ${item.counter.getInnerHTML}
                 <p class="basket__price">${item.price * item.count}</p>
             </div>
             `)
         })
     }
+
 }
 
-class Count {
-    set value(val) {
-        this.value = isNaN(val) ? 0 : val;
-
+class Count  {
+    _count;
+    increment() {
+        console.log("hi");
+        return this._count++;
+    }
+    get getInnerHTML() {
+       return `
+        <div onclick="this.increment()">+</div>
+        <p class="basket__count">${this._count}</p>
+        <div>-</div>
+        `
+    }
+    constructor(count) {
+        this._count = count;
+        console.log(this._count )
     }
 
-    get value() {
-        return this.value;
-    }
-    constructor(wrapper) {
-        const template  = document.querySelector(".basket__count");
-        const content = document.importNode(template.content,true);
-        this.value
-    }
 }
 
 // class Count {p
