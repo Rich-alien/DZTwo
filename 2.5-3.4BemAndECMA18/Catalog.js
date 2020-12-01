@@ -147,76 +147,76 @@ let product = []
 class Product {
     _product;
     wrapper;
-    constructor(product,wrapper) {
+    _index;
+
+    constructor(product, wrapper, index) {
         this._product = product;
         this.wrapper = wrapper
+        this._index = index
         this.createProduct();
     }
 
     createProduct() {
 
         let template = document.createElement("div");
-        template.className=("basket");
-            template.innerHTML=`<p class="basket__name">${this._product.name}</p>
+        template.className = ("basket");
+        template.innerHTML = `<p class="basket__name">${this._product.name}</p>
                 <p class="basket__country">${this._product.country}</p>
               <p class="basket__price">${this._product.price * this._product.count}</p>
            `;
-            console.log(this._product.count);
-        let newCounter = new Count(this._product.count,template);
-       this.wrapper.append(template);
+        console.log(this._product.count);
+        let newCounter = new Count(this._product.count, template);
+        this.wrapper.append(template);
 
     }
 }
 
-class Count  {
-    _count=0;
+class Count {
+    _count = 0;
     template;
     inner;
 
-     getInnerHTML(count) { return `
+    getInnerHTML(count) {
+        return `
         <div class="increment">+</div>
         <p class="product__count">${count}</p>
         <div class="decrement">-</div>
-        ` ;
+        `;
     }
-    constructor(count,template) {
+
+    constructor(count, template) {
         this.template = template;
-        this.inner =  this.getInnerHTML(count);
-        console.log(count);
+        this.inner = this.getInnerHTML(count);
         this._count = count;
 
         let counterDiv = document.createElement("div");
-        counterDiv.className= "container-count";
+        counterDiv.className = "container-count";
         counterDiv.innerHTML = this.inner;
         this.template.appendChild(counterDiv);
         console.log(this.template);
         console.log(counterDiv.querySelector(".increment"));
-        counterDiv.querySelector(".increment").addEventListener("click" , this.increment);
-        counterDiv.querySelector(".decrement").addEventListener("click" , this.decrement);
-
+        counterDiv.querySelector(".increment").addEventListener("click", this.increment);
+        counterDiv.querySelector(".decrement").addEventListener("click", this.decrement);
 
 
     }
-    getCount  ()  {
+
+    getCount() {
         return this._count;
 
     }
-    increment=()=> {
-         if(this._count<20){
 
-             $(".product__count").empty();
-             this._count++;
-             $(".product__count").append(this._count);
+    increment = () => {
+        if (this._count < 20) {
+            this._count++;
 
-         }
+        }
 
         console.log("in");
     }
-    decrement=()=> {
-        if(this._count>0){
-            $(".product__count").empty();
+    decrement = () => {
+        if (this._count > 0) {
             this._count--;
-            $(".product__count").append(this._count);
 
         }
         console.log("de");
@@ -224,22 +224,24 @@ class Count  {
 }
 
 class Popup {
-        _productData;
+    _productData;
 
-        mapProductData (productData){
-           let popupContainer = document.querySelector(".popup-container__product");
-            basketCount.append(
-                productData.forEach(item=>{
-                    item.counter = new Product(item,popupContainer);
-                })
-            )
-        }
-        constructor(productData) {
+    mapProductData(productData) {
+        let popupContainer = document.querySelector(".popup-container__product");
+        basketCount.append(
+            productData.forEach((item, index) => {
+                item.counter = new Product(item, popupContainer, index);
+            })
+        )
+    }
+
+    constructor(productData) {
         this._productData = productData;
         this.mapProductData(this._productData);
 
     }
 }
+
 const createCart = function () {
     const newPopup = new Popup(preBasket);
     cartPopup.show();
