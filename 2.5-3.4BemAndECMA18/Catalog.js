@@ -251,7 +251,7 @@ class Popup {
     hideCart = () => {
         $(".b-popup").hide();
         preBasket = [];
-        basketCount.empty();
+        // basketCount.empty();
     }
 }
 const newPopup = new Popup(preBasket);
