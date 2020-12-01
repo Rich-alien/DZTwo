@@ -250,9 +250,11 @@ class Popup {
 
     hideCart = () => {
         $(".b-popup").hide();
-        containerCart.empty();
+        preBasket = [];
+        basketCount.empty();
     }
 }
+const newPopup = new Popup(preBasket);
 
 
 const initProducts = () => {
@@ -293,17 +295,12 @@ const setData = (id) => {
 }
 const pressBuy = (id) => {
     //первый эллемент точно будет уникальным в корзине
-    if (cart.size === 0) {
-        count++;
-        preBasket.push(setData(id));
-        cart.set(click, preBasket);
+
+     if (cart.has(id)) {
+        cart.set( id, setData(id));
+        newPopup.mapProductData(preBasket);
         basketCount.empty()
-        basketCount.append(count);
-    } else if (isExistProductById(id, cart)) {
-        count++;
-        preBasket.push(setData(id));
-        basketCount.empty()
-        basketCount.append(count);
+        basketCount.append(cart.size);
     } else {
         for (let value of cart) {
             value[1][getID(id, cart)].count++;
@@ -311,8 +308,17 @@ const pressBuy = (id) => {
     }
 
 }
-console.log(preBasket)
-const newPopup = new Popup(preBasket);
+// const isExistProductById = (id, basket) => {
+//     for (let product of basket) {
+//         for (let i = 0; i < product[1].length; i++) {
+//             if (product[1][i].id === id) {
+//                 return false;
+//             }
+//         }
+//     }
+//     return true;
+// }
+
 
 const getID = (id, cart) => {
     let saveID = [];
@@ -324,13 +330,3 @@ const getID = (id, cart) => {
     return saveID.indexOf(id);
 }
 
-const isExistProductById = (id, basket) => {
-    for (let product of basket) {
-        for (let i = 0; i < product[1].length; i++) {
-            if (product[1][i].id === id) {
-                return false;
-            }
-        }
-    }
-    return true;
-}
