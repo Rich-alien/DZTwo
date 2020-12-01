@@ -296,8 +296,10 @@ const setData = (id) => {
 const pressBuy = (id) => {
     //первый эллемент точно будет уникальным в корзине
 
-     if (cart.has(id)) {
+     if (!cart.has(id)) {
         cart.set( id, setData(id));
+        console.log(cart);
+        basketCount.push(setData(id));
         newPopup.mapProductData(preBasket);
         basketCount.empty()
         basketCount.append(cart.size);
