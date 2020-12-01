@@ -153,9 +153,8 @@ class Product {
 
     constructor(product, wrapper, index) {
         this._product = product;
-        this.wrapper = wrapper
-        this._index = index
-
+        this.wrapper = wrapper;
+        this._index = index;
         this.createProduct();
     }
 
@@ -168,10 +167,10 @@ class Product {
               <p class="basket__price">${this._product.price * this._product.count}</p>
            `;
         this.newCounter = new Count(this._product.count, template);
-
         this.wrapper.append(template);
         this.newCounter.updatePrice = (count) => {
             this._count = count;
+            this.updateCount(this._count);
             template.querySelector(".basket__price").innerHTML = this._count * this._product.price;
         }
     }
@@ -229,6 +228,9 @@ class Popup {
         basketCount.append(
             productData.forEach((item, index) => {
                 item.counter = new Product(item, popupContainer, index);
+                item.counter.updateCount=(count)=>{
+                    item.count=count;
+                };
             })
         )
     }
