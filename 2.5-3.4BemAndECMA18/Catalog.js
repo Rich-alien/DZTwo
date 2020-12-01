@@ -158,6 +158,7 @@ class Product {
 
         this.createProduct();
     }
+
     createProduct() {
 
         let template = document.createElement("div");
@@ -166,10 +167,10 @@ class Product {
                 <p class="basket__country">${this._product.country}</p>
               <p class="basket__price">${this._product.price * this._product.count}</p>
            `;
-         this.newCounter = new Count(this._product.count, template );
+        this.newCounter = new Count(this._product.count, template);
 
         this.wrapper.append(template);
-        this.newCounter.updatePrice=(count)=>{
+        this.newCounter.updatePrice = (count) => {
             this._count = count;
             template.querySelector(".basket__price").innerHTML = this._count * this._product.price;
         }
@@ -181,16 +182,13 @@ class Count {
     template;
     inner;
     value;
+
     getInnerHTML(count) {
         return `
         <div class="increment">+</div>
         <p class="product__count">${count}</p>
         <div class="decrement">-</div>
         `;
-    }
-
-    getCount() {
-        return this._count;
     }
 
     constructor(count, template) {
@@ -203,33 +201,28 @@ class Count {
         counterDiv.innerHTML = this.inner;
 
         this.template.appendChild(counterDiv);
-        counterDiv.querySelector(".increment").addEventListener("click", (()=> {
-            this.increment();
-            this.updatePrice(this._count);
-        }));
-        counterDiv.querySelector(".decrement").addEventListener("click", (()=> {
-            this.decrement();
-            this.updatePrice(this._count);
-        }));
+        counterDiv.querySelector(".increment").addEventListener("click", this.increment);
+        counterDiv.querySelector(".decrement").addEventListener("click", this.decrement);
         this.value = counterDiv.querySelector(".product__count");
 
     }
 
 
-
-    increment () {
+    increment() {
         if (this._count < 20) {
             this._count++;
             this.value.innerHTML = this._count;
-
+            this.updatePrice(this._count);
         }
 
 
     }
+
     decrement = () => {
         if (this._count > 0) {
             this._count--;
             this.value.innerHTML = this._count;
+            this.updatePrice(this._count);
         }
     }
 }
