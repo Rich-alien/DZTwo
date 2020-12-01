@@ -134,12 +134,10 @@ const data = [
     },
 
 ];
-
 let click = 0;
 let cart = new Map;
 let count = 0;
 let basketCount = $(".basket__counter");
-let cartPopup = $(".b-popup");
 let containerCart = $('.popup-container__product');
 let preBasket = [];
 let product = []
@@ -241,24 +239,22 @@ class Popup {
 
 
         const template = document.getElementById("popup");
-        template.querySelector(".basket").addEventListener("click", () => cartPopup.show());
-        template.querySelector(".button__popup").addEventListener("click", this.hideCart);
-        const content = document.importNode(template.content, true);
 
+        const content = document.importNode(template.content, true);
+        document.querySelector(".basket").addEventListener("click", () => $(".b-popup").show());
+        content.querySelector(".button__popup").addEventListener("click", this.hideCart);
         document.querySelector(".header").appendChild(content);
         this.mapProductData(this._productData);
 
     }
 
     hideCart = () => {
-        cartPopup.hide();
+        $(".b-popup").hide();
         containerCart.empty();
     }
 }
 
-const createCart = function () {
-    const newPopup = new Popup(preBasket);
-}
+
 const initProducts = () => {
     $(".basket__counter").append(cart.size);
     data.forEach(item => {
@@ -315,6 +311,8 @@ const pressBuy = (id) => {
     }
 
 }
+console.log(preBasket)
+const newPopup = new Popup(preBasket);
 
 const getID = (id, cart) => {
     let saveID = [];
