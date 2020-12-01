@@ -148,16 +148,16 @@ class Product {
     _product;
     wrapper;
     _index;
+    _count;
+    newCounter;
 
     constructor(product, wrapper, index) {
         this._product = product;
         this.wrapper = wrapper
         this._index = index
+
         this.createProduct();
     }
-
-    priceUpdate = (template, count, price) => template.querySelector(".basket__price").innerHTML = count * price;
-
     createProduct() {
 
         let template = document.createElement("div");
@@ -166,14 +166,13 @@ class Product {
                 <p class="basket__country">${this._product.country}</p>
               <p class="basket__price">${this._product.price * this._product.count}</p>
            `;
-        console.log(this._product.count);
-        let newCounter = new Count(this._product.count, template ,this._product.price);
+         this.newCounter = new Count(this._product.count, template );
+
         this.wrapper.append(template);
-        // template.querySelector(".increment").addEventListener("click",this.priceUpdate(template,newCounter.getCount(),this._product.price));
-        // template.querySelector(".decrement").addEventListener("click",()=> template.querySelector(".basket__price").innerHTML=newCounter.getCount() * this._product.price);
-
-
-        console.log(newCounter.getCount() * this._product.price);
+        this.newCounter.updatePrice=(count)=>{
+            this._count = count;
+            template.querySelector(".basket__price").innerHTML = this._count * this._product.price;
+        }
     }
 }
 
@@ -182,7 +181,6 @@ class Count {
     template;
     inner;
     value;
-    _price;
     getInnerHTML(count) {
         return `
         <div class="increment">+</div>
@@ -195,11 +193,10 @@ class Count {
         return this._count;
     }
 
-    constructor(count, template, price) {
+    constructor(count, template) {
         this.template = template;
         this.inner = this.getInnerHTML(count);
         this._count = count;
-        this._price = price;
         let counterDiv = document.createElement("div");
         counterDiv.className = "container-count";
 
@@ -208,17 +205,16 @@ class Count {
         this.template.appendChild(counterDiv);
         counterDiv.querySelector(".increment").addEventListener("click", (()=> {
             this.increment();
-            this.updatePrice(template);
+            this.updatePrice(this._count);
         }));
         counterDiv.querySelector(".decrement").addEventListener("click", (()=> {
             this.decrement();
-            this.updatePrice(template);
+            this.updatePrice(this._count);
         }));
         this.value = counterDiv.querySelector(".product__count");
+
     }
-    updatePrice(template){
-        template.querySelector(".basket__price").innerHTML = this._count * this._price;
-    }
+
 
 
     increment () {
