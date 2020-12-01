@@ -155,9 +155,9 @@ class Product {
         this._index = index
         this.createProduct();
     }
-    priceUpdate (){
 
-    }
+    priceUpdate = (template, count, price) => template.querySelector(".basket__price").innerHTML = count * price;
+
     createProduct() {
 
         let template = document.createElement("div");
@@ -167,10 +167,10 @@ class Product {
               <p class="basket__price">${this._product.price * this._product.count}</p>
            `;
         console.log(this._product.count);
-        let newCounter = new Count(this._product.count, template);
+        let newCounter = new Count(this._product.count, template ,this._product.price);
         this.wrapper.append(template);
-        template.querySelector(".increment").addEventListener("click",()=> template.querySelector(".basket__price").innerHTML=newCounter.getCount() * this._product.price);
-        template.querySelector(".decrement").addEventListener("click",()=> template.querySelector(".basket__price").innerHTML=newCounter.getCount() * this._product.price);
+        // template.querySelector(".increment").addEventListener("click",this.priceUpdate(template,newCounter.getCount(),this._product.price));
+        // template.querySelector(".decrement").addEventListener("click",()=> template.querySelector(".basket__price").innerHTML=newCounter.getCount() * this._product.price);
 
 
         console.log(newCounter.getCount() * this._product.price);
@@ -182,7 +182,7 @@ class Count {
     template;
     inner;
     value;
-
+    _price;
     getInnerHTML(count) {
         return `
         <div class="increment">+</div>
@@ -190,35 +190,44 @@ class Count {
         <div class="decrement">-</div>
         `;
     }
-    getCount () {
+
+    getCount() {
         return this._count;
     }
-    constructor(count, template) {
+
+    constructor(count, template, price) {
         this.template = template;
         this.inner = this.getInnerHTML(count);
-
-
         this._count = count;
+        this._price = price;
         let counterDiv = document.createElement("div");
         counterDiv.className = "container-count";
 
         counterDiv.innerHTML = this.inner;
 
         this.template.appendChild(counterDiv);
-        counterDiv.querySelector(".increment").addEventListener("click", this.increment);
-        counterDiv.querySelector(".decrement").addEventListener("click", this.decrement);
+        counterDiv.querySelector(".increment").addEventListener("click", (()=> {
+            this.increment();
+            this.updatePrice(template);
+        }));
+        counterDiv.querySelector(".decrement").addEventListener("click", (()=> {
+            this.decrement();
+            this.updatePrice(template);
+        }));
         this.value = counterDiv.querySelector(".product__count");
     }
-
-    getCount() {
-        return this._count;
+    updatePrice(template){
+        template.querySelector(".basket__price").innerHTML = this._count * this._price;
     }
 
-    increment = () => {
+
+    increment () {
         if (this._count < 20) {
             this._count++;
             this.value.innerHTML = this._count;
+
         }
+
 
     }
     decrement = () => {
