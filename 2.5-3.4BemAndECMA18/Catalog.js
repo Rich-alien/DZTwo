@@ -136,9 +136,7 @@ const data = [
 ];
 let click = 0;
 let cart = new Map;
-let count = 0;
 let basketCount = $(".basket__counter");
-let containerCart = $('.popup-container__product');
 let preBasket = [];
 let product = []
 
@@ -208,7 +206,6 @@ class Count {
             this.updatePrice(this._count);
         }
     }
-
     decrement = () => {
         if (this._count > 0) {
             this._count--;
@@ -234,18 +231,13 @@ class Popup {
     }
 
     constructor(productData) {
-
         this._productData = productData;
-
-
         const template = document.getElementById("popup");
-
         const content = document.importNode(template.content, true);
         document.querySelector(".basket").addEventListener("click", () => $(".b-popup").show());
         content.querySelector(".button__popup").addEventListener("click", this.hideCart);
         document.querySelector(".header").appendChild(content);
         this.mapProductData(this._productData);
-
     }
 
     hideCart = () => {
@@ -254,9 +246,8 @@ class Popup {
         basketCount.empty();
     }
 }
+
 const newPopup = new Popup(preBasket);
-
-
 const initProducts = () => {
     $(".basket__counter").append(cart.size);
     data.forEach(item => {
@@ -278,7 +269,6 @@ const initProducts = () => {
             </div>`)
     })
 }
-
 const setData = (id) => {
     return (
         {
@@ -294,37 +284,13 @@ const setData = (id) => {
     )
 }
 const pressBuy = (id) => {
-    //первый эллемент точно будет уникальным в корзине
-
-     if (!cart.has(id)) {
-        cart.set( id, setData(id));
+    if (!cart.has(id)) {
+        cart.set(id, setData(id));
         newPopup.mapProductData(cart);
         basketCount.empty()
         basketCount.append(cart.size);
     } else {
-      cart.get(id).count++;
+        cart.get(id).count++;
     }
-
-}
-// const isExistProductById = (id, basket) => {
-//     for (let product of basket) {
-//         for (let i = 0; i < product[1].length; i++) {
-//             if (product[1][i].id === id) {
-//                 return false;
-//             }
-//         }
-//     }
-//     return true;
-// }
-
-
-const getID = (id, cart) => {
-    let saveID = [];
-    for (let product of cart) {
-        for (let i = 0; i < product[1].length; i++) {
-            saveID.push(product[1][i].id);
-        }
-    }
-    return saveID.indexOf(id);
 }
 
