@@ -204,7 +204,7 @@ class Count {
         this.countElement = counterDiv.querySelector(".product__count");
     }
 
-    increment() {
+    increment = () => {
         if (this._count < 20) {
             this._count++;
             this.countElement.innerHTML = this._count;
