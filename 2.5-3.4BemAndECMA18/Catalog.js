@@ -181,7 +181,7 @@ class Count {
     _count = 0;
     template;
     inner;
-    value;
+    countElement;
 
     getInnerHTML(count) {
         return `
@@ -197,31 +197,25 @@ class Count {
         this._count = count;
         let counterDiv = document.createElement("div");
         counterDiv.className = "container-count";
-
         counterDiv.innerHTML = this.inner;
-
         this.template.appendChild(counterDiv);
         counterDiv.querySelector(".increment").addEventListener("click", this.increment);
         counterDiv.querySelector(".decrement").addEventListener("click", this.decrement);
-        this.value = counterDiv.querySelector(".product__count");
-
+        this.countElement = counterDiv.querySelector(".product__count");
     }
-
 
     increment() {
         if (this._count < 20) {
             this._count++;
-            this.value.innerHTML = this._count;
+            this.countElement.innerHTML = this._count;
             this.updatePrice(this._count);
         }
-
-
     }
 
     decrement = () => {
         if (this._count > 0) {
             this._count--;
-            this.value.innerHTML = this._count;
+            this.countElement.innerHTML = this._count;
             this.updatePrice(this._count);
         }
     }
