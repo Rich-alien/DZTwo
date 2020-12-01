@@ -236,15 +236,24 @@ class Popup {
     }
 
     constructor(productData) {
+        document.querySelector(".basket").addEventListener("click",()=>cartPopup.show());
         this._productData = productData;
-        this.mapProductData(this._productData);
 
+
+        const template =document.querySelector(".b-popup");
+        const content = document.importNode(template.content, true);
+        document.querySelector(".header").appendChild(content);
+        this.mapProductData(this._productData);
+        document.querySelector(".button__popup").addEventListener("click",this.hideCart);
+    }
+    hideCart = () => {
+        cartPopup.hide();
+        containerCart.empty();
     }
 }
 
 const createCart = function () {
     const newPopup = new Popup(preBasket);
-    cartPopup.show();
 }
 const initProducts = () => {
     $(".basket__counter").append(cart.size);
@@ -267,10 +276,7 @@ const initProducts = () => {
             </div>`)
     })
 }
-const hideCart = () => {
-    cartPopup.hide();
-    containerCart.empty();
-}
+
 const setData = (id) => {
     return (
         {
