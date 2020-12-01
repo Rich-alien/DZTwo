@@ -299,7 +299,7 @@ const pressBuy = (id) => {
      if (!cart.has(id)) {
         cart.set( id, setData(id));
         console.log(cart);
-        basketCount.push(setData(id));
+         preBasket.push(setData(id));
         newPopup.mapProductData(preBasket);
         basketCount.empty()
         basketCount.append(cart.size);
