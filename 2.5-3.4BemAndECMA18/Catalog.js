@@ -298,15 +298,11 @@ const pressBuy = (id) => {
 
      if (!cart.has(id)) {
         cart.set( id, setData(id));
-        console.log(cart);
-         preBasket.push(setData(id));
-        newPopup.mapProductData(preBasket);
+        newPopup.mapProductData(cart);
         basketCount.empty()
         basketCount.append(cart.size);
     } else {
-        for (let value of cart) {
-            value[1][getID(id, cart)].count++;
-        }
+      cart.get(id).count++;
     }
 
 }
