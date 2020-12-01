@@ -175,7 +175,7 @@ class Count {
     _count = 0;
     template;
     inner;
-
+    value;
     getInnerHTML(count) {
         return `
         <div class="increment">+</div>
@@ -187,16 +187,18 @@ class Count {
     constructor(count, template) {
         this.template = template;
         this.inner = this.getInnerHTML(count);
-        this._count = count;
 
+
+        this._count = count;
         let counterDiv = document.createElement("div");
         counterDiv.className = "container-count";
+
         counterDiv.innerHTML = this.inner;
+
         this.template.appendChild(counterDiv);
-        console.log(this.template);
-        console.log(counterDiv.querySelector(".increment"));
         counterDiv.querySelector(".increment").addEventListener("click", this.increment);
         counterDiv.querySelector(".decrement").addEventListener("click", this.decrement);
+        this.value = counterDiv.querySelector(".product__count");
 
 
     }
@@ -208,18 +210,18 @@ class Count {
 
     increment = () => {
         if (this._count < 20) {
+            // this.value.empty()
             this._count++;
-
+            this.value.innerHTML = this._count;
         }
 
-        console.log("in");
     }
     decrement = () => {
         if (this._count > 0) {
-            this._count--;
 
+            this._count--;
+            this.value.innerHTML = this._count;
         }
-        console.log("de");
     }
 }
 
