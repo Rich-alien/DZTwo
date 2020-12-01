@@ -228,24 +228,28 @@ class Popup {
         basketCount.append(
             productData.forEach((item, index) => {
                 item.counter = new Product(item, popupContainer, index);
-                item.counter.updateCount=(count)=>{
-                    item.count=count;
+                item.counter.updateCount = (count) => {
+                    item.count = count;
                 };
             })
         )
     }
 
     constructor(productData) {
-        document.querySelector(".basket").addEventListener("click",()=>cartPopup.show());
+
         this._productData = productData;
 
 
-        const template =document.querySelector(".b-popup");
+        const template = document.getElementById("popup");
+        template.querySelector(".basket").addEventListener("click", () => cartPopup.show());
+        template.querySelector(".button__popup").addEventListener("click", this.hideCart);
         const content = document.importNode(template.content, true);
+
         document.querySelector(".header").appendChild(content);
         this.mapProductData(this._productData);
-        document.querySelector(".button__popup").addEventListener("click",this.hideCart);
+
     }
+
     hideCart = () => {
         cartPopup.hide();
         containerCart.empty();
