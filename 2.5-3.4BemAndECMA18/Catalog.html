@@ -68,23 +68,25 @@
             </div>
         </div>
     </div>
-    <template  class="b-popup" >
-        <div class="b-popup-content">
-            <div class="popup-container">
-                <div class="popup-container__top">
-                    <div class="name p">name</div>
-                    <div class="country p">country</div>
-                    <div class="count p" >count</div>
-                    <div class="price p">price</div>
+    <template id="popup">
+        <div class="b-popup">
+            <div class="b-popup-content">
+                <div class="popup-container">
+                    <div class="popup-container__top">
+                        <div class="name p">name</div>
+                        <div class="country p">country</div>
+                        <div class="count p">count</div>
+                        <div class="price p">price</div>
+                    </div>
+                    <div class="popup-container__product"></div>
                 </div>
-                <div class="popup-container__product"></div>
+                <button class="button__popup">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z"
+                              fill="#FFFDFD"/>
+                    </svg>
+                </button>
             </div>
-            <button class="button__popup"  >
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z"
-                          fill="#FFFDFD"/>
-                </svg>
-            </button>
         </div>
     </template>
     <div class="header__login">
@@ -108,5 +110,5 @@
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="Catalog.js"></script>
-</body >
+</body>
 </html>
