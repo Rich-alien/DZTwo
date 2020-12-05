@@ -249,7 +249,7 @@ class Popup {
     }
 }
 
-function curry(f) {
+function processCart(f) {
     return function (data) {
         return function (discount) {
             return f(data, discount);
@@ -258,28 +258,15 @@ function curry(f) {
 }
 
 
-const sum = (data, discount) => {
-    data.forEach(item => {
+const calculationDiscount  = (data, discount) => {
+    data.map(item => {
         item.price -= (item.price * discount);
     })
 }
 
-let calculationDiscount = curry(sum);
-//
-//
-// const calculationDiscount = (data)=>{
-//
-//
-//    //  data.forEach(items=>{
-//    //     items.price*=discount
-//    // })
-//
-// }
-// вызывается на 299 строчке
-const discountCall = (discountFunction,data,discount) => {
-    discountFunction(data,discount)
-    return data;
-}
+let applyDiscount = processCart(calculationDiscount );
+
+
 
 const newPopup = new Popup(preBasket);
 
@@ -322,7 +309,7 @@ const setData = (id) => {
 const pressBuy = (id) => {
     if (!cart.has(id)) {
         cart.set(id, setData(id));
-        calculationDiscount(cart)(discount);
+        applyDiscount(cart)(discount);
         newPopup.mapProductData(cart);
         basketCount.empty()
         basketCount.append(cart.size);
