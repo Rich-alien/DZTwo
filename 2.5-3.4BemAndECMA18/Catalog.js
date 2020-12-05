@@ -138,7 +138,8 @@ let click = 0;
 let cart = new Map;
 let basketCount = $(".basket__counter");
 let preBasket = [];
-let product = []
+let product = [];
+const discount = 0.3;
 
 class Product {
     _product;
@@ -155,12 +156,11 @@ class Product {
     }
 
     createProduct() {
-
         let template = document.createElement("div");
-        template.className = ("basket");
+        template.className = ("basketPopup");
         template.innerHTML = `<p class="basket__name">${this._product.name}</p>
-                <p class="basket__country">${this._product.country}</p>
-              <p class="basket__price">${this._product.price * this._product.count}</p>
+                              <p class="basket__country">${this._product.country}</p>
+                              <p class="basket__price">${this._product.price * this._product.count}</p>
            `;
         this.newCounter = new Count(this._product.count, template);
         this.wrapper.append(template);
@@ -218,6 +218,7 @@ class Count {
 class Popup {
     _productData;
 
+
     mapProductData(productData) {
         let popupContainer = document.querySelector(".popup-container__product");
         basketCount.append(
@@ -228,6 +229,7 @@ class Popup {
                 };
             })
         )
+
     }
 
     constructor(productData) {
@@ -242,12 +244,45 @@ class Popup {
 
     hideCart = () => {
         $(".b-popup").hide();
-        preBasket = [];
+        $(".popup-container__product").empty();
         basketCount.empty();
     }
 }
 
+function curry(f) {
+    return function (data) {
+        return function (discount) {
+            return f(data, discount);
+        }
+    }
+}
+
+
+const sum = (data, discount) => {
+    data.forEach(item => {
+        item.price -= (item.price * discount);
+    })
+}
+
+let calculationDiscount = curry(sum);
+//
+//
+// const calculationDiscount = (data)=>{
+//
+//
+//    //  data.forEach(items=>{
+//    //     items.price*=discount
+//    // })
+//
+// }
+// вызывается на 299 строчке
+const discountCall = (discountFunction,data,discount) => {
+    discountFunction(data,discount)
+    return data;
+}
+
 const newPopup = new Popup(preBasket);
+
 const initProducts = () => {
     $(".basket__counter").append(cart.size);
     data.forEach(item => {
@@ -282,10 +317,12 @@ const setData = (id) => {
             count: data[id].count,
         }
     )
+
 }
 const pressBuy = (id) => {
     if (!cart.has(id)) {
         cart.set(id, setData(id));
+        calculationDiscount(cart)(discount);
         newPopup.mapProductData(cart);
         basketCount.empty()
         basketCount.append(cart.size);
